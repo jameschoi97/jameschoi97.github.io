@@ -15,9 +15,6 @@ jobs:
   build:
     name: Web build
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./smarthqservice
     steps:
       - uses: actions/checkout@v2
       - uses: subosito/flutter-action@v1
