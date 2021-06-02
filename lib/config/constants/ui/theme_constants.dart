@@ -6,9 +6,12 @@ import 'package:get/get.dart';
 const default_gradient_start = Color(0xFFEBEEF2);
 const default_gradient_end = Color(0xFFC3C6C9);
 
+const default_appbar = Color (0xFF64686B);
+
 class DefaultColors {
   Color get gradientStart => default_gradient_start;
   Color get gradientEnd => default_gradient_end;
+  Color get appBar => default_appbar;
 }
 
 abstract class MyTheme {
