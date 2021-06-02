@@ -14,7 +14,7 @@ class MyWebApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'James Choi\'s Website',
       initialRoute: HomePage.name,
-      theme: _themeController.themeData,
+      theme: _themeController.theme.themeData,
       routes : {
         HomePage.name: (_) => HomePage(),
         ResumePage.name: (_) => ResumePage(),
@@ -23,6 +23,7 @@ class MyWebApp extends StatelessWidget {
         GetPage(
           name: HomePage.name,
           page: () => HomePage(),
+
         ),
         GetPage(
           name: ResumePage.name,

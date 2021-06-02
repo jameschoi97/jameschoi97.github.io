@@ -6,18 +6,52 @@ import 'package:get/get.dart';
 const default_gradient_start = Color(0xFFEBEEF2);
 const default_gradient_end = Color(0xFFC3C6C9);
 
-const default_appbar = Color (0xFF64686B);
+const default_appbar = Color(0xFF64686B);
+const default_appbar_selected = Color(0xFF484A4F);
+const default_appbar_border = Color(0xFF32353C);
+const default_appbar_hover_color = Color(0xFF929498);
+
+const default_font_color = Color(0xFF212529);
+const default_appbar_font_color = Color(0xFFCFD8DC);
+
 
 class DefaultColors {
   Color get gradientStart => default_gradient_start;
   Color get gradientEnd => default_gradient_end;
   Color get appBar => default_appbar;
+  Color get appBarSelected => default_appbar_selected;
+  Color get appBarBorder => default_appbar_border;
+  Color get fontColor => default_font_color;
+  Color get appBarFontColor => default_appbar_font_color;
+  Color get appBarHoverColor => default_appbar_hover_color;
 }
 
 abstract class MyTheme {
+  late final textTheme = TextTheme(
+    headline1: TextStyle(color: colorSet.fontColor, fontSize: 96),
+    headline2: TextStyle(color: colorSet.fontColor, fontSize: 60),
+    headline3: TextStyle(color: colorSet.fontColor, fontSize: 48),
+    headline4: TextStyle(color: colorSet.fontColor, fontSize: 34),
+    headline5: TextStyle(color: colorSet.fontColor, fontSize: 24),
+    headline6: TextStyle(color: colorSet.fontColor, fontSize: 20),
+    subtitle1: TextStyle(color: colorSet.fontColor, fontSize: 16),
+    subtitle2: TextStyle(color: colorSet.fontColor, fontSize: 14),
+    bodyText1: TextStyle(color: colorSet.fontColor, fontSize: 16),
+    bodyText2: TextStyle(color: colorSet.fontColor, fontSize: 14),
+    button: TextStyle(color: colorSet.fontColor, fontSize: 14),
+    caption: TextStyle(color: colorSet.fontColor, fontSize: 12),
+    overline: TextStyle(color: colorSet.fontColor, fontSize: 10),
+  );
+
   final DefaultColors colorSet;
 
   MyTheme({required this.colorSet});
+
+  ThemeData get themeData => ThemeData(
+      fontFamily: 'Montserrat',
+      textTheme: textTheme
+
+  );
 
   BoxDecoration get background => BoxDecoration(
       gradient: LinearGradient(
@@ -46,9 +80,7 @@ class MyThemeController extends GetxController {
 
   static final MyTheme _defaultTheme = DefaultTheme();
 
-  ThemeData get themeData => ThemeData(
 
-  );
 
   BoxDecoration get background => theme.background;
 }
