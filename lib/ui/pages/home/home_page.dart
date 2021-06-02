@@ -21,28 +21,33 @@ class HomePage extends GetView<MainController> {
 
   @override
   Widget build(BuildContext context) {
-    return MyScaffold(
-      appBar: ResponsiveWidget.isSmallScreen(context)
-      ? AppBar(
-        backgroundColor: _themeController.theme.colorSet.appBar,
-        elevation: 0,
-        title: Text(
-          'JAMES CHOI',
-          style: TextStyle(
-            color: Colors.blueGrey.shade100,
-            fontSize: 20,
-            fontFamily: 'Montserrat',
-            fontWeight: FontWeight.w400,
-            letterSpacing: 2,
-          ),
-        ),
-      )
-      : null,
-      drawer: Container(
-        width: 250,
-          child: MyDrawer()
+
+    final pageButtons = subpages.map((page) => InkWell(
+      hoverColor: _themeController.theme.colorSet.appBarHoverColor,
+      onTap: () {
+        controller.currentPage.value = page;
+        Get.toNamed(page.pageName);
+      },
+      child: Container(
+          margin: EdgeInsets.symmetric(vertical: 30),
+          child: Center(
+            child: Text(page.name.toUpperCase(),
+              style: TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.w600,
+                letterSpacing: 4,
+              ),),
+          )
       ),
+    )).toList();
+
+    return MyScaffold(
       body: ResponsiveWidget(
+        smallScreen: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: pageButtons,
+        ),
         largeScreen: Row(
           children: [
             Expanded(
@@ -50,24 +55,7 @@ class HomePage extends GetView<MainController> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: subpages.map((page) => InkWell(
-                    hoverColor: _themeController.theme.colorSet.appBarHoverColor,
-                    onTap: () {
-                      controller.currentPage.value = page;
-                      Get.toNamed(page.pageName);
-                    },
-                    child: Container(
-                        margin: EdgeInsets.symmetric(vertical: 30),
-                        child: Center(
-                          child: Text(page.name.toUpperCase(),
-                          style: TextStyle(
-                            fontSize: 40,
-                            fontWeight: FontWeight.w600,
-                            letterSpacing: 4,
-                          ),),
-                        )
-                    ),
-                  )).toList(),
+                  children: pageButtons,
                 )
             ),
             Expanded(
