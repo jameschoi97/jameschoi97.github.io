@@ -26,6 +26,11 @@ class DefaultColors {
   Color get appBarHoverColor => default_appbar_hover_color;
 }
 
+class ResumeColors extends DefaultColors{
+  @override
+  Color get fontColor => Colors.black;
+}
+
 abstract class MyTheme {
   late final textTheme = TextTheme(
     headline1: TextStyle(color: colorSet.fontColor, fontSize: 96),
@@ -71,6 +76,20 @@ class DefaultTheme extends MyTheme {
 
   @override
   String get name => 'Default';
+}
+
+class ResumeTheme extends MyTheme {
+  ResumeTheme() : super(colorSet: ResumeColors());
+
+  @override
+  String get name => 'Resume';
+
+  @override
+  ThemeData get themeData => ThemeData(
+    fontFamily: 'TimesNewRoman',
+    textTheme: textTheme,
+  );
+
 }
 
 class MyThemeController extends GetxController {

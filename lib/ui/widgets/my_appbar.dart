@@ -5,8 +5,6 @@ import 'package:jameschoi97/main_controller.dart';
 import 'package:jameschoi97/ui/widgets/responsive_widget.dart';
 import 'package:get/get.dart';
 
-import 'my_drawer.dart';
-
 class MyAppBar extends GetWidget<MainController> {
   final _themeController = Get.find<MyThemeController>();
 
