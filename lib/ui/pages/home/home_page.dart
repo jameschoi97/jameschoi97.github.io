@@ -20,39 +20,52 @@ class HomePage extends GetView<MainController> {
 
   @override
   Widget build(BuildContext context) {
-    final pageButtons = subpages
-        .map((page) => InkWell(
-              hoverColor: _themeController.theme.colorSet.appBarHoverColor,
-              onHover: ResponsiveWidget.isSmallScreen(context)
-                  ? null
-                  : (hovering) {
-                      if (hovering) {
-                        controller.hoverPage.value = page;
-                      } else {
-                        controller.hoverPage.value = Pages.home;
-                      }
-                    },
-              onTap: () {
-                controller.currentPage.value = page;
-                Get.toNamed(page.pageName);
-              },
-              child: Text(
-                page.name.toUpperCase(),
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.w600,
-                  letterSpacing: 4,
-                ),
-              ),
-            ))
-        .toList();
+    final pageButtons = Map.fromIterable(subpages,
+      key: (entry) => entry as Pages,
+      value: (entry) {
+      final page = entry as Pages;
+      return InkWell(
+          hoverColor: _themeController.theme.colorSet.appBarHoverColor,
+          onHover: ResponsiveWidget.isSmallScreen(context)
+              ? null
+              : (hovering) {
+            if (hovering) {
+              controller.hoverPage.value = page;
+            } else {
+              controller.hoverPage.value = Pages.home;
+            }
+          },
+          onTap: () {
+            controller.currentPage.value = page;
+            Get.toNamed(page.pageName);
+          },
+          child: Text(
+            page.name.toUpperCase(),
+            style: TextStyle(
+              fontSize: 40,
+              fontWeight: FontWeight.w600,
+              letterSpacing: 4,
+            ),
+          ),
+        );
+      });
 
     return MyScaffold(
       body: ResponsiveWidget(
         smallScreen: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: pageButtons,
+          children: [
+            getItem(Pages.home),
+            Column(
+              children: subpages.map((page) => Column(
+                children: [
+                  getItem(page),
+                  pageButtons[page]!,
+                ]
+              )).toList(),
+            ),
+          ],
         ),
         largeScreen: Row(
           children: [
@@ -61,24 +74,29 @@ class HomePage extends GetView<MainController> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: pageButtons.map((button) => Container(
+                  children: subpages.map((page) => Container(
                     padding: EdgeInsets.symmetric(vertical: 30),
-                    child: button,
+                    child: pageButtons[page],
                   )).toList(),
                 )),
             Expanded(
                 flex: 3,
-                child: Obx(() => Stack(
-                      children: pages
-                          .map((page) => AnimatedOpacity(
-                                opacity: controller.hoverPage.value == page
-                                    ? 1
-                                    : 0,
-                                duration: Duration(milliseconds: 200),
-                                child: Center(child: getItem(page)),
-                              ))
-                          .toList(),
-                    )))
+                child: Obx(() => ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxHeight: MediaQuery.of(context).size.height,
+                  ),
+                  child: Stack(
+                        children: pages
+                            .map((page) => AnimatedOpacity(
+                                  opacity: controller.hoverPage.value == page
+                                      ? 1
+                                      : 0,
+                                  duration: Duration(milliseconds: 200),
+                                  child: Center(child: getItem(page)),
+                                ))
+                            .toList(),
+                      ),
+                )))
           ],
         ),
       ),
@@ -101,7 +119,7 @@ class HomePage extends GetView<MainController> {
     } else if (page == Pages.aboutMe) {
       return Container();
     } else if (page == Pages.resume) {
-      return Image.asset('assets/images/resume.png');
+      return Image.asset('assets/images/resume.png', fit: BoxFit.fitHeight);
     } else if (page == Pages.movies) {
       return Container();
     } else {

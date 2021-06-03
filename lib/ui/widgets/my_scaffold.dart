@@ -60,9 +60,11 @@ class MyScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: appBar,
-        body: Container(
-          decoration: Get.find<MyThemeController>().background,
-          child: body,
+        body: SingleChildScrollView(
+          child: Container(
+            decoration: Get.find<MyThemeController>().background,
+            child: body,
+          ),
         ),
         floatingActionButton: floatingActionButton,
         floatingActionButtonLocation: floatingActionButtonLocation,
