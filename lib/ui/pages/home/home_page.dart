@@ -56,12 +56,22 @@ class HomePage extends GetView<MainController> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            getItem(Pages.home),
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 50, horizontal: 100),
+                child: getItem(Pages.home)
+            ),
             Column(
               children: subpages.map((page) => Column(
                 children: [
-                  getItem(page),
-                  pageButtons[page]!,
+                  Container(
+                    height: MediaQuery.of(context).size.width,
+                      padding: EdgeInsets.symmetric(vertical: 50),
+                      child: getItem(page)
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(vertical: 20),
+                      child: pageButtons[page]!
+                  ),
                 ]
               )).toList(),
             ),
