@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
+import 'package:jameschoi97/ui/pages/about_me/about_me_page.dart';
 import 'package:jameschoi97/ui/pages/home/home_page.dart';
+import 'package:jameschoi97/ui/pages/movies/movies_page.dart';
 import 'package:jameschoi97/ui/pages/resume/resume_page.dart';
 
 enum Pages {
@@ -28,11 +30,11 @@ extension PagesExtension on Pages {
     if (index == Pages.home.index) {
       return HomePage.name;
     } else if (index == Pages.aboutMe.index) {
-      return 'About Me';
+      return AboutMePage.name;
     } else if (index == Pages.resume.index) {
       return ResumePage.name;
     } else if (index == Pages.movies.index) {
-      return 'Movies';
+      return MoviesPage.name;
     } else {
       return '';
     }
