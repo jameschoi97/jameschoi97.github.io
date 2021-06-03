@@ -59,7 +59,7 @@ class HomePage extends GetView<MainController> {
           children: [
             Container(
               padding: EdgeInsets.symmetric(vertical: 50, horizontal: 100),
-                child: getItem(Pages.home)
+                child: getItem(context, Pages.home)
             ),
             Column(
               children: subpages.map((page) => Column(
@@ -67,7 +67,7 @@ class HomePage extends GetView<MainController> {
                   Container(
                     height: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.symmetric(vertical: 50),
-                      child: getItem(page)
+                      child: getItem(context,page)
                   ),
                   Container(
                     margin: EdgeInsets.symmetric(vertical: 20),
@@ -103,7 +103,7 @@ class HomePage extends GetView<MainController> {
                                       ? 1
                                       : 0,
                                   duration: Duration(milliseconds: 200),
-                                  child: Center(child: getItem(page)),
+                                  child: Center(child: getItem(context,page)),
                                 ))
                             .toList(),
                       ),
@@ -114,14 +114,14 @@ class HomePage extends GetView<MainController> {
     );
   }
 
-  Widget getItem(Pages page) {
+  Widget getItem(BuildContext context, Pages page) {
     if (page == Pages.home) {
       return Text(
           'Welcome to my website!\n'
               '\nThis is a work in progress, but I will aim to perfect it over the next '
               'few months, years, or the rest of my life.',
           style: TextStyle(
-            fontSize: 30,
+            fontSize: MediaQuery.of(context).size.width < 600 ? 20 : 30,
             fontWeight: FontWeight.w600,
             letterSpacing: 4,
           ),
