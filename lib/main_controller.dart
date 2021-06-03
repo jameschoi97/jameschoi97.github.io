@@ -50,4 +50,5 @@ const pages = [
 
 class MainController extends GetxController {
   final currentPage = Pages.home.obs;
+  final hoverPage = Pages.home.obs;
 }
