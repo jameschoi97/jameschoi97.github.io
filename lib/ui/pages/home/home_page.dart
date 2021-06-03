@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jameschoi97/config/constants/ui/theme_constants.dart';
@@ -127,7 +128,24 @@ class HomePage extends GetView<MainController> {
           textAlign: TextAlign.center,
       );
     } else if (page == Pages.aboutMe) {
-      return Container();
+      return CarouselSlider(
+          items: [
+            Image.asset('assets/images/me_1.png', fit: BoxFit.fitHeight),
+            Image.asset('assets/images/me_2.png', fit: BoxFit.fitHeight),
+            Image.asset('assets/images/me_3.png', fit: BoxFit.fitHeight)
+          ],
+          options: CarouselOptions(
+            aspectRatio: 16/14,
+            viewportFraction: 0.7,
+            autoPlay: true,
+            autoPlayInterval: Duration(milliseconds: 1500),
+            pauseAutoPlayOnTouch: false,
+            pauseAutoPlayOnManualNavigate: false,
+            enlargeCenterPage: true,
+            enlargeStrategy: CenterPageEnlargeStrategy.scale,
+            scrollPhysics: NeverScrollableScrollPhysics(),
+          )
+      );
     } else if (page == Pages.resume) {
       return Image.asset('assets/images/resume.png', fit: BoxFit.fitHeight);
     } else if (page == Pages.movies) {
