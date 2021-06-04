@@ -10,7 +10,8 @@ class MyResume extends StatelessWidget {
 
   final nyc = 'New York, NY';
 
-  final double defaultFontSize = 16;
+  final double defaultFontSize = 15;
+
 
   @override
   Widget build(BuildContext context) {
@@ -86,6 +87,29 @@ class MyResume extends StatelessWidget {
         )
       ]);
     }
+
+    Widget listItem(String title, List<String> items) {
+      return Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          TextBox(
+            text: '${title}: ',
+            fontSize: convert(defaultFontSize),
+            bold: true,
+          ),
+          TextBox(
+            text: items.join(', '),
+            fontSize: convert(defaultFontSize),
+          )
+        ]
+      );
+    }
+
+    final EdgeInsetsGeometry defaultSectionMargin = EdgeInsets.only(
+      left: convert(20),
+      right: convert(20),
+      bottom: convert(10),
+    );
 
     return Container(
         width: 210,
@@ -178,7 +202,25 @@ class MyResume extends StatelessWidget {
                             ])
                       ])
                 ],
-                EdgeInsets.symmetric(horizontal: 20)),
+                defaultSectionMargin),
+            makeSection(
+                'Coursework',
+                [
+                  listItem(
+                      'Computer Science',
+                      [
+                        'Data Structures',
+                        'Computer Systems Organization',
+                        'Basic Algorithms',
+                        'Operating Systems',
+                        '\nArtificial Intelligence',
+                        'Theory of Computation',
+                        'Numerical Optimization',
+                      ]
+                  )
+                ],
+                defaultSectionMargin
+            ),
           ],
         ));
   }

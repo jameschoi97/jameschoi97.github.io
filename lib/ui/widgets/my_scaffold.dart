@@ -79,7 +79,7 @@ class MyScaffold extends StatelessWidget {
         bottomNavigationBar: bottomNavigationBar,
         bottomSheet: bottomSheet,
         drawer: drawer != null ? drawer :
-        MediaQuery.of(context).size.width < 800 ? MyDrawer() : null,
+        MediaQuery.of(context).size.width < 600 ? MyDrawer() : null,
         onDrawerChanged: onDrawerChanged,
         endDrawer: endDrawer,
         onEndDrawerChanged: onEndDrawerChanged,
