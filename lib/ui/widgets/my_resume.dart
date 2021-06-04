@@ -1,90 +1,120 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:jameschoi97/config/constants/ui/theme_constants.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyResume extends StatelessWidget {
-
   final myName = 'James Choi';
   final myAddress = '303 E 5th St, New York, NY 10003';
   final myNumber = '(610) 392-3086';
   final myEmail = 'wc1414@nyu.edu';
 
+  final double defaultFontSize = 16;
 
   @override
   Widget build(BuildContext context) {
-    var screenWidth = MediaQuery.of(context).size.width;
+    double convert(double originalValue) {
+      var screenWidth = MediaQuery.of(context).size.width;
+      return originalValue / 720 * screenWidth;
+    }
 
-      return Container(
-        width: 210*4,
-        height: 297*4,
+    Widget makeSection(
+        String title, List<Widget> children, EdgeInsetsGeometry? margin) {
+      return Column(children: [
+        Container(
+          width: MediaQuery.of(context).size.width,
+          margin: margin == null ? EdgeInsets.zero : margin,
+          decoration: BoxDecoration(
+              border: Border(
+                  bottom: BorderSide(
+            color: Colors.black,
+            width: convert(2),
+          ))),
+          child: TextBox(
+            text: title,
+            fontSize: convert(defaultFontSize),
+            style: TextStyle(
+              fontFamily: 'TimesNewRoman',
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
+        Column(
+          children: children,
+        )
+      ]);
+    }
+
+    return Container(
+        width: 210 * 4,
+        height: 297 * 4,
         color: Colors.white,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-
           children: [
             TextBox(
                 text: myName,
-                widthFactor: 0.25,
-              margin: EdgeInsets.only(top: screenWidth * 0.04, bottom: screenWidth * 0.01),
-              style: TextStyle(
-                fontFamily: 'TimesNewRoman',
-                fontWeight: FontWeight.w600,
-              )
+                fontSize: convert(30),
+                margin: EdgeInsets.only(top: convert(40), bottom: convert(10)),
+                style: TextStyle(
+                  fontFamily: 'TimesNewRoman',
+                  fontWeight: FontWeight.w600,
+                )),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextBox(text: myAddress, fontSize: convert(defaultFontSize)),
+                TextBox(text: '|', fontSize: convert(defaultFontSize), margin: EdgeInsets.symmetric(horizontal: convert(10)),),
+                TextBox(text: myNumber, fontSize: convert(defaultFontSize), onPressed: () => launch('sms:+1 $myNumber')),
+                TextBox(text: '|', fontSize: convert(defaultFontSize), margin: EdgeInsets.symmetric(horizontal: convert(10)),),
+                TextBox(text: myEmail, fontSize: convert(defaultFontSize), onPressed: () => launch('mailto:$myEmail')),
+              ]
             ),
-            TextBox(
-              text: '$myAddress | $myNumber | $myEmail',
-              widthFactor: 0.7,
-            ),
-            Container(
-              padding: EdgeInsets.symmetric(horizontal: 30),
-              decoration: BoxDecoration(
-                border: Border(
-                  bottom: BorderSide(
-                    color: Colors.black,
-                    width: 2.0,
-                  )
-                ),
-              ),
-              child: Text('Education', style: TextStyle(
-                fontFamily: 'TimesNewRoman',
-                fontWeight: FontWeight.w600,
-              ))
-            )
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
           ],
-
-        )
-    );
+        ));
   }
-
 }
 
 class TextBox extends StatelessWidget {
-
   TextBox({
     required this.text,
     this.style,
     this.margin,
-    required this.widthFactor,
+    required this.fontSize,
+    this.onPressed,
   });
 
   final String text;
   final TextStyle? style;
   final EdgeInsetsGeometry? margin;
-  final double widthFactor;
-
-
+  final double fontSize;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: margin == null ? EdgeInsets.zero : margin,
-        width: MediaQuery.of(context).size.width * widthFactor,
-        child: FittedBox(
-          fit: BoxFit.fill,
-          child: Text(text, style: style == null ? TextStyle(
-            fontFamily: 'TimesNewRoman',
-          ) : style),
-        )
+      margin: margin == null ? EdgeInsets.zero : margin,
+      child: onPressed == null
+          ? Text(text,
+              style: style == null
+                  ? TextStyle(
+                      fontFamily: 'TimesNewRoman',
+                      fontSize: fontSize,
+                    )
+                  : style!.copyWith(fontSize: fontSize))
+          : TextButton(
+              onPressed: onPressed,
+              style: ButtonStyle(
+                foregroundColor: MaterialStateProperty.all(Colors.black),
+                overlayColor: MaterialStateProperty.all(Colors.lightBlue.withOpacity(0.15))
+              ),
+              child: Text(text,
+                  style: style == null
+                      ? TextStyle(
+                          fontFamily: 'TimesNewRoman',
+                          fontSize: fontSize,
+                        )
+                      : style!.copyWith(fontSize: fontSize))),
     );
   }
 }

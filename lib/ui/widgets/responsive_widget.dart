@@ -26,6 +26,7 @@ class ResponsiveWidget extends StatelessWidget {
   }
 
 
+
   @override
   Widget build(BuildContext context) {
     var screenWidth = MediaQuery.of(context).size.width;
