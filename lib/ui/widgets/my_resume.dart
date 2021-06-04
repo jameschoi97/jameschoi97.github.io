@@ -8,6 +8,8 @@ class MyResume extends StatelessWidget {
   final myNumber = '(610) 392-3086';
   final myEmail = 'wc1414@nyu.edu';
 
+  final nyc = 'New York, NY';
+
   final double defaultFontSize = 16;
 
   @override
@@ -19,37 +21,75 @@ class MyResume extends StatelessWidget {
 
     Widget makeSection(
         String title, List<Widget> children, EdgeInsetsGeometry? margin) {
-      return Column(children: [
-        Container(
-          width: MediaQuery.of(context).size.width,
-          margin: margin == null ? EdgeInsets.zero : margin,
-          decoration: BoxDecoration(
-              border: Border.all(color: Colors.black),
-            /*Border(
-                  bottom: BorderSide(
-            color: Colors.black,
-            width: convert(2),
-          ))*/
-
-          ),
-          child: TextBox(
-            text: title,
-            fontSize: convert(defaultFontSize),
-            style: TextStyle(
-              fontFamily: 'TimesNewRoman',
-              fontWeight: FontWeight.w600,
+      return Container(
+        margin: margin == null ? EdgeInsets.zero : margin,
+        child: Column(children: [
+          Container(
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+                border: Border(
+                    bottom: BorderSide(
+              color: Colors.black,
+              width: convert(2),
+            ))),
+            child: TextBox(
+              text: title,
+              fontSize: convert(defaultFontSize),
+              bold: true,
             ),
           ),
-        ),
+          Column(
+            children: children,
+          )
+        ]),
+      );
+    }
+
+    Widget bulletPointTitle(
+        Widget title, String location, List<Widget> children) {
+      return Column(children: [
+        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+          title,
+          TextBox(
+            text: location,
+            fontSize: convert(defaultFontSize),
+            bold: true,
+          )
+        ]),
         Column(
           children: children,
         )
       ]);
     }
 
+    Widget bulletPointItem(Widget title, String date, List<Widget> entries) {
+      return Column(children: [
+        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+          title,
+          TextBox(
+            text: date,
+            fontSize: convert(defaultFontSize),
+            italics: true,
+          )
+        ]),
+        Column(
+          children: entries
+              .map((entry) => Row(children: [
+                    TextBox(
+                      text: '•',
+                      fontSize: convert(defaultFontSize),
+                      margin: EdgeInsets.symmetric(horizontal: convert(10)),
+                    ),
+                    entry,
+                  ]))
+              .toList(),
+        )
+      ]);
+    }
+
     return Container(
-        width: 210 * 4,
-        height: 297 * 4,
+        width: 210,
+        height: 297,
         color: Colors.white,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -58,36 +98,87 @@ class MyResume extends StatelessWidget {
                 text: myName,
                 fontSize: convert(30),
                 margin: EdgeInsets.only(top: convert(40), bottom: convert(10)),
-                style: TextStyle(
-                  fontFamily: 'TimesNewRoman',
-                  fontWeight: FontWeight.w600,
-                )),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextBox(text: myAddress, fontSize: convert(defaultFontSize)),
-                TextBox(text: '|', fontSize: convert(defaultFontSize), margin: EdgeInsets.symmetric(horizontal: convert(10)),),
-                TextBox(text: myNumber, fontSize: convert(defaultFontSize), onPressed: () => launch('sms:+1 $myNumber')),
-                TextBox(text: '|', fontSize: convert(defaultFontSize), margin: EdgeInsets.symmetric(horizontal: convert(10)),),
-                TextBox(text: myEmail, fontSize: convert(defaultFontSize), onPressed: () => launch('mailto:$myEmail')),
-              ]
-            ),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
-            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+                bold: true),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              TextBox(text: myAddress, fontSize: convert(defaultFontSize)),
+              TextBox(
+                text: '|',
+                fontSize: convert(defaultFontSize),
+                margin: EdgeInsets.symmetric(horizontal: convert(10)),
+              ),
+              TextBox(
+                  text: myNumber,
+                  fontSize: convert(defaultFontSize),
+                  onPressed: () => launch('sms:+1 $myNumber')),
+              TextBox(
+                text: '|',
+                fontSize: convert(defaultFontSize),
+                margin: EdgeInsets.symmetric(horizontal: convert(10)),
+              ),
+              TextBox(
+                  text: myEmail,
+                  fontSize: convert(defaultFontSize),
+                  onPressed: () => launch('mailto:$myEmail')),
+            ]),
+            makeSection(
+                'Education',
+                [
+                  bulletPointTitle(
+                      TextBox(
+                        text:
+                            'College of Arts and Sciences, New York University',
+                        fontSize: convert(defaultFontSize),
+                        bold: true,
+                        onPressed: () => launch('https://cas.nyu.edu'),
+                      ),
+                      nyc,
+                      [
+                        bulletPointItem(
+                            TextBox(
+                              text:
+                                  'Pursuing B.S. in Computer Science / Mathematics with Honors',
+                              fontSize: convert(defaultFontSize),
+                              italics: true,
+                              onPressed: () =>
+                                  launch('https://courant.nyu.edu'),
+                            ),
+                            'September 2016 - Expected May 2022',
+                            [
+                              Row(
+                                children: [
+                                  TextBox(
+                                      text: 'Current GPA: ',
+                                      fontSize: convert(defaultFontSize)),
+                                  TextBox(
+                                    text: '3.96/4.0',
+                                    fontSize: convert(defaultFontSize),
+                                    bold: true,
+                                    underline: true,
+                                  ),
+                                  TextBox(
+                                    text: ' (Major GPA: ',
+                                    fontSize: convert(defaultFontSize),
+                                  ),
+                                  TextBox(
+                                    text: '4.0/4.0',
+                                    fontSize: convert(defaultFontSize),
+                                    bold: true,
+                                    underline: true,
+                                  ),
+                                  TextBox(
+                                    text:')',
+                                    fontSize: convert(defaultFontSize),
+                                  )
+                                ],
+                              ),
+                              TextBox(
+                                text: 'Honors: CAS Presidential Honors Scholars, Deans\'s List (2016 - 2019), DURF Grant Recipient',
+                                fontSize: convert(defaultFontSize),
+                              )
+                            ])
+                      ])
+                ],
+                EdgeInsets.symmetric(horizontal: 20)),
           ],
         ));
   }
@@ -96,17 +187,21 @@ class MyResume extends StatelessWidget {
 class TextBox extends StatelessWidget {
   TextBox({
     required this.text,
-    this.style,
     this.margin,
     required this.fontSize,
     this.onPressed,
+    this.bold = false,
+    this.italics = false,
+    this.underline = false,
   });
 
   final String text;
-  final TextStyle? style;
   final EdgeInsetsGeometry? margin;
   final double fontSize;
   final void Function()? onPressed;
+  final bool bold;
+  final bool italics;
+  final bool underline;
 
   @override
   Widget build(BuildContext context) {
@@ -114,25 +209,31 @@ class TextBox extends StatelessWidget {
       margin: margin == null ? EdgeInsets.zero : margin,
       child: onPressed == null
           ? Text(text,
-              style: style == null
-                  ? TextStyle(
-                      fontFamily: 'TimesNewRoman',
-                      fontSize: fontSize,
-                    )
-                  : style!.copyWith(fontSize: fontSize))
+              style: TextStyle(
+                fontFamily: 'TimesNewRoman',
+                fontSize: fontSize,
+                fontWeight: bold ? FontWeight.w600 : FontWeight.normal,
+                fontStyle: italics ? FontStyle.italic : FontStyle.normal,
+                decoration:
+                    underline ? TextDecoration.underline : TextDecoration.none,
+              ))
           : TextButton(
               onPressed: onPressed,
               style: ButtonStyle(
-                foregroundColor: MaterialStateProperty.all(Colors.black),
-                overlayColor: MaterialStateProperty.all(Colors.lightBlue.withOpacity(0.15))
-              ),
+                  foregroundColor: MaterialStateProperty.all(Colors.black),
+                  padding: MaterialStateProperty.all(EdgeInsets.zero),
+                  minimumSize: MaterialStateProperty.all(Size.zero),
+                  overlayColor: MaterialStateProperty.all(
+                      Colors.lightBlue.withOpacity(0.15))),
               child: Text(text,
-                  style: style == null
-                      ? TextStyle(
-                          fontFamily: 'TimesNewRoman',
-                          fontSize: fontSize,
-                        )
-                      : style!.copyWith(fontSize: fontSize))),
+                  style: TextStyle(
+                    fontFamily: 'TimesNewRoman',
+                    fontSize: fontSize,
+                    fontStyle: italics ? FontStyle.italic : FontStyle.normal,
+                    decoration: underline
+                        ? TextDecoration.underline
+                        : TextDecoration.none,
+                  ))),
     );
   }
 }

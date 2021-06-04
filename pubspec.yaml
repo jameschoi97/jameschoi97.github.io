@@ -65,6 +65,8 @@ flutter:
     - family: TimesNewRoman
       fonts:
         - asset: assets/fonts/times_new_roman.ttf
+        - asset: assets/fonts/times_new_roman_italic.ttf
+          style: italic
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a

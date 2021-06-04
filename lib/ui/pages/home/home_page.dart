@@ -119,7 +119,7 @@ class HomePage extends GetView<MainController> {
       return Text(
           'Welcome to my website!\n'
               '\nThis is a work in progress, but I will aim to perfect it over the next '
-              'few months, years, or the rest of my life.',
+              'few months / years or maybe even for the rest of my life.',
           style: TextStyle(
             fontSize: MediaQuery.of(context).size.width < 600 ? 20 : 30,
             fontWeight: FontWeight.w600,
