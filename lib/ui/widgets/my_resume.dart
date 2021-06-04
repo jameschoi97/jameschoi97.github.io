@@ -12,7 +12,6 @@ class MyResume extends StatelessWidget {
 
   final double defaultFontSize = 15;
 
-
   @override
   Widget build(BuildContext context) {
     double convert(double originalValue) {
@@ -20,7 +19,7 @@ class MyResume extends StatelessWidget {
       return originalValue / 720 * screenWidth;
     }
 
-    Widget makeSection(
+    Widget section(
         String title, List<Widget> children, EdgeInsetsGeometry? margin) {
       return Container(
         margin: margin == null ? EdgeInsets.zero : margin,
@@ -89,26 +88,23 @@ class MyResume extends StatelessWidget {
     }
 
     Widget listItem(String title, List<String> items) {
-      return Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          TextBox(
-            text: '${title}: ',
-            fontSize: convert(defaultFontSize),
-            bold: true,
-          ),
-          TextBox(
-            text: items.join(', '),
-            fontSize: convert(defaultFontSize),
-          )
-        ]
-      );
+      return Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        TextBox(
+          text: '${title}: ',
+          fontSize: convert(defaultFontSize),
+          bold: true,
+        ),
+        TextBox(
+          text: items.join(', '),
+          fontSize: convert(defaultFontSize),
+        )
+      ]);
     }
 
     final EdgeInsetsGeometry defaultSectionMargin = EdgeInsets.only(
       left: convert(20),
       right: convert(20),
-      bottom: convert(10),
+      top: convert(15),
     );
 
     return Container(
@@ -144,7 +140,7 @@ class MyResume extends StatelessWidget {
                   fontSize: convert(defaultFontSize),
                   onPressed: () => launch('mailto:$myEmail')),
             ]),
-            makeSection(
+            section(
                 'Education',
                 [
                   bulletPointTitle(
@@ -190,37 +186,80 @@ class MyResume extends StatelessWidget {
                                     underline: true,
                                   ),
                                   TextBox(
-                                    text:')',
+                                    text: ')',
                                     fontSize: convert(defaultFontSize),
                                   )
                                 ],
                               ),
                               TextBox(
-                                text: 'Honors: CAS Presidential Honors Scholars, Deans\'s List (2016 - 2019), DURF Grant Recipient',
+                                text:
+                                    'Honors: CAS Presidential Honors Scholars, Deans\'s List (2016 - 2019), DURF Grant Recipient',
                                 fontSize: convert(defaultFontSize),
                               )
                             ])
                       ])
                 ],
                 defaultSectionMargin),
-            makeSection(
+            section(
                 'Coursework',
                 [
-                  listItem(
-                      'Computer Science',
-                      [
-                        'Data Structures',
-                        'Computer Systems Organization',
-                        'Basic Algorithms',
-                        'Operating Systems',
-                        '\nArtificial Intelligence',
-                        'Theory of Computation',
-                        'Numerical Optimization',
-                      ]
+                  listItem('Computer Science', [
+                    'Data Structures',
+                    'Computer Systems Organization',
+                    'Basic Algorithms',
+                    'Operating Systems',
+                    '\nArtificial Intelligence',
+                    'Theory of Computation',
+                    'Numerical Optimization',
+                  ]),
+                  listItem('Mathematics', [
+                    'Calculus',
+                    'Linear Algebra',
+                    'Theory of Probability',
+                    'Numerical Analysis',
+                    'Real Analysis',
+                    '\nAbstract Algebra'
+                  ])
+                ],
+                defaultSectionMargin),
+            section(
+                'Technical Skills',
+                [
+                  listItem('Languages', [
+                    'Python',
+                    'Java',
+                    'HTML',
+                    'Javascript',
+                    'MATLAB',
+                    'Swift',
+                    'Dart',
+                  ])
+                ],
+                defaultSectionMargin),
+            section(
+                'Work Experience',
+                [
+                  bulletPointTitle(
+                    TextBox(
+                      text: 'GE Appliances',
+                      fontSize: convert(defaultFontSize),
+                      bold: true,
+                    ),
+                    'Seongnam, Korea',
+                    [
+                      bulletPointItem(
+                        TextBox(
+                          text: 'Mobile Development Intern',
+                          fontSize: convert(defaultFontSize),
+                          italics: true,
+                        ),
+                        'April 2021 - August 2021',
+                        [],
+                      )
+                    ],
                   )
                 ],
-                defaultSectionMargin
-            ),
+                defaultSectionMargin)
           ],
         ));
   }

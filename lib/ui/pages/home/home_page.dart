@@ -21,6 +21,7 @@ class HomePage extends GetView<MainController> {
 
   @override
   Widget build(BuildContext context) {
+    controller.currentPage.value = Pages.home;
     final pageButtons = Map.fromIterable(subpages,
       key: (entry) => entry as Pages,
       value: (entry) {
@@ -37,7 +38,6 @@ class HomePage extends GetView<MainController> {
             }
           },
           onTap: () {
-            controller.currentPage.value = page;
             Get.toNamed(page.pageName);
           },
           child: Text(
