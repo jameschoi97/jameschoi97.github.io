@@ -73,6 +73,21 @@ class MyResume extends StatelessWidget {
               ]
             ),
             makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
+            makeSection('Education', [], EdgeInsets.symmetric(horizontal: 20)),
           ],
         ));
   }
