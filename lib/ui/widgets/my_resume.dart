@@ -24,11 +24,14 @@ class MyResume extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           margin: margin == null ? EdgeInsets.zero : margin,
           decoration: BoxDecoration(
-              border: Border(
+              border: Border.all(color: Colors.black),
+            /*Border(
                   bottom: BorderSide(
             color: Colors.black,
             width: convert(2),
-          ))),
+          ))*/
+
+          ),
           child: TextBox(
             text: title,
             fontSize: convert(defaultFontSize),
