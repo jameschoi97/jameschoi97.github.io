@@ -68,20 +68,18 @@ class ShqsPage extends StatelessWidget{
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 70, vertical: 20),
-            child: ConstrainedBox(
-              constraints: BoxConstraints(
-                maxWidth: 750,
-              ),
-              child: Text('During my time at GE Appliances, I was working with the Smart HQ Service team. '
-                  'Smart HQ Service helps technicians provide better repair services by giving them resources such '
-                  'as diagnostics data for the appliances. My main job in the team was to work on the cross-platform app, '
-                  'so that the technicians could access the app not only on their phones, but also'
-                  ' through web on a bigger screen. These are some of the features I added to SmartHQ Service during my internship:',
+            constraints: BoxConstraints(
+              maxWidth: 750,
+            ),
+            child: Text('During my time at GE Appliances, I was working with the Smart HQ Service team. '
+                'Smart HQ Service helps technicians provide better repair services by giving them resources such '
+                'as diagnostics data for the appliances. My main job in the team was to work on the cross-platform app, '
+                'so that the technicians could access the app not only on their phones, but also'
+                ' through web on a bigger screen. These are some of the features I added to SmartHQ Service during my internship:',
                 style: TextStyle(
                   fontSize: 16,
                 )
-              )
-            ),
+            )
           ),
           MyGrid(
             isScrollable: false,

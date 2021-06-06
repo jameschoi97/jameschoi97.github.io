@@ -35,7 +35,10 @@ class ResumePage extends GetView<MainController> {
                     fontWeight: FontWeight.w600,
                   ),
                   recognizer: TapGestureRecognizer()..onTap = () => Get.to(() => StaticResumePage()),
-                )
+                ),
+                TextSpan(
+                  text: '.'
+                ),
               ],
 
             ),
