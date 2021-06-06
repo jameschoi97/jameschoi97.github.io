@@ -374,7 +374,7 @@ class MyResume extends StatelessWidget {
                       fontSize: normalFontSize,
                     ),
                     TextBox(
-                      text: 'Attend NYU\'s Sophomore Leadership Development Series; topics include logistics of organizing events,'
+                      text: 'Attended NYU\'s Sophomore Leadership Development Series; topics included logistics of organizing events,'
                           '\nhelping transfer students transition into NYU, and team-building with other cohort presidents',
                       fontSize: normalFontSize,
                     )
