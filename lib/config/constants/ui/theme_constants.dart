@@ -54,7 +54,8 @@ abstract class MyTheme {
 
   ThemeData get themeData => ThemeData(
       fontFamily: 'Montserrat',
-      textTheme: textTheme
+      textTheme: textTheme,
+      textButtonTheme: TextButtonThemeData(style: buttonStyle),
 
   );
 
@@ -66,6 +67,13 @@ abstract class MyTheme {
             colorSet.gradientStart,
             colorSet.gradientEnd
           ]));
+
+  ButtonStyle get buttonStyle => ButtonStyle(
+      foregroundColor: MaterialStateProperty.all(colorSet.fontColor),
+      padding: MaterialStateProperty.all(EdgeInsets.zero),
+      minimumSize: MaterialStateProperty.all(Size.zero),
+      overlayColor: MaterialStateProperty.all(
+          Colors.lightBlue.withOpacity(0.15)));
 
 
   String get name;

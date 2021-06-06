@@ -60,17 +60,22 @@ class MyScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: appBar,
-        body: SingleChildScrollView(
-          child: ConstrainedBox(
-            constraints: BoxConstraints(
-              minHeight: MediaQuery.of(context).size.height - 56,
-              minWidth: MediaQuery.of(context).size.width,
-            ),
-            child: Container(
+        body: Stack(
+          children: [
+            Container(
               decoration: Get.find<MyThemeController>().background,
-              child: body,
             ),
-          ),
+            SingleChildScrollView(
+              child: body,
+              /*child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: MediaQuery.of(context).size.height - 56,
+                  minWidth: MediaQuery.of(context).size.width,
+                ),
+                child: body
+              ),*/
+            ),
+          ],
         ),
         floatingActionButton: floatingActionButton,
         floatingActionButtonLocation: floatingActionButtonLocation,

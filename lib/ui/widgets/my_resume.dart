@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:jameschoi97/ui/pages/resume/subpages/shqs_page.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:get/get.dart';
 
 class MyResume extends StatelessWidget {
   final myName = 'James Choi';
@@ -157,6 +159,7 @@ class MyResume extends StatelessWidget {
                     text:
                     'Worked in SmartHQ Service Team, mainly focusing on the cross-platform app built with Flutter SDK',
                     fontSize: normalFontSize,
+                    onPressed: () => Get.to(() => ShqsPage()),
                   ),
                   TextBox(
                     text: 'Won 3rd place in 5th GEA hackathon',
@@ -537,11 +540,7 @@ class TextBox extends StatelessWidget {
           : TextButton(
               onPressed: onPressed,
               style: ButtonStyle(
-                  foregroundColor: MaterialStateProperty.all(Colors.black),
-                  padding: MaterialStateProperty.all(EdgeInsets.zero),
-                  minimumSize: MaterialStateProperty.all(Size.zero),
-                  overlayColor: MaterialStateProperty.all(
-                      Colors.lightBlue.withOpacity(0.15))),
+                  foregroundColor: MaterialStateProperty.all(Colors.black),),
               child: Text(text,
                   style: TextStyle(
                     fontFamily: 'TimesNewRoman',
