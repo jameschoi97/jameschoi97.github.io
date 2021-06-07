@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:jameschoi97/ui/pages/about_me/about_me_page.dart';
 import 'package:jameschoi97/ui/pages/home/home_page.dart';
+import 'package:jameschoi97/ui/pages/movies/movies_controller.dart';
 import 'package:jameschoi97/ui/pages/movies/movies_page.dart';
 import 'package:jameschoi97/ui/pages/resume/resume_page.dart';
 
@@ -48,7 +49,9 @@ const pages = [
   Pages.movies,
 ];
 
+
 class MainController extends GetxController {
   final currentPage = Pages.home.obs;
   final hoverPage = Pages.home.obs;
+  final movieController = Get.put(MoviesController());
 }

@@ -1,8 +1,11 @@
+import 'dart:async';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jameschoi97/config/constants/ui/theme_constants.dart';
 import 'package:jameschoi97/main_controller.dart';
+import 'package:jameschoi97/ui/widgets/my_movies.dart';
 import 'package:jameschoi97/ui/widgets/my_scaffold.dart';
 import 'package:jameschoi97/ui/widgets/responsive_widget.dart';
 
@@ -18,9 +21,15 @@ class HomePage extends GetView<MainController> {
   ];
 
   final _themeController = Get.find<MyThemeController>();
+  late final moviePanel = MoviePanel(
+      column: 4,
+      row: 3,
+      paths: controller.movieController.paths);
+
 
   @override
   Widget build(BuildContext context) {
+
     controller.currentPage.value = Pages.home;
     final pageButtons = Map.fromIterable(subpages,
       key: (entry) => entry as Pages,
@@ -32,8 +41,18 @@ class HomePage extends GetView<MainController> {
               ? null
               : (hovering) {
             if (hovering) {
+              if(page == Pages.movies){
+                for (int index = 0; index < controller.movieController.visibilities!.length; index++){
+                  Timer(Duration(milliseconds: 200*index), () => controller.movieController.visibilities![index] = true);
+                }
+              }
               controller.hoverPage.value = page;
             } else {
+              if(page == Pages.movies){
+                for (int index = 0; index < controller.movieController.visibilities!.length; index++){
+                  controller.movieController.visibilities![index] = false;
+                }
+              }
               controller.hoverPage.value = Pages.home;
             }
           },
@@ -149,7 +168,9 @@ class HomePage extends GetView<MainController> {
     } else if (page == Pages.resume) {
       return Image.asset('assets/images/resume.png', fit: BoxFit.fitHeight);
     } else if (page == Pages.movies) {
-      return Container();
+      return Center(
+        child: moviePanel,
+      );
     } else {
       return Container();
     }
