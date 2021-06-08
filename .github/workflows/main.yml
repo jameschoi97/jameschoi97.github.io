@@ -13,17 +13,6 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  image_resize:
-    name: Image Resizer Action
-    runs-on: ubuntu-latest
-    steps:
-      - uses: sharadcodes/img-resizer@v1.1
-        with:
-          image-folder: './assets/images/posters' # This is a Required field & this folder has original images
-          new-resolution: '200x300' # This is Required field
-          output-folder: './assets/images/thumbnails' # This is Required field & this folder will be used to store resized images
-
-
   build:
     name: Web build
     runs-on: ubuntu-latest
