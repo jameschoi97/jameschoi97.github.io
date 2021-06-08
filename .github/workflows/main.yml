@@ -16,11 +16,11 @@ jobs:
   image_resize:
     name: Image Resizer Action
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./assets/images
+    env:
+      working-directory: ./assets/images
     steps:
       - uses: sharadcodes/img-resizer@v1.1
+        working-directory: ${{env.working-directory}}
         with:
           image-folder: 'posters' # This is a Required field & this folder has original images
           new-resolution: '200x300' # This is Required field
