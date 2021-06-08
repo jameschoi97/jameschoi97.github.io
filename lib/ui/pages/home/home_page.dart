@@ -5,13 +5,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jameschoi97/config/constants/ui/theme_constants.dart';
 import 'package:jameschoi97/main_controller.dart';
+import 'package:jameschoi97/ui/pages/home/home_controller.dart';
 import 'package:jameschoi97/ui/widgets/my_movies.dart';
 import 'package:jameschoi97/ui/widgets/my_scaffold.dart';
 import 'package:jameschoi97/ui/widgets/responsive_widget.dart';
 
 import 'package:get/get.dart';
 
-class HomePage extends GetView<MainController> {
+class HomePage extends GetView<HomeController> {
   static final name = '/home';
 
   final subpages = [
@@ -21,10 +22,13 @@ class HomePage extends GetView<MainController> {
   ];
 
   final _themeController = Get.find<MyThemeController>();
+  final _mainController = Get.find<MainController>();
 
   @override
   Widget build(BuildContext context) {
-    controller.currentPage.value = Pages.home;
+    controller.smallScreen = ResponsiveWidget.isSmallScreen(context);
+    controller.moviesContentLength = MediaQuery.of(context).size.width;
+    _mainController.currentPage.value = Pages.home;
     final pageButtons = Map.fromIterable(subpages,
         key: (entry) => entry as Pages,
         value: (entry) {
@@ -33,41 +37,17 @@ class HomePage extends GetView<MainController> {
             hoverColor: _themeController.theme.colorSet.appBarHoverColor,
             onHover: ResponsiveWidget.isSmallScreen(context)
                 ? null
-                : (hovering) {
+                : (hovering) async{
                     if (hovering) {
                       if (page == Pages.movies) {
-                        for (int index = 0;
-                            index <
-                                controller.movieController.visibilities!.length;
-                            index++) {
-                          controller.movieController.timers.add(Timer(
-                              Duration(
-                                  milliseconds: (controller
-                                              .movieController.panelDuration /
-                                          controller.movieController
-                                              .visibilities!.length *
-                                          index)
-                                      .ceil()),
-                              () => controller
-                                  .movieController.visibilities![index] = true));
-                        }
+                        _mainController.movieController.showPanel();
                       }
-                      controller.hoverPage.value = page;
+                      _mainController.hoverPage.value = page;
                     } else {
+                      _mainController.hoverPage.value = Pages.home;
                       if (page == Pages.movies) {
-                        for (Timer timer in controller.movieController.timers) {
-                          timer.cancel();
-                        }
-                        controller.movieController.timers.clear();
-                        for (int index = 0;
-                            index <
-                                controller.movieController.visibilities!.length;
-                            index++) {
-                          controller.movieController.visibilities![index] =
-                              false;
-                        }
+                        _mainController.movieController.hidePanel();
                       }
-                      controller.hoverPage.value = Pages.home;
                     }
                   },
             onTap: () {
@@ -86,6 +66,7 @@ class HomePage extends GetView<MainController> {
         });
 
     return MyScaffold(
+      scrollController: controller.scrollController,
       body: ResponsiveWidget(
         smallScreen: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -96,11 +77,12 @@ class HomePage extends GetView<MainController> {
                 child: getItem(context, Pages.home)),
             Column(
               children: subpages
-                  .map((page) => Column(children: [
+                  .map((page) => Column(
+                  children: [
                         Container(
                             height: MediaQuery.of(context).size.width,
                             padding: EdgeInsets.symmetric(vertical: 50),
-                            child: getItem(context, page)),
+                            child: Center(child: getItem(context, page))),
                         Container(
                             margin: EdgeInsets.symmetric(vertical: 20),
                             child: pageButtons[page]!),
@@ -132,7 +114,7 @@ class HomePage extends GetView<MainController> {
                       child: Stack(
                         children: pages
                             .map((page) => AnimatedOpacity(
-                                  opacity: controller.hoverPage.value == page
+                                  opacity: _mainController.hoverPage.value == page
                                       ? 1
                                       : 0,
                                   duration: Duration(milliseconds: 200),
@@ -247,7 +229,7 @@ class HomePage extends GetView<MainController> {
       return Container(
         padding: EdgeInsets.symmetric(horizontal: 30),
         child: MoviePanel(
-            column: 12, row: 5, images: controller.movieController.imageNames, width: MediaQuery.of(context).size.width,),
+            column: 12, row: 5, images: _mainController.movieController.imageNames, width: MediaQuery.of(context).size.width,),
       );
     } else {
       return Container();

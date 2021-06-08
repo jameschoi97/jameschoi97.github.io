@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jameschoi97/config/constants/ui/theme_constants.dart';
 import 'package:jameschoi97/ui/pages/about_me/about_me_page.dart';
+import 'package:jameschoi97/ui/pages/home/home_bindings.dart';
 import 'package:jameschoi97/ui/pages/home/home_page.dart';
 import 'package:jameschoi97/ui/pages/movies/movies_page.dart';
 import 'package:jameschoi97/ui/pages/resume/resume_page.dart';
@@ -25,6 +26,7 @@ class MyWebApp extends StatelessWidget {
         GetPage(
           name: HomePage.name,
           page: () => HomePage(),
+          binding: HomeBindings(),
         ),
         GetPage(
           name: AboutMePage.name,

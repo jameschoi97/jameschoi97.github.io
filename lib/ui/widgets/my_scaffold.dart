@@ -30,6 +30,7 @@ class MyScaffold extends StatelessWidget {
     this.drawerEnableOpenDragGesture = true,
     this.endDrawerEnableOpenDragGesture = true,
     this.restorationId,
+    this.scrollController,
   });
 
   final appBar;
@@ -54,6 +55,7 @@ class MyScaffold extends StatelessWidget {
   final bool drawerEnableOpenDragGesture;
   final bool endDrawerEnableOpenDragGesture;
   final restorationId;
+  final ScrollController? scrollController;
 
 
   @override
@@ -67,6 +69,7 @@ class MyScaffold extends StatelessWidget {
             ),
             SingleChildScrollView(
               child: body,
+              controller: scrollController,
               /*child: ConstrainedBox(
                 constraints: BoxConstraints(
                   minHeight: MediaQuery.of(context).size.height - 56,

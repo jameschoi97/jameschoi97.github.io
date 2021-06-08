@@ -45,7 +45,7 @@ class MoviePanel extends GetWidget<MoviesController> {
                 final itemColumn = (indexEntry.key % column).floor();
                 return Obx(() => AnimatedOpacity(
                         opacity: controller.visibilities![itemRow + itemColumn] ? 1 : 0,
-                        duration: Duration(milliseconds: 500),
+                        duration: Duration(milliseconds: (controller.panelDuration / (row + column - 1) + 100).ceil()),
                   child: Image.asset(
                       'assets/images/thumbnails/${images[indexEntry.value-1]}'
                       , fit: BoxFit.fitHeight),

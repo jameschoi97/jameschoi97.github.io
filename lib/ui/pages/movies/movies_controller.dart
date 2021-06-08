@@ -10,7 +10,7 @@ class MoviesController extends GetxController {
 
   RxList<bool>? visibilities;
   List<Timer> timers = [];
-  final int panelDuration = 1500;
+  final int panelDuration = 1000;
 
   @override
   void onInit() {
@@ -25,6 +25,26 @@ class MoviesController extends GetxController {
     }
     print(imageNames);
     super.onInit();
+  }
+
+  void showPanel() {
+    for (int index = 0; index < visibilities!.length; index++) {
+      timers.add(Timer(
+          Duration(
+              milliseconds:
+                  (panelDuration / visibilities!.length * index).ceil()),
+          () => visibilities![index] = true));
+    }
+  }
+
+  void hidePanel() {
+    for (Timer timer in timers) {
+      timer.cancel();
+    }
+    timers.clear();
+    for (int index = 0; index < visibilities!.length; index++) {
+      visibilities![index] = false;
+    }
   }
 }
 
