@@ -11,50 +11,56 @@ class MoviePanel extends GetWidget<MoviesController> {
   MoviePanel({
     required this.column,
     required this.row,
-    required this.paths,
+    required this.images,
+    this.width = 800,
   });
 
   int row;
   int column;
-  List<String> paths;
+  List<String> images;
+  double width;
 
   @override
   Widget build(BuildContext context) {
     final total = row * column;
-    if (total > paths.length) {
+    if (total > images.length) {
       return Container(
-        child: Text('Something wrong ${paths.length}'),
+        child: Text('Something wrong ${images.length}'),
       );
     } else {
-      final indices = getRandomIndices(total, paths);
+      final indices = getRandomIndices(total, images);
       controller.visibilities = RxList<bool>.filled(row + column - 1, false);
-      return Container(
-        width: 800,
-        height: 450,
-        child: MyGrid(
-          row: row,
-          column: column,
-          hasBorder: false,
-          isScrollable: false,
-          children: indices.asMap().entries.map((indexEntry) {
-            final itemRow = (indexEntry.key / column).floor();
-            final itemColumn = (indexEntry.key % column).floor();
-            return Obx(() => AnimatedOpacity(
-                    opacity: controller.visibilities![itemRow + itemColumn] ? 1 : 0,
-                    duration: Duration(milliseconds: 500),
-              child: Image.asset(
-                  paths[indexEntry.value-1]
-                  , fit: BoxFit.fitHeight),
-                ));
-          }).toList(),
+      return Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            width: width,
+            child: MyGrid(
+              row: row,
+              column: column,
+              hasBorder: false,
+              isScrollable: false,
+              children: indices.asMap().entries.map((indexEntry) {
+                final itemRow = (indexEntry.key / column).floor();
+                final itemColumn = (indexEntry.key % column).floor();
+                return Obx(() => AnimatedOpacity(
+                        opacity: controller.visibilities![itemRow + itemColumn] ? 1 : 0,
+                        duration: Duration(milliseconds: 500),
+                  child: Image.asset(
+                      'assets/images/thumbnails/${images[indexEntry.value-1]}'
+                      , fit: BoxFit.fitHeight),
+                    ));
+              }).toList(),
 
-        )
+            )
+          ),
+        ],
       );
     }
   }
 
-  List<int> getRandomIndices(int count, List<String> paths) {
-    var originalIndices = new List<int>.generate(paths.length, (i) => i + 1);
+  List<int> getRandomIndices(int count, List<String> images) {
+    var originalIndices = new List<int>.generate(images.length, (i) => i + 1);
     var indices = <int>[];
     final random = Random();
     while (indices.length < count) {

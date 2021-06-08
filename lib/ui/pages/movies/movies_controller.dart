@@ -1,12 +1,16 @@
+import 'dart:async';
+
 import 'package:get/get.dart';
 import 'package:jameschoi97/ui/pages/movies/movies_xml.dart';
 import 'package:xml/xml.dart';
 
 class MoviesController extends GetxController {
-  final paths = <String>[];
+  final imageNames = <String>[];
   final movies = <Movie>[];
 
   RxList<bool>? visibilities;
+  List<Timer> timers = [];
+  final int panelDuration = 1500;
 
   @override
   void onInit() {
@@ -15,11 +19,11 @@ class MoviesController extends GetxController {
     for (var node in movieNodes.children) {
       final movie = Movie(node);
       movies.add(movie);
-      if (movie.imagePath != null) {
-        paths.add(movie.imagePath!);
+      if (movie.imageName != null) {
+        imageNames.add(movie.imageName!);
       }
     }
-    print(paths);
+    print(imageNames);
     super.onInit();
   }
 }
@@ -28,7 +32,7 @@ class Movie {
   String name;
   String? year;
   String? series;
-  String? imagePath;
+  String? imageName;
 
   Movie(XmlNode node)
       : name = node.getElement('Name')!.firstChild.toString(),
@@ -38,7 +42,7 @@ class Movie {
         series = node.getElement('Series') == null
             ? null
             : node.getElement('Series')!.firstChild.toString(),
-        imagePath = node.getElement('ImgName') == null
+        imageName = node.getElement('ImgName') == null
             ? null
-            : 'assets/images/posters/${node.getElement('ImgName')!.firstChild}';
+            : node.getElement('ImgName')!.firstChild.toString();
 }

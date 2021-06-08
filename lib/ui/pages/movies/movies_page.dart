@@ -21,7 +21,7 @@ class MoviesPage extends GetView<MainController> {
         child: MoviePanel(
             column: 3,
             row: 3,
-            paths: controller.movieController.paths),
+            images: controller.movieController.imageNames),
       ),
     );
   }

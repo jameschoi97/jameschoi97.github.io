@@ -24,46 +24,66 @@ class HomePage extends GetView<MainController> {
 
   @override
   Widget build(BuildContext context) {
-
     controller.currentPage.value = Pages.home;
     final pageButtons = Map.fromIterable(subpages,
-      key: (entry) => entry as Pages,
-      value: (entry) {
-      final page = entry as Pages;
-      return InkWell(
-          hoverColor: _themeController.theme.colorSet.appBarHoverColor,
-          onHover: ResponsiveWidget.isSmallScreen(context)
-              ? null
-              : (hovering) {
-            if (hovering) {
-              if(page == Pages.movies){
-                for (int index = 0; index < controller.movieController.visibilities!.length; index++){
-                  Timer(Duration(milliseconds: 200*index), () => controller.movieController.visibilities![index] = true);
-                }
-              }
-              controller.hoverPage.value = page;
-            } else {
-              if(page == Pages.movies){
-                for (int index = 0; index < controller.movieController.visibilities!.length; index++){
-                  controller.movieController.visibilities![index] = false;
-                }
-              }
-              controller.hoverPage.value = Pages.home;
-            }
-          },
-          onTap: () {
-            Get.toNamed(page.pageName);
-          },
-          child: Text(
-            page.name.toUpperCase(),
-            style: TextStyle(
-              fontSize: 40,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 4,
+        key: (entry) => entry as Pages,
+        value: (entry) {
+          final page = entry as Pages;
+          return InkWell(
+            hoverColor: _themeController.theme.colorSet.appBarHoverColor,
+            onHover: ResponsiveWidget.isSmallScreen(context)
+                ? null
+                : (hovering) {
+                    if (hovering) {
+                      if (page == Pages.movies) {
+                        for (int index = 0;
+                            index <
+                                controller.movieController.visibilities!.length;
+                            index++) {
+                          controller.movieController.timers.add(Timer(
+                              Duration(
+                                  milliseconds: (controller
+                                              .movieController.panelDuration /
+                                          controller.movieController
+                                              .visibilities!.length *
+                                          index)
+                                      .ceil()),
+                              () => controller
+                                  .movieController.visibilities![index] = true));
+                        }
+                      }
+                      controller.hoverPage.value = page;
+                    } else {
+                      if (page == Pages.movies) {
+                        for (Timer timer in controller.movieController.timers) {
+                          timer.cancel();
+                        }
+                        controller.movieController.timers.clear();
+                        for (int index = 0;
+                            index <
+                                controller.movieController.visibilities!.length;
+                            index++) {
+                          controller.movieController.visibilities![index] =
+                              false;
+                        }
+                      }
+                      controller.hoverPage.value = Pages.home;
+                    }
+                  },
+            onTap: () {
+              Get.toNamed(page.pageName);
+            },
+            child: Text(
+              page.name.toUpperCase(),
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.w600,
+                letterSpacing: 4,
+              ),
             ),
-          ),
-        );
-      });
+          );
+        });
 
     return MyScaffold(
       body: ResponsiveWidget(
@@ -72,23 +92,20 @@ class HomePage extends GetView<MainController> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              padding: EdgeInsets.symmetric(vertical: 50, horizontal: 100),
-                child: getItem(context, Pages.home)
-            ),
+                padding: EdgeInsets.symmetric(vertical: 50, horizontal: 100),
+                child: getItem(context, Pages.home)),
             Column(
-              children: subpages.map((page) => Column(
-                children: [
-                  Container(
-                    height: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.symmetric(vertical: 50),
-                      child: getItem(context,page)
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(vertical: 20),
-                      child: pageButtons[page]!
-                  ),
-                ]
-              )).toList(),
+              children: subpages
+                  .map((page) => Column(children: [
+                        Container(
+                            height: MediaQuery.of(context).size.width,
+                            padding: EdgeInsets.symmetric(vertical: 50),
+                            child: getItem(context, page)),
+                        Container(
+                            margin: EdgeInsets.symmetric(vertical: 20),
+                            child: pageButtons[page]!),
+                      ]))
+                  .toList(),
             ),
           ],
         ),
@@ -99,29 +116,31 @@ class HomePage extends GetView<MainController> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: subpages.map((page) => Container(
-                    padding: EdgeInsets.symmetric(vertical: 30),
-                    child: pageButtons[page],
-                  )).toList(),
+                  children: subpages
+                      .map((page) => Container(
+                            padding: EdgeInsets.symmetric(vertical: 30),
+                            child: pageButtons[page],
+                          ))
+                      .toList(),
                 )),
             Expanded(
-                flex: 3,
+                flex: 5,
                 child: Obx(() => ConstrainedBox(
-                  constraints: BoxConstraints(
-                    maxHeight: MediaQuery.of(context).size.height,
-                  ),
-                  child: Stack(
+                      constraints: BoxConstraints(
+                        maxHeight: MediaQuery.of(context).size.height,
+                      ),
+                      child: Stack(
                         children: pages
                             .map((page) => AnimatedOpacity(
                                   opacity: controller.hoverPage.value == page
                                       ? 1
                                       : 0,
                                   duration: Duration(milliseconds: 200),
-                                  child: Center(child: getItem(context,page)),
+                                  child: Center(child: getItem(context, page)),
                                 ))
                             .toList(),
                       ),
-                )))
+                    )))
           ],
         ),
       ),
@@ -131,25 +150,88 @@ class HomePage extends GetView<MainController> {
   Widget getItem(BuildContext context, Pages page) {
     if (page == Pages.home) {
       return Text(
-          'Welcome to my website!\n'
-              '\nThis is a work in progress, but I will aim to perfect it over the next '
-              'few months / years or maybe even for the rest of my life.',
-          style: TextStyle(
-            fontSize: MediaQuery.of(context).size.width < 600 ? 20 : 30,
-            fontWeight: FontWeight.w600,
-            letterSpacing: 4,
-          ),
-          textAlign: TextAlign.center,
+        'Welcome to my website!\n'
+        '\nThis is a work in progress, but I will aim to perfect it over the next '
+        'few months / years or maybe even for the rest of my life.',
+        style: TextStyle(
+          fontSize: MediaQuery.of(context).size.width < 600 ? 20 : 30,
+          fontWeight: FontWeight.w600,
+          letterSpacing: 4,
+        ),
+        textAlign: TextAlign.center,
       );
     } else if (page == Pages.aboutMe) {
       return CarouselSlider(
           items: [
-            Image.asset('assets/images/me_1.png', fit: BoxFit.fitHeight),
-            Image.asset('assets/images/me_2.png', fit: BoxFit.fitHeight),
-            Image.asset('assets/images/me_3.png', fit: BoxFit.fitHeight)
+            Stack(
+              alignment: AlignmentDirectional.bottomCenter,
+              children: [
+                Image.asset('assets/images/me_1.png', fit: BoxFit.fitHeight),
+                Container(
+                  padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+                  width: MediaQuery.of(context).size.width,
+                  child:
+                    FittedBox(
+                      fit: BoxFit.fitWidth,
+                      child: Text('SMART',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white.withOpacity(0.8),
+                        letterSpacing: 3
+                      ),)
+                    )
+
+                  ,
+                )
+              ],
+            ),
+            Stack(
+              alignment: AlignmentDirectional.bottomCenter,
+              children: [
+                Image.asset('assets/images/me_2.png', fit: BoxFit.fitHeight),
+                Container(
+                  padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.05),
+                  width: MediaQuery.of(context).size.width,
+                  child:
+                  FittedBox(
+                      fit: BoxFit.fitWidth,
+                      child: Text('FOCUSED',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white.withOpacity(0.8),
+                            letterSpacing: 3
+                        ),)
+                  )
+
+                  ,
+                )
+              ],
+            ),
+            Stack(
+              alignment: AlignmentDirectional.bottomCenter,
+              children: [
+                Image.asset('assets/images/me_3.png', fit: BoxFit.fitHeight),
+                Container(
+                  padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.06),
+                  width: MediaQuery.of(context).size.width,
+                  child:
+                  FittedBox(
+                      fit: BoxFit.fitWidth,
+                      child: Text('CONFIDENT',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white.withOpacity(0.8),
+                            letterSpacing: 3
+                        ),)
+                  )
+
+                  ,
+                )
+              ],
+            ),
           ],
           options: CarouselOptions(
-            aspectRatio: 16/14,
+            aspectRatio: 16 / 14,
             viewportFraction: 0.7,
             autoPlay: true,
             autoPlayInterval: Duration(milliseconds: 1500),
@@ -158,16 +240,14 @@ class HomePage extends GetView<MainController> {
             enlargeCenterPage: true,
             enlargeStrategy: CenterPageEnlargeStrategy.scale,
             scrollPhysics: NeverScrollableScrollPhysics(),
-          )
-      );
+          ));
     } else if (page == Pages.resume) {
       return Image.asset('assets/images/resume.png', fit: BoxFit.fitHeight);
     } else if (page == Pages.movies) {
-      return Center(
+      return Container(
+        padding: EdgeInsets.symmetric(horizontal: 30),
         child: MoviePanel(
-            column: 9,
-            row: 3,
-            paths: controller.movieController.paths),
+            column: 12, row: 5, images: controller.movieController.imageNames, width: MediaQuery.of(context).size.width,),
       );
     } else {
       return Container();

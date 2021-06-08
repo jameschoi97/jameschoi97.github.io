@@ -191,146 +191,128 @@ const moviesXml = '''<?xml version="1.0"?>
         <ImgName>babe.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Back to the Future </Name>
-
+        <Year>1985</Year>
+        <Series>Back to the Future</Series>
+        <ImgName>back_to_the_future.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Back to the Future 2</Name>
-
+        <Name>Back to the Future Part Ⅱ</Name>
+        <Year>1989</Year>
+        <Series>Back to the Future</Series>
+        <ImgName>back_to_the_future_part_2.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Back to the Future 3</Name>
-
+        <Name>Back to the Future Part Ⅲ</Name>
+        <Year>1990</Year>
+        <Series>Back to the Future</Series>
+        <ImgName>back_to_the_future_part_3.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Bad Moms</Name>
-
+        <Year>2016</Year>
+        <ImgName>bad_moms.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Bad Teacher</Name>
-
+        <Year>2011</Year>
+        <ImgName>bad_teacher.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Basic Instinct</Name>
-
+        <Year>1992</Year>
+        <Series>Basic Instinct</Series>
+        <ImgName>basic_instinct.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Basic Instinct 2</Name>
-
+        <Year>2006</Year>
+        <Series>Basic Instinct</Series>
+        <ImgName>basic_instinct_2.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Batman Begins</Name>
-
-
         <Year>2005</Year>
-
-
         <Series>The Dark Knight</Series>
-
+        <ImgName>batman_begins.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>The Dark Knight Rises</Name>
-
-
         <Year>2012</Year>
-
-
         <Series>The Dark Knight</Series>
-
+        <ImgName>the_dark_knight_rises.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Battleship</Name>
-
+        <Year>2012</Year>
+        <ImgName>battleship.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Baywatch</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Beauty and the Beast</Name>
-
-
         <Year>2017</Year>
-
+        <ImgName>baywatch.jpg</ImgName>
     </Movie>
     <Movie>
-
+        <Name>Beauty and the Beast</Name>
+        <Year>2017</Year>
+        <ImgName>beauty_and_the_beast.jpg</ImgName>
+    </Movie>
+    <Movie>
         <Name>Bee Movie</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Big Hero 6</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Black Panther</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Black Swan</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Blue Mountain State The Rise of Thadland</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Bolt</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Borat</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Brave</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Bruce Almighty</Name>
-
-
-        <Year>2003</Year>
-
-
-        <Series>Bruce Almighty</Series>
-
-    </Movie>
-    <Movie>
-
-        <Name>Evan Almighty</Name>
-
-
         <Year>2007</Year>
-
-
-        <Series>Bruce Almighty</Series>
-
+        <ImgName>bee_movie.jpg</ImgName>
     </Movie>
     <Movie>
-
+        <Name>Big Hero 6</Name>
+        <Year>2014</Year>
+        <ImgName>big_hero_6.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Black Panther</Name>
+        <Year>2018</Year>
+        <ImgName>black_panther.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Black Swan</Name>
+        <Year>2010</Year>
+        <ImgName>black_swan.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Blue Mountain State: The Rise of Thadland</Name>
+        <Year>2016</Year>
+        <ImgName>blue_mountain_state_the_rise_of_thadland.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Bolt</Name>
+        <Year>2008</Year>
+        <ImgName>bolt.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan</Name>
+        <Year>2006</Year>
+        <ImgName>borat.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Brave</Name>
+        <Year>2012</Year>
+        <ImgName>brave.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Bruce Almighty</Name>
+        <Year>2003</Year>
+        <Series>Bruce Almighty</Series>
+        <ImgName>bruce_almighty.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Evan Almighty</Name>
+        <Year>2007</Year>
+        <Series>Bruce Almighty</Series>
+        <ImgName>evan_almighty.jpg</ImgName>
+    </Movie>
+    <Movie>
         <Name>Burning Sands</Name>
-
+        <Year>2017</Year>
+        <ImgName>burning_sands.jpg</ImgName>
     </Movie>
     <Movie>
 
@@ -2135,6 +2117,11 @@ const moviesXml = '''<?xml version="1.0"?>
 
         <Year>2009</Year>
 
+    </Movie>
+    <Movie>
+        <Name>Aladdin</Name>
+        <Year>2019</Year>
+        <ImgName>aladdin.jpg</ImgName>
     </Movie>
 </Movies>
 ''';
