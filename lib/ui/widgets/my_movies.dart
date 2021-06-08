@@ -29,8 +29,8 @@ class MoviePanel extends GetWidget<MoviesController> {
       final indices = getRandomIndices(total, paths);
       controller.visibilities = RxList<bool>.filled(row + column - 1, false);
       return Container(
-        width: 300,
-        height: 400,
+        width: 800,
+        height: 450,
         child: MyGrid(
           row: row,
           column: column,
@@ -44,7 +44,7 @@ class MoviePanel extends GetWidget<MoviesController> {
                     duration: Duration(milliseconds: 500),
               child: Image.asset(
                   paths[indexEntry.value-1]
-                  , width: 50),
+                  , fit: BoxFit.fitHeight),
                 ));
           }).toList(),
 

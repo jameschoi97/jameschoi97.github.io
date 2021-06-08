@@ -21,11 +21,6 @@ class HomePage extends GetView<MainController> {
   ];
 
   final _themeController = Get.find<MyThemeController>();
-  late final moviePanel = MoviePanel(
-      column: 4,
-      row: 3,
-      paths: controller.movieController.paths);
-
 
   @override
   Widget build(BuildContext context) {
@@ -169,7 +164,10 @@ class HomePage extends GetView<MainController> {
       return Image.asset('assets/images/resume.png', fit: BoxFit.fitHeight);
     } else if (page == Pages.movies) {
       return Center(
-        child: moviePanel,
+        child: MoviePanel(
+            column: 9,
+            row: 3,
+            paths: controller.movieController.paths),
       );
     } else {
       return Container();
