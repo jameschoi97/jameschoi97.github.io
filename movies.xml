@@ -315,15 +315,10 @@
         <ImgName>burning_sands.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Captain America: The First Avenger</Name>
-
-
         <Year>2011</Year>
-
-
         <Series>Captain America</Series>
-
+        <ImgName>captain_america_the_first_avenger.jpg</ImgName>
     </Movie>
     <Movie>
 
