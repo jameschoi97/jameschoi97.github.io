@@ -430,6 +430,7 @@ const moviesXml = '''<?xml version="1.0"?>
         <Year>2018</Year>
         <Series>Deadpool</Series>
         <ImgName>deadpool_2.jpg</ImgName>
+    </Movie>
     <Movie>
         <Name>Despicable Me</Name>
         <Year>2010</Year>
