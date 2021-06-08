@@ -11,7 +11,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  - name: Image Resizer Action
+  image_resize:
+    name: Image Resizer Action
     uses: sharadcodes/img-resizer@v1.1
     with:
       image-folder: 'assets/images/posters' # This is a Required field & this folder has original images
