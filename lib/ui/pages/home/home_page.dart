@@ -79,10 +79,13 @@ class HomePage extends GetView<HomeController> {
               children: subpages
                   .map((page) => Column(
                   children: [
-                        Container(
-                            height: MediaQuery.of(context).size.width,
-                            padding: EdgeInsets.symmetric(vertical: 50),
-                            child: Center(child: getItem(context, page))),
+                        GestureDetector(
+                          onTap: () => Get.toNamed(page.pageName),
+                          child: Container(
+                              height: MediaQuery.of(context).size.width,
+                              padding: EdgeInsets.symmetric(vertical: 50),
+                              child: Center(child: getItem(context, page))),
+                        ),
                         Container(
                             margin: EdgeInsets.symmetric(vertical: 20),
                             child: pageButtons[page]!),
