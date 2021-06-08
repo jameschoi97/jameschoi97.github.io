@@ -3,182 +3,192 @@ const moviesXml = '''<?xml version="1.0"?>
     <Movie>
         <Name>300</Name>
         <Year>2006</Year>
-        <Poster>300.jpg</Poster>
+        <ImgName>300.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>10,000 BC</Name>
         <Year>2008</Year>
-        <Poster>10000_bc.jpg</Poster>
+        <ImgName>10000_bc.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>17 Again</Name>
         <Year>2009</Year>
-        <Poster>17_again.jpg</Poster>
+        <ImgName>17_again.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>21 &amp; Over</Name>
         <Year>2013</Year>
-        <Poster>21_and_over.jpg</Poster>
+        <ImgName>21_and_over.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>21 Jump Street</Name>
         <Year>2012</Year>
         <Series>21 Jump Street</Series>
-        <Poster>21_jump_street.jpg</Poster>
+        <ImgName>21_jump_street.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>22 Jump Street</Name>
         <Year>2014</Year>
         <Series>21 Jump Street</Series>
-        <Poster>22_jump_street.jpg</Poster>
+        <ImgName>22_jump_street.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>The 40-Year-Old Virgin</Name>
         <Year>2005</Year>
-        <Poster>the_40_year_old_virgin.jpg</Poster>
+        <ImgName>the_40_year_old_virgin.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>A Bug's Life</Name>
         <Year>1998</Year>
-        <Poster>a_bugs_life.jpg</Poster>
+        <ImgName>a_bugs_life.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>A Clockwork Orange</Name>
         <Year>1971</Year>
-        <Poster>a_clockwork_orange.jpg</Poster>
+        <ImgName>a_clockwork_orange.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>A.I. Artificial Intelligence</Name>
         <Year>2001</Year>
-        <Poster>ai_artificial_intelligence.jpg</Poster>
+        <ImgName>ai_artificial_intelligence.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>About Time</Name>
         <Year>2013</Year>
-        <Poster>about_time.jpg</Poster>
+        <ImgName>about_time.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Accepted</Name>
         <Year>2006</Year>
-        <Poster>accepted.jpg</Poster>
+        <ImgName>accepted.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Ace Ventura: Pet Detective</Name>
         <Year>1994</Year>
-        <Poster>ace_ventura_pet_detective.jpg</Poster>
+        <ImgName>ace_ventura_pet_detective.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Alvin and the Chipmunks</Name>
-
+        <Year>2007</Year>
+        <ImgName>alvin_and_the_chipmunks.jpeg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Amadeus</Name>
-
+        <Year>1984</Year>
+        <ImgName>amadeus.jpeg</ImgName>
     </Movie>
     <Movie>
-
         <Name>American Beauty</Name>
-
+        <Year>1999</Year>
+        <ImgName>american_beauty.jpeg</ImgName>
     </Movie>
     <Movie>
-
         <Name>American Pie</Name>
-
+        <Year>1999</Year>
+        <Series>American Pie</Series>
+        <ImgName>american_pie.jpeg</ImgName>
     </Movie>
     <Movie>
-
         <Name>American Pie 2</Name>
-
+        <Year>2001</Year>
+        <Series>American Pie</Series>
+        <ImgName>american_pie_2.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>American Pie 3</Name>
-
+        <Name>American Wedding</Name>
+        <Year>2003</Year>
+        <Series>American Pie</Series>
+        <ImgName>american_wedding.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>American Pie 4</Name>
-
+        <Name>American Reunion</Name>
+        <Year>2012</Year>
+        <Series>American Pie</Series>
+        <ImgName>american_reunion.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>American Pie 5</Name>
-
+        <Name>American Pie Presents: Band Camp</Name>
+        <Year>2005</Year>
+        <Series>American Pie Presents</Series>
+        <ImgName>american_pie_presents_band_camp.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>American Pie 6</Name>
-
+        <Name>American Pie Presnets: The Naked Mile</Name>
+        <Year>2006</Year>
+        <Series>American Pie Presents</Series>
+        <ImgName>american_pie_presents_the_naked_mile.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>American Pie 7</Name>
-
+        <Name>American Pie Presents: Beta House</Name>
+        <Year>2007</Year>
+        <Series>American Pie Presents</Series>
+        <ImgName>american_pie_presents_beta_house.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>American Pie 8</Name>
-
+        <Name>American Pie Presents: The Book of Love</Name>
+        <Year>2009</Year>
+        <Series>American Pie Presents</Series>
+        <ImgName>american_pie_presents_the_book_of_love.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>American Sniper</Name>
-
+        <Year>2014</Year>
+        <ImgName>american_sniper.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Angels in the Outfield</Name>
-
+        <Year>1994</Year>
+        <ImgName>angels_in_the_outfield.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Anger Management</Name>
-
+        <Year>2003</Year>
+        <ImgName>anger_management.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Animal House</Name>
-
-
         <Year>1978</Year>
-
+        <ImgName>animal_house.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Ant-Man</Name>
-
+        <Year>2015</Year>
+        <Series>Ant-Man</Series>
+        <ImgName>ant_man.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Ant-Man and the Wasp</Name>
-
+        <Year>2018</Year>
+        <Series>Ant-Man</Series>
+        <ImgName>ant_man_and_the_wasp.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Avatar</Name>
-
+        <Year>2009</Year>
+        <ImgName>avatar.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Avengers: Age of Ultron</Name>
-
+        <Year>2015</Year>
+        <Series>The Avengers</Series>
+        <ImgName>avengers_age_of_ultron.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Avengers: Endgame</Name>
-
+        <Year>2019</Year>
+        <Series>The Avengers</Series>
+        <ImgName>avengers_endgame.jpeg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Avengers: Infinity War</Name>
-
+        <Year>2018</Year>
+        <Series>The Avengers</Series>
+        <ImgName>avengers_infinity_war.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Babe</Name>
-
+        <Year>1995</Year>
+        <ImgName>babe.jpg</ImgName>
     </Movie>
     <Movie>
 
@@ -1440,9 +1450,10 @@ const moviesXml = '''<?xml version="1.0"?>
 
     </Movie>
     <Movie>
-
         <Name>The Avengers</Name>
-
+        <Year>2012</Year>
+        <Series>The Avengers</Series>
+        <ImgName>the_avengers.jpg</ImgName>
     </Movie>
     <Movie>
 

@@ -38,7 +38,7 @@ class Movie {
         series = node.getElement('Series') == null
             ? null
             : node.getElement('Series')!.firstChild.toString(),
-        imagePath = node.getElement('Poster') == null
+        imagePath = node.getElement('ImgName') == null
             ? null
-            : 'assets/images/posters/${node.getElement('Poster')!.firstChild}';
+            : 'assets/images/posters/${node.getElement('ImgName')!.firstChild}';
 }
