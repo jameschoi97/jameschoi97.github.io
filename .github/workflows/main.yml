@@ -18,13 +18,13 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./jameschoi97
+        working-directory: ./assets/images
     steps:
       - uses: sharadcodes/img-resizer@v1.1
         with:
-          image-folder: 'assets/images/posters' # This is a Required field & this folder has original images
+          image-folder: 'posters' # This is a Required field & this folder has original images
           new-resolution: '200x300' # This is Required field
-          output-folder: 'assets/images/thumbnails' # This is Required field & this folder will be used to store resized images
+          output-folder: 'thumbnails' # This is Required field & this folder will be used to store resized images
 
 
   build:
