@@ -321,134 +321,131 @@ const moviesXml = '''<?xml version="1.0"?>
         <ImgName>captain_america_the_first_avenger.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Captain America: The Winter Soldier</Name>
-
-
         <Year>2014</Year>
-
-
         <Series>Captain America</Series>
-
+        <ImgName>captain_america_the_winter_soldier.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Captain America: Civil War</Name>
-
-
         <Year>2016</Year>
-
-
         <Series>Captain America</Series>
-
+        <ImgName>captain_america_civil_war.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Captain Marvel</Name>
-
+        <Year>2019</Year>
+        <ImgName>captain_marvel.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Cars</Name>
-
+        <Year>2006</Year>
+        <Series>Cars</Series>
+        <ImgName>cars.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Cars 2</Name>
-
+        <Year>2011</Year>
+        <Series>Cars</Series>
+        <ImgName>cars_2.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Catch Me if You Can</Name>
-
+        <Year>2002</Year>
+        <ImgName>catch_me_if_you_can.jpeg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Central Intelligence</Name>
-
+        <Year>2016</Year>
+        <ImgName>central_intelligence.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Charlotte's Web</Name>
-
+        <Year>2006</Year>
+        <ImgName>charlottes_web.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Chicken Little</Name>
-
+        <Year>2005</Year>
+        <ImgName>chicken_little.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Chitty Chitty Bang Bang</Name>
-
+        <Year>1968</Year>
+        <ImgName>chitty_chitty_bang_bang.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Click</Name>
-
+        <Year>2006</Year>
+        <ImgName>click.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Cloudy with a Chance of Meatballs</Name>
-
+        <Year>2009</Year>
+        <ImgName>cloudy_with_a_chance_of_meatballs.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Coraline</Name>
-
+        <Year>2009</Year>
+        <ImgName>coraline.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Corpse Bride</Name>
-
+        <Year>2005</Year>
+        <ImgName>corpse_bride.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Crazy Rich Asians</Name>
-
-
         <Year>2018</Year>
-
+        <ImgName>crazy_rich_asians.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Crazy Stupid Love</Name>
-
+        <Year>2011</Year>
+        <ImgName>crazy_stupid_love.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Daddy's Home</Name>
-
+        <Year>2015</Year>
+        <ImgName>daddys_home.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Danny Collins</Name>
-
+        <Year>2015</Year>
+        <ImgName>danny_collins.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Date Night</Name>
-
+        <Year>2010</Year>
+        <ImgName>date_night.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Deadpool</Name>
-
+        <Year>2016</Year>
+        <Series>Deadpool</Series>
+        <ImgName>deadpool.jpg</ImgName>
     </Movie>
     <Movie>
-
+        <Name>Deadpool 2</Name>
+        <Year>2018</Year>
+        <Series>Deadpool</Series>
+        <ImgName>deadpool_2.jpg</ImgName>
+    <Movie>
         <Name>Despicable Me</Name>
-
+        <Year>2010</Year>
+        <Series>Despicable Me</Series>
+        <ImgName>despicable_me.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Despicable Me - Minionss</Name>
-
+        <Name>Minions</Name>
+        <Year>2015</Year>
+        <Series>Despicable Me</Series>
+        <ImgName>minions.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Despicable Me 2</Name>
-
+        <Year>2013</Year>
+        <ImgName>despicable_me_2.jpg</ImgName>
     </Movie>
     <Movie>
 
@@ -1115,6 +1112,11 @@ const moviesXml = '''<?xml version="1.0"?>
 
         <Name>Purge</Name>
 
+    </Movie>
+    <Movie>
+        <Name>Push</Name>
+        <Year>2009</Year>
+        <ImgName>push.jpg</ImgName>
     </Movie>
     <Movie>
 
