@@ -81,7 +81,6 @@ class MoviesController extends GetxController {
   }
 
   void sortMoviesUsingCategory(MovieInfo category) {
-    print('sorting');
     var newList = List<Movie>.from(movies);
     if (category == currentSort.value) {
       sortAscending.value = !sortAscending.value;
@@ -136,9 +135,6 @@ class MoviesController extends GetxController {
       newList = List<Movie>.from(newList.reversed);
     }
     movies.value = newList;
-    for (Movie movie in movies) {
-      print(movie.name);
-    }
   }
 }
 

@@ -2207,4 +2207,7 @@
         <Year>2020</Year>
         <ImgName>onward.jpg</ImgName>
     </Movie>
+    <Movie>
+        <Name>3 Idiots</Name>
+    </Movie>
 </Movies>

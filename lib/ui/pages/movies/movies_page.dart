@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:jameschoi97/config/constants/ui/theme_constants.dart';
 import 'package:jameschoi97/main_controller.dart';
 import 'package:jameschoi97/ui/widgets/my_appbar.dart';
-import 'package:jameschoi97/ui/widgets/my_movies.dart';
 import 'package:jameschoi97/ui/widgets/my_scaffold.dart';
 import 'package:get/get.dart';
 
@@ -36,7 +35,40 @@ class MoviesPage extends GetView<MoviesController> {
           child: MyAppBar(),
         ),
         body: Column(
-          children: [Text('On May 5 2017, '), _showMovies(context)],
+          children: [
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 60, vertical: 40),
+              constraints: BoxConstraints(
+                maxWidth: 750,
+              ),
+              child: Text('On May 5th, 2017, I got bored and listing down all the movies I\'ve ever watched to the best '
+                  'of my recollection. Ever since, I\'ve tried my best to keep a record of all the movies I\'ve watched '
+                  'subsequently.',
+              style: TextStyle(
+                fontSize: 18
+              ),),
+            ),
+            Container(
+              child: RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                        text: 'Currently, I\'m at ', style: TextStyle(fontSize: 15)),
+                    TextSpan(
+                      text: controller.movies.length.toString(),
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 15
+                      ),
+                    ),
+                    TextSpan(
+                        text: ' movies.', style: TextStyle(fontSize: 15)
+                    ),
+                  ]
+                )
+              )
+            ),
+            _showMovies(context)],
         ));
   }
 
@@ -49,22 +81,25 @@ class MoviesPage extends GetView<MoviesController> {
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Obx(() => Column(
-          children: [
-            _getTitleRow(context),
-            Container(
-                height:
-                    MediaQuery.of(context).size.height - 56 - 50 - sidePadding,
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: controller.movies
-                        .asMap()
-                        .entries
-                        .map((movie) => _getMovieRow(context, movie))
-                        .toList(),
-                  ),
-                ))
-          ],
-        )),
+              children: [
+                _getTitleRow(context),
+                Container(
+                    height: MediaQuery.of(context).size.height -
+                        56 -
+                        50 -
+                        sidePadding,
+                    width: max(getTotalWidth(), MediaQuery.of(context).size.width-2*sidePadding),
+                    child: ListView.builder(
+                      padding: EdgeInsets.zero,
+                      itemCount: controller.movies.length,
+                        itemBuilder: (context, index) => _getMovieRow(context, controller.movies[index], index % 2 != 0)
+
+
+                    )
+
+                  )
+              ],
+            )),
       ),
     );
   }
@@ -72,7 +107,7 @@ class MoviesPage extends GetView<MoviesController> {
   Widget _getTitleRow(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          border: Border(bottom: BorderSide(color: Colors.white))),
+          border: Border(bottom: BorderSide(color: _themeController.theme.colorSet.movieBorder))),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: columns
@@ -86,9 +121,22 @@ class MoviesPage extends GetView<MoviesController> {
                 child: TextButton(
                   style: _themeController.borderlessButtonStyle,
                   onPressed: () => controller.sortMoviesUsingCategory(column),
-                  child: Text(
-                    column.name,
-                    textAlign: TextAlign.center,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(width: 30),
+                      Text(
+                        column.name,
+                        textAlign: TextAlign.center,
+                      ),
+                      controller.currentSort.value == column
+                          ? Icon(
+                              controller.sortAscending.value
+                                  ? Icons.keyboard_arrow_down_outlined
+                                  : Icons.keyboard_arrow_up_outlined,
+                              size: 30)
+                          : SizedBox(width: 30),
+                    ],
                   ),
                 )))
             .toList(),
@@ -96,19 +144,18 @@ class MoviesPage extends GetView<MoviesController> {
     );
   }
 
-  Widget _getMovieRow(BuildContext context, MapEntry<int, Movie> movie) {
+  Widget _getMovieRow(BuildContext context, Movie movie, bool evenRow) {
     return TextButton(
-      onPressed: movie.value.imageName != null
+      onPressed: movie.imageName != null
           ? () {
-              showPoster(movie.value);
+              showPoster(movie);
             }
           : null,
       style: _themeController.borderlessButtonStyle,
       child: Container(
         height: 50,
-        color: movie.key % 2 == 0
-            ? _themeController.theme.colorSet.movieRow1
-            : _themeController.theme.colorSet.movieRow2,
+        color: evenRow
+        ? _themeController.theme.colorSet.movieRow2 : _themeController.theme.colorSet.movieRow1,
         child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: columns
@@ -121,7 +168,7 @@ class MoviesPage extends GetView<MoviesController> {
                             columnTotalWidth *
                             column.widthRatio),
                     alignment: Alignment.center,
-                    child: getChild(movie.value, column, movie.key % 2 != 0)))
+                    child: getChild(movie, column, evenRow)))
                 .toList()),
       ),
     );
@@ -158,20 +205,19 @@ class MoviesPage extends GetView<MoviesController> {
               Center(
                 child: FittedBox(
                   fit: BoxFit.fitWidth,
-                  child: Text(movie.name, style: TextStyle(
-                    letterSpacing: 3,
-                    fontWeight: FontWeight.w600,
-                    fontSize:40,
-                  )),
+                  child: Text(movie.name,
+                      style: TextStyle(
+                        letterSpacing: 3,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 40,
+                      )),
                 ),
               ),
               Expanded(
-                  child:
-                      Container(
-                        padding: EdgeInsets.all(20),
-                          child: Image.asset('assets/images/posters/${movie.imageName}')
-                      )
-              ),
+                  child: Container(
+                      padding: EdgeInsets.all(20),
+                      child: Image.asset(
+                          'assets/images/posters/${movie.imageName}'))),
               TextButton(
                   onPressed: () {
                     Get.back();
