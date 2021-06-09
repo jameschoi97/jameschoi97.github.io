@@ -41,7 +41,7 @@ class MoviesPage extends GetView<MoviesController> {
               constraints: BoxConstraints(
                 maxWidth: 750,
               ),
-              child: Text('On May 5th, 2017, I got bored and listing down all the movies I\'ve ever watched to the best '
+              child: Text('On May 5th, 2017, I got bored and started listing down all the movies I\'ve ever watched - to the best '
                   'of my recollection. Ever since, I\'ve tried my best to keep a record of all the movies I\'ve watched '
                   'subsequently.',
               style: TextStyle(
