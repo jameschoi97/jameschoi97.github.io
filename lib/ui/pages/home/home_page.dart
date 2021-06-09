@@ -233,8 +233,12 @@ class HomePage extends GetView<HomeController> {
     } else if (page == Pages.movies) {
       return Container(
         padding: EdgeInsets.symmetric(horizontal: 30),
-        child: MoviePanel(
-            column: 18, row: 7, images: _mainController.movieController.imageNames, width: MediaQuery.of(context).size.width,),
+        child: ResponsiveWidget(
+          smallScreen: MoviePanel(
+            column: 9, row: 4, images: _mainController.movieController.imageNames, width: MediaQuery.of(context).size.width),
+          largeScreen: MoviePanel(
+              column: 18, row: 7, images: _mainController.movieController.imageNames, width: MediaQuery.of(context).size.width,),
+        ),
       );
     } else {
       return Container();

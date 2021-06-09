@@ -435,17 +435,21 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>Despicable Me</Name>
         <Year>2010</Year>
         <Series>Despicable Me</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>despicable_me.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Minions</Name>
         <Year>2015</Year>
         <Series>Despicable Me</Series>
+        <SeriesIndex>3</SeriesIndex>
         <ImgName>minions.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Despicable Me 2</Name>
         <Year>2013</Year>
+        <Series>Despicable Me</Series>
+        <SeriesIndex>2</SeriesIndex>
         <ImgName>despicable_me_2.jpg</ImgName>
     </Movie>
     <Movie>

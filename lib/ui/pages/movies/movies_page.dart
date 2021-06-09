@@ -48,7 +48,7 @@ class MoviesPage extends GetView<MoviesController> {
               Border.all(color: _themeController.theme.colorSet.movieBorder)),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        child: Column(
+        child: Obx(() => Column(
           children: [
             _getTitleRow(context),
             Container(
@@ -64,7 +64,7 @@ class MoviesPage extends GetView<MoviesController> {
                   ),
                 ))
           ],
-        ),
+        )),
       ),
     );
   }
@@ -85,7 +85,7 @@ class MoviesPage extends GetView<MoviesController> {
                         column.widthRatio),
                 child: TextButton(
                   style: _themeController.borderlessButtonStyle,
-                  onPressed: () => controller.sortUsingCategory(column),
+                  onPressed: () => controller.sortMoviesUsingCategory(column),
                   child: Text(
                     column.name,
                     textAlign: TextAlign.center,
@@ -128,7 +128,7 @@ class MoviesPage extends GetView<MoviesController> {
   }
 
   Widget? getChild(Movie movie, MovieInfo column, bool evenRow) {
-    return Text(movie.valueOf(column),
+    return Text(movie.valueOf(column) ?? '',
         textAlign: TextAlign.center,
         style: TextStyle(
             color: evenRow

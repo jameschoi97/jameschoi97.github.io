@@ -8,9 +8,12 @@ enum MovieInfo {
   name,
   year,
   series,
+  seriesIndex,
+  defaultSort, //only used for sorting
 }
 
-extension MovieInfoExtension on MovieInfo {
+
+extension ColumnExtension on MovieInfo {
   String get name {
     if (index == MovieInfo.name.index) return 'Name';
     if (index == MovieInfo.year.index) return 'Year';
@@ -33,7 +36,10 @@ extension MovieInfoExtension on MovieInfo {
 
 class MoviesController extends GetxController {
   final imageNames = <String>[];
-  final movies = <Movie>[];
+  final movies = <Movie>[].obs;
+
+  final currentSort = MovieInfo.name.obs;
+  final sortAscending = true.obs;
 
   RxList<bool>? visibilities;
   List<Timer> timers = [];
@@ -50,6 +56,7 @@ class MoviesController extends GetxController {
         imageNames.add(movie.imageName!);
       }
     }
+    sortMoviesUsingCategory(MovieInfo.defaultSort);
     super.onInit();
   }
 
@@ -73,8 +80,65 @@ class MoviesController extends GetxController {
     }
   }
 
-  void sortUsingCategory(MovieInfo category){
+  void sortMoviesUsingCategory(MovieInfo category) {
+    print('sorting');
+    var newList = List<Movie>.from(movies);
+    if (category == currentSort.value) {
+      sortAscending.value = !sortAscending.value;
+    } else {
+      currentSort.value = category;
+      sortAscending.value = true;
+    }
+    newList.sort((a,b) {
+      if (a.valueOf(category) == null){
+        if (sortAscending.value) {
+          return 1;
+        } else {
+          return -1;
+        }
+      } else if (b.valueOf(category) == null){
+        if (sortAscending.value) {
+          return -1;
+        } else {
+          return 1;
+        }
+      } else {
+        if (category == MovieInfo.defaultSort) {
+          var firstItem = a.valueOf(MovieInfo.series);
+          var secondItem = b.valueOf(MovieInfo.series);
+          if (firstItem == null) {
+            firstItem = a.valueOf(MovieInfo.name);
+          }
+          if (secondItem == null) {
+            secondItem = b.valueOf(MovieInfo.name);
+          }
+          final result = firstItem!.compareTo(secondItem!);
+          if (result != 0) {
+            return result;
+          } else {
+            return (a.valueOf(MovieInfo.seriesIndex) ?? '0').compareTo(b.valueOf(MovieInfo.seriesIndex) ?? '0');
+          }
+        } else if (category == MovieInfo.series){
+          final result = a.valueOf(MovieInfo.series)!.compareTo(b.valueOf(MovieInfo.series)!);
+          if (result != 0) {
+            return result;
+          } else {
+            return (a.valueOf(MovieInfo.seriesIndex) ?? '0').compareTo(b.valueOf(MovieInfo.seriesIndex) ?? '0');
+          }
+        } else {
+          return (a.valueOf(category)!).compareTo(b.valueOf(category)!);
+        }
 
+      }
+
+    });
+    if (!sortAscending.value) {
+      newList = List<Movie>.from(newList.reversed);
+    }
+    movies.value = newList;
+    for (Movie movie in movies) {
+      print(movie.name);
+    }
   }
 }
 
@@ -82,6 +146,7 @@ class Movie {
   String name;
   String? year;
   String? series;
+  String? seriesIndex;
   String? imageName;
 
   Movie(XmlNode node)
@@ -92,19 +157,26 @@ class Movie {
         series = node.getElement('Series') == null
             ? null
             : node.getElement('Series')!.firstChild.toString(),
+        seriesIndex = node.getElement('SeriesIndex') == null
+            ? null
+            : node.getElement('SeriesIndex')!.firstChild.toString(),
         imageName = node.getElement('ImgName') == null
             ? null
             : node.getElement('ImgName')!.firstChild.toString();
 
-  String valueOf(MovieInfo category) {
+  String? valueOf(MovieInfo category) {
     if (category == MovieInfo.name) {
       return name;
     } else if (category == MovieInfo.year) {
-      return year ?? '';
+      return year;
     } else if (category == MovieInfo.series) {
-      return series ?? '';
-    } else {
+      return series;
+    } else if (category == MovieInfo.seriesIndex) {
+      return seriesIndex;
+    } else if (category == MovieInfo.defaultSort) {
       return '';
+    } else {
+      return null;
     }
   }
 }
