@@ -41,7 +41,7 @@ class MoviesController extends GetxController {
 
   @override
   void onInit() {
-    final singleLineXml = moviesXml.replaceAll('\n', '').replaceAll('    ', '').replaceAll('&amp;', '&');
+    final singleLineXml = moviesXml.replaceAll('\n', '').replaceAll('    ', '');
     final movieNodes = XmlDocument.parse(singleLineXml).children[1];
     for (var node in movieNodes.children) {
       final movie = Movie(node);

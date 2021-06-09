@@ -146,93 +146,95 @@ class HomePage extends GetView<HomeController> {
         textAlign: TextAlign.center,
       );
     } else if (page == Pages.aboutMe) {
-      return CarouselSlider(
-          items: [
-            Stack(
-              alignment: AlignmentDirectional.bottomCenter,
-              children: [
-                Image.asset('assets/images/me_1.png', fit: BoxFit.fitHeight),
-                Container(
-                  padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
-                  width: MediaQuery.of(context).size.width,
-                  child:
+      return Center(
+        child: CarouselSlider(
+            items: [
+              Stack(
+                alignment: AlignmentDirectional.bottomCenter,
+                children: [
+                  Image.asset('assets/images/me_1.png', fit: BoxFit.fitHeight),
+                  Container(
+                    padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
+                    width: MediaQuery.of(context).size.width,
+                    child:
+                      FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text('SMART',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white.withOpacity(0.8),
+                          letterSpacing: 3
+                        ),)
+                      )
+
+                    ,
+                  )
+                ],
+              ),
+              Stack(
+                alignment: AlignmentDirectional.bottomCenter,
+                children: [
+                  Image.asset('assets/images/me_2.png', fit: BoxFit.fitHeight),
+                  Container(
+                    padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.05),
+                    width: MediaQuery.of(context).size.width,
+                    child:
                     FittedBox(
-                      fit: BoxFit.fitWidth,
-                      child: Text('SMART',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        color: Colors.white.withOpacity(0.8),
-                        letterSpacing: 3
-                      ),)
+                        fit: BoxFit.fitWidth,
+                        child: Text('FOCUSED',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white.withOpacity(0.8),
+                              letterSpacing: 3
+                          ),)
                     )
 
-                  ,
-                )
-              ],
-            ),
-            Stack(
-              alignment: AlignmentDirectional.bottomCenter,
-              children: [
-                Image.asset('assets/images/me_2.png', fit: BoxFit.fitHeight),
-                Container(
-                  padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.05),
-                  width: MediaQuery.of(context).size.width,
-                  child:
-                  FittedBox(
-                      fit: BoxFit.fitWidth,
-                      child: Text('FOCUSED',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white.withOpacity(0.8),
-                            letterSpacing: 3
-                        ),)
+                    ,
                   )
+                ],
+              ),
+              Stack(
+                alignment: AlignmentDirectional.bottomCenter,
+                children: [
+                  Image.asset('assets/images/me_3.png', fit: BoxFit.fitHeight),
+                  Container(
+                    padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.045),
+                    width: MediaQuery.of(context).size.width,
+                    child:
+                    FittedBox(
+                        fit: BoxFit.fitWidth,
+                        child: Text('CONFIDENT',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white.withOpacity(0.8),
+                              letterSpacing: 3
+                          ),)
+                    )
 
-                  ,
-                )
-              ],
-            ),
-            Stack(
-              alignment: AlignmentDirectional.bottomCenter,
-              children: [
-                Image.asset('assets/images/me_3.png', fit: BoxFit.fitHeight),
-                Container(
-                  padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.045),
-                  width: MediaQuery.of(context).size.width,
-                  child:
-                  FittedBox(
-                      fit: BoxFit.fitWidth,
-                      child: Text('CONFIDENT',
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white.withOpacity(0.8),
-                            letterSpacing: 3
-                        ),)
+                    ,
                   )
-
-                  ,
-                )
-              ],
-            ),
-          ],
-          options: CarouselOptions(
-            aspectRatio: 16 / 14,
-            viewportFraction: 0.7,
-            autoPlay: true,
-            autoPlayInterval: Duration(milliseconds: 1500),
-            pauseAutoPlayOnTouch: false,
-            pauseAutoPlayOnManualNavigate: false,
-            enlargeCenterPage: true,
-            enlargeStrategy: CenterPageEnlargeStrategy.scale,
-            scrollPhysics: NeverScrollableScrollPhysics(),
-          ));
+                ],
+              ),
+            ],
+            options: CarouselOptions(
+              aspectRatio: 16 / 14,
+              viewportFraction: 0.7,
+              autoPlay: true,
+              autoPlayInterval: Duration(milliseconds: 1500),
+              pauseAutoPlayOnTouch: false,
+              pauseAutoPlayOnManualNavigate: false,
+              enlargeCenterPage: true,
+              enlargeStrategy: CenterPageEnlargeStrategy.scale,
+              scrollPhysics: NeverScrollableScrollPhysics(),
+            )),
+      );
     } else if (page == Pages.resume) {
       return Image.asset('assets/images/resume.png', fit: BoxFit.fitHeight);
     } else if (page == Pages.movies) {
       return Container(
         padding: EdgeInsets.symmetric(horizontal: 30),
         child: MoviePanel(
-            column: 12, row: 5, images: _mainController.movieController.imageNames, width: MediaQuery.of(context).size.width,),
+            column: 18, row: 7, images: _mainController.movieController.imageNames, width: MediaQuery.of(context).size.width,),
       );
     } else {
       return Container();

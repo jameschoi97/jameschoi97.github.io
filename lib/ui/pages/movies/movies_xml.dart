@@ -449,292 +449,356 @@ const moviesXml = '''<?xml version="1.0"?>
         <ImgName>despicable_me_2.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Dirty Grandpa</Name>
-
+        <Year>2016</Year>
+        <ImgName>dirty_grandpa.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Django Unchained</Name>
-
+        <Year>2012</Year>
+        <ImgName>django_unchained.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Don Jon</Name>
-
+        <Year>2013</Year>
+        <ImgName>don_jon.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Dr. Strange</Name>
-
+        <Name>Doctor Strange</Name>
+        <Year>2016</Year>
+        <ImgName>doctor_strange.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Elf</Name>
-
+        <Year>2003</Year>
+        <ImgName>elf.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Escape Plan</Name>
-
+        <Year>2013</Year>
+        <ImgName>escape_plan.jpg</ImgName>
     </Movie>
     <Movie>
-
+        <Name>Escape Room</Name>
+        <Year>2019</Year>
+        <ImgName>escape_room.jpeg</ImgName>
+    </Movie>
+    <Movie>
         <Name>Euro Trip</Name>
-
+        <Year>2004</Year>
+        <ImgName>euro_trip.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Everything Must Go</Name>
-
+        <Year>2010</Year>
+        <ImgName>everything_must_go.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Fantastic 4</Name>
-
+        <Name>Fantastic Four</Name>
+        <Year>2005</Year>
+        <Series>Fantastic Four</Series>
+        <ImgName>fantastic_four_2005.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Fantastic 4 (2015)</Name>
-
+        <Name>Fantastic Four</Name>
+        <Year>2015</Year>
+        <ImgName>fantastic_four_2015.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Fantastic 4 2</Name>
-
+        <Name>Fantastic 4: Rise of the Silver Surfer</Name>
+        <Year>2007</Year>
+        <Series>Fantastic Four</Series>
+        <ImgName>fantastic_4_rise_of_the_silver_surfer.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Fight Club</Name>
-
+        <Year>1999</Year>
+        <ImgName>fight_club.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Finding Nemo</Name>
-
+        <Year>2003</Year>
+        <ImgName>finding_nemo.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Focus</Name>
-
+        <Year>2015</Year>
+        <ImgName>focus.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Forgetting Sarah Marshall</Name>
-
+        <Year>2008</Year>
+        <ImgName>forgetting_sarah_marshall.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Forrest Gump</Name>
-
+        <Year>1994</Year>
+        <ImgName>forrest_gump.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Frozen</Name>
-
+        <Year>2013</Year>
+        <ImgName>frozen.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Fundamentals of Caring</Name>
-
+        <Name>The Fundamentals of Caring</Name>
+        <Year>2016</Year>
+        <ImgName>the_fundamentals_of_caring.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>G.I. Joe</Name>
-
+        <Name>G.I. Joe: The Rise of Cobra</Name>
+        <Year>2009</Year>
+        <Series>G.I. Joe</Series>
+        <ImgName>gi_joe_the_rise_of_cobra.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>G.I. Joe 2</Name>
-
+        <Name>G.I. Joe: Retaliation</Name>
+        <Year>2013</Year>
+        <Series>G.I. Joe</Series>
+        <ImgName>gi_joe_retaliation.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Get Hard</Name>
-
+        <Year>2015</Year>
+        <ImgName>get_hard.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Get Out</Name>
-
-
         <Year>2017</Year>
-
+        <ImgName>get_out.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Gods of Egypt</Name>
-
+        <Year>2016</Year>
+        <ImgName>gods_of_egypt.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Gravity</Name>
-
+        <Year>2013</Year>
+        <ImgName>gravity.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Hancock</Name>
-
+        <Year>2008</Year>
+        <ImgName>hancock.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Harold and Kumar</Name>
-
+        <Name>Harold and Kumar Go to White Castle</Name>
+        <Year>2004</Year>
+        <Series>Harold and Kumar</Series>
+        <ImgName>harold_and_kumar_go_to_white_castle.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Harold and Kumar 2</Name>
-
+        <Name>Harold and Kumar Escape from Guantanamo Bay</Name>
+        <Year>2008</Year>
+        <Series>Harold and Kumar</Series>
+        <ImgName>harold_and_kumar_escape_from_guantanamo_bay.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Harry Potter 1</Name>
-
+        <Name>Harry Potter and the Sorcerer's Stone</Name>
+        <Year>2001</Year>
+        <Series>Harry Potter</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>harry_potter_and_the_sorcerers_stone.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Harry Potter 2</Name>
-
+        <Name>Harry Potter and the Chamber of Secrets</Name>
+        <Year>2002</Year>
+        <Series>Harry Potter</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>harry_potter_and_the_chamber_of_secrets.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Harry Potter 3</Name>
-
+        <Name>Harry Potter and the Prisoner of Azkaban</Name>
+        <Year>2004</Year>
+        <Series>Harry Potter</Series>
+        <SeriesIndex>3</SeriesIndex>
+        <ImgName>harry_potter_and_the_prisoner_of_azkaban.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Harry Potter 4</Name>
-
+        <Name>Harry Potter and the Goblet of Fire</Name>
+        <Year>2005</Year>
+        <Series>Harry Potter</Series>
+        <SeriesIndex>4</SeriesIndex>
+        <ImgName>harry_potter_and_the_goblet_of_fire.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Harry Potter 5</Name>
-
+        <Name>Harry Potter and the Order of the Phoenix</Name>
+        <Year>2007</Year>
+        <Series>Harry Potter</Series>
+        <SeriesIndex>5</SeriesIndex>
+        <ImgName>harry_potter_and_the_order_of_the_phoenix.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Harry Potter 6</Name>
-
+        <Name>Harry Potter and the Half-Blood Prince</Name>
+        <Year>2009</Year>
+        <Series>Harry Potter</Series>
+        <SeriesIndex>6</SeriesIndex>
+        <ImgName>harry_potter_and_the_half_blood_prince.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Harry Potter 7-1</Name>
-
+        <Name>Harry Potter and the Deathly Hallows: Part 1</Name>
+        <Year>2010</Year>
+        <Series>Harry Potter</Series>
+        <SeriesIndex>7</SeriesIndex>
+        <ImgName>harry_potter_and_the_deathly_hallows_part_1.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Harry Potter 7-2</Name>
-
+        <Name>Harry Potter and the Deathly Hallows: Part 2</Name>
+        <Year>2011</Year>
+        <Series>Harry Potter</Series>
+        <SeriesIndex>8</SeriesIndex>
+        <ImgName>harry_potter_and_the_deathly_hallows_part_2.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Home Alone </Name>
-
+        <Name>Home Alone</Name>
+        <Year>1990</Year>
+        <Series>Home Alone</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>home_alone.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Home Alone 2</Name>
-
+        <Name>Home Alone 2: Lost in New York</Name>
+        <Year>1992</Year>
+        <Series>Home Alone</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>home_alone_2_lost_in_new_york.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Horrible Bosses</Name>
-
+        <Year>2011</Year>
+        <Series>Horrible Bosses</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>horrible_bosses.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Horrible Bosses 2</Name>
-
+        <Year>2014</Year>
+        <Series>Horrible Bosses</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>horrible_bosses_2.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>How to be Single</Name>
-
+        <Year>2016</Year>
+        <ImgName>how_to_be_single.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>How to Train Your Dragon</Name>
-
+        <Year>2010</Year>
+        <Series>How to Train Your Dragon</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>how_to_train_your_dragon.jpg</ImgName>
     </Movie>
     <Movie>
-
+        <Name>How to Train Your Dragon: The Hidden World</Name>
+        <Year>2019</Year>
+        <Series>How to Train Your Dragon</Series>
+        <SeriesIndex>3</SeriesIndex>
+        <ImgName>how_to_train_your_dragon_the_hidden_world.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>The Hustle</Name>
+        <Year>2019</Year>
+        <ImgName>the_hustle.jpg</ImgName>
+    </Movie>
+    <Movie>
         <Name>Hulk</Name>
-
+        <Year>2003</Year>
+        <Series>Hulk</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>hulk.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Hulk 2</Name>
-
+        <Name>The Incredible Hulk</Name>
+        <Year>2008</Year>
+        <Series>Hulk</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>the_incredible_hulk.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Hunger Games</Name>
-
+        <Name>The Hunger Games</Name>
+        <Year>2012</Year>
+        <Series>The Hunger Games</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>the_hunger_games.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Hunger Games 2</Name>
-
+        <Name>The Hunger Games: Catching Fire</Name>
+        <Year>2013</Year>
+        <Series>The Hunger Games</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>the_hunger_games_catching_fire.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Hunger Games 3-1</Name>
-
+        <Name>The Hunger Games: Mockingjay - Part 1</Name>
+        <Year>2014</Year>
+        <Series>The Hunger Games</Series>
+        <SeriesIndex>3</SeriesIndex>
+        <ImgName>the_hunger_games_mockingjay_part_1.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Hunger Games 3-2</Name>
-
+        <Name>The Hunger Games: Mockingjay - Part 2</Name>
+        <Year>2015</Year>
+        <Series>The Hunger Games</Series>
+        <SeriesIndex>4</SeriesIndex>
+        <ImgName>the_hunger_games_mockingjay_part_2.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>I Love You Man</Name>
-
+        <Name>I Love You, Man</Name>
+        <Year>2009</Year>
+        <ImgName>i_love_you_man.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>I Love You Phillip Morris</Name>
-
+        <Year>2009</Year>
+        <ImgName>i_love_you_phillip_morris.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Inglorious Bastards</Name>
-
+        <Name>Inglourious Basterds</Name>
+        <Year>2009</Year>
+        <ImgName>inglourious_basterds.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Inside Out</Name>
-
+        <Year>2015</Year>
+        <ImgName>inside_out.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Into the Woods</Name>
-
+        <Year>2014</Year>
+        <ImgName>into_the_woods.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Iron Man</Name>
-
+        <Year>2008</Year>
+        <Series>Iron Man</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>iron_man.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Iron Man 2</Name>
-
+        <Year>2010</Year>
+        <Series>Iron Man</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>iron_man_2.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Iron Man 3</Name>
-
+        <Year>2013</Year>
+        <Series>Iron Man</Series>
+        <SeriesIndex>3</SeriesIndex>
+        <ImgName>iron_man_3.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Isn't It Romantic (2019)</Name>
-
+        <Name>Isn't It Romantic</Name>
+        <Year>2019</Year>
+        <ImgName>isnt_it_romantic.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Jack the Giant Slayer</Name>
-
+        <Year>2013</Year>
+        <ImgName>jack_the_giant_slayer.jpg</ImgName>
     </Movie>
     <Movie>
 
@@ -938,6 +1002,9 @@ const moviesXml = '''<?xml version="1.0"?>
 
         <Name>Men in Black 3</Name>
 
+    </Movie>
+    <Movie>
+        <Name>Men in Black: International</Name>
     </Movie>
     <Movie>
 
@@ -1916,7 +1983,7 @@ const moviesXml = '''<?xml version="1.0"?>
     </Movie>
     <Movie>
 
-        <Name>X-Men 6: Apocalypse</Name>
+        <Name>X-Men: Apocalypse</Name>
 
 
         <Year>2016</Year>
@@ -2120,6 +2187,21 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>Aladdin</Name>
         <Year>2019</Year>
         <ImgName>aladdin.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Meet Joe Black</Name>
+        <Year>1998</Year>
+        <ImgName>meet_joe_black.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>100 Things</Name>
+        <Year>2018</Year>
+        <ImgName>100_things.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Onward</Name>
+        <Year>2020</Year>
+        <ImgName>onward.jpg</ImgName>
     </Movie>
 </Movies>
 ''';
