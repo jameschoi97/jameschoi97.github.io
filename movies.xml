@@ -16,7 +16,7 @@
         <ImgName>17_again.jpg</ImgName>
     </Movie>
     <Movie>
-        <Name>21 &amp; Over</Name>
+        <Name>21 and Over</Name>
         <Year>2013</Year>
         <ImgName>21_and_over.jpg</ImgName>
     </Movie>
@@ -197,13 +197,13 @@
         <ImgName>back_to_the_future.jpg</ImgName>
     </Movie>
     <Movie>
-        <Name>Back to the Future Part Ⅱ</Name>
+        <Name>Back to the Future Part II</Name>
         <Year>1989</Year>
         <Series>Back to the Future</Series>
         <ImgName>back_to_the_future_part_2.jpg</ImgName>
     </Movie>
     <Movie>
-        <Name>Back to the Future Part Ⅲ</Name>
+        <Name>Back to the Future Part III</Name>
         <Year>1990</Year>
         <Series>Back to the Future</Series>
         <ImgName>back_to_the_future_part_3.jpg</ImgName>

@@ -14,6 +14,11 @@ const default_appbar_hover_color = Color(0xFF929498);
 const default_font_color = Color(0xFF212529);
 const default_appbar_font_color = Color(0xFFCFD8DC);
 
+const movie_row_1 = Color(0xFFF0ECAD);
+const movie_row_2 = Color(0xFFFFF0CC);
+const movie_row_2_font = Color(0xFFE3E3CA);
+const movie_border = Color(0xFF999911);
+
 
 class DefaultColors {
   Color get gradientStart => default_gradient_start;
@@ -24,6 +29,10 @@ class DefaultColors {
   Color get fontColor => default_font_color;
   Color get appBarFontColor => default_appbar_font_color;
   Color get appBarHoverColor => default_appbar_hover_color;
+  Color get movieRow1 => movie_row_1;
+  Color get movieRow2 => movie_row_2;
+  Color get movieRow2Font => default_font_color;
+  Color get movieBorder => movie_border;
 }
 
 class ResumeColors extends DefaultColors{
@@ -107,7 +116,9 @@ class MyThemeController extends GetxController {
 
   static final MyTheme _defaultTheme = DefaultTheme();
 
-
-
   BoxDecoration get background => theme.background;
+
+  ButtonStyle get borderlessButtonStyle => ButtonStyle().copyWith(
+    side: MaterialStateProperty.all(BorderSide.none),
+  );
 }

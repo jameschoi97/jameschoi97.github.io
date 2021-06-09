@@ -197,7 +197,7 @@ class HomePage extends GetView<HomeController> {
               children: [
                 Image.asset('assets/images/me_3.png', fit: BoxFit.fitHeight),
                 Container(
-                  padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.06),
+                  padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.045),
                   width: MediaQuery.of(context).size.width,
                   child:
                   FittedBox(

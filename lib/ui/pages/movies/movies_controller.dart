@@ -4,6 +4,33 @@ import 'package:get/get.dart';
 import 'package:jameschoi97/ui/pages/movies/movies_xml.dart';
 import 'package:xml/xml.dart';
 
+enum MovieInfo {
+  name,
+  year,
+  series,
+}
+
+extension MovieInfoExtension on MovieInfo {
+  String get name {
+    if (index == MovieInfo.name.index) return 'Name';
+    if (index == MovieInfo.year.index) return 'Year';
+    if (index == MovieInfo.series.index) return 'Series';
+    return 'Error';
+  }
+
+  double get widthRatio {
+    if (index == MovieInfo.name.index) {
+      return 300;
+    } else if (index == MovieInfo.year.index) {
+      return 120;
+    } else if (index == MovieInfo.series.index) {
+      return 200;
+    } else {
+      return 0;
+    }
+  }
+}
+
 class MoviesController extends GetxController {
   final imageNames = <String>[];
   final movies = <Movie>[];
@@ -14,7 +41,7 @@ class MoviesController extends GetxController {
 
   @override
   void onInit() {
-    final singleLineXml = moviesXml.replaceAll('\n', '').replaceAll('    ', '');
+    final singleLineXml = moviesXml.replaceAll('\n', '').replaceAll('    ', '').replaceAll('&amp;', '&');
     final movieNodes = XmlDocument.parse(singleLineXml).children[1];
     for (var node in movieNodes.children) {
       final movie = Movie(node);
@@ -23,7 +50,6 @@ class MoviesController extends GetxController {
         imageNames.add(movie.imageName!);
       }
     }
-    print(imageNames);
     super.onInit();
   }
 
@@ -46,6 +72,10 @@ class MoviesController extends GetxController {
       visibilities![index] = false;
     }
   }
+
+  void sortUsingCategory(MovieInfo category){
+
+  }
 }
 
 class Movie {
@@ -65,4 +95,16 @@ class Movie {
         imageName = node.getElement('ImgName') == null
             ? null
             : node.getElement('ImgName')!.firstChild.toString();
+
+  String valueOf(MovieInfo category) {
+    if (category == MovieInfo.name) {
+      return name;
+    } else if (category == MovieInfo.year) {
+      return year ?? '';
+    } else if (category == MovieInfo.series) {
+      return series ?? '';
+    } else {
+      return '';
+    }
+  }
 }
