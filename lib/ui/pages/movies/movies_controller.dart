@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:jameschoi97/ui/pages/movies/movies_xml.dart';
 import 'package:xml/xml.dart';
