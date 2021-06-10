@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
             hoverColor: _themeController.theme.colorSet.appBarHoverColor,
             onHover: ResponsiveWidget.isSmallScreen(context)
                 ? null
-                : (hovering) async{
+                : (hovering) {
                     if (hovering) {
                       if (page == Pages.movies) {
                         _mainController.movieController.showPanel();
@@ -147,7 +147,7 @@ class HomePage extends StatelessWidget {
         '\nThis is a work in progress, but I will aim to perfect it over the next '
         'few months / years or maybe even for the rest of my life.',
         style: TextStyle(
-          fontSize: MediaQuery.of(context).size.width < 600 ? 20 : 30,
+          fontSize: ResponsiveWidget.isSmallScreen(context) ? 20 : 30,
           fontWeight: FontWeight.w600,
           letterSpacing: 4,
         ),
@@ -251,7 +251,7 @@ class HomePage extends StatelessWidget {
           smallScreen: MoviePanel(
             column: 9, row: 4, images: _mainController.movieController.imageNames, width: MediaQuery.of(context).size.width),
           largeScreen: MoviePanel(
-              column: 18, row: 7, images: _mainController.movieController.imageNames, width: MediaQuery.of(context).size.width,),
+              column: 13, row: 5, images: _mainController.movieController.imageNames, width: MediaQuery.of(context).size.width,),
         ),
       );
     } else {

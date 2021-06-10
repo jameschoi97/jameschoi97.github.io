@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jameschoi97/config/constants/ui/theme_constants.dart';
+import 'package:jameschoi97/ui/widgets/responsive_widget.dart';
 
 import 'my_drawer.dart';
 
@@ -87,7 +88,7 @@ class MyScaffold extends StatelessWidget {
         bottomNavigationBar: bottomNavigationBar,
         bottomSheet: bottomSheet,
         drawer: drawer != null ? drawer :
-        MediaQuery.of(context).size.width < 600 ? MyDrawer() : null,
+        ResponsiveWidget.isSmallScreen(context) ? MyDrawer() : null,
         onDrawerChanged: onDrawerChanged,
         endDrawer: endDrawer,
         onEndDrawerChanged: onEndDrawerChanged,

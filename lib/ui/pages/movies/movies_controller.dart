@@ -61,7 +61,7 @@ class MoviesController extends GetxController {
     super.onInit();
   }
 
-  void showPanel() {
+  void showPanel() async {
     for (int index = 0; index < visibilities!.length; index++) {
       timers.add(Timer(
           Duration(
@@ -71,14 +71,14 @@ class MoviesController extends GetxController {
     }
   }
 
-  void hidePanel() {
+  void hidePanel() async {
+    for (int index = 0; index < visibilities!.length; index++) {
+      visibilities![index] = false;
+    }
     for (Timer timer in timers) {
       timer.cancel();
     }
     timers.clear();
-    for (int index = 0; index < visibilities!.length; index++) {
-      visibilities![index] = false;
-    }
   }
 
   void sortMoviesUsingCategory(MovieInfo category) {
