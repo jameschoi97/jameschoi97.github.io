@@ -1,18 +1,16 @@
-import 'dart:async';
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jameschoi97/config/constants/ui/theme_constants.dart';
 import 'package:jameschoi97/main_controller.dart';
-import 'package:jameschoi97/ui/pages/home/home_controller.dart';
+import 'package:jameschoi97/ui/pages/movies/movies_controller.dart';
 import 'package:jameschoi97/ui/widgets/my_movies.dart';
 import 'package:jameschoi97/ui/widgets/my_scaffold.dart';
 import 'package:jameschoi97/ui/widgets/responsive_widget.dart';
 
 import 'package:get/get.dart';
 
-class HomePage extends GetView<HomeController> {
+class HomePage extends StatelessWidget {
   static final name = '/home';
 
   final subpages = [
@@ -23,11 +21,13 @@ class HomePage extends GetView<HomeController> {
 
   final _themeController = Get.find<MyThemeController>();
   final _mainController = Get.find<MainController>();
+  final _moviesController = Get.find<MoviesController>();
+  final _scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
-    controller.smallScreen = ResponsiveWidget.isSmallScreen(context);
-    controller.moviesContentLength = MediaQuery.of(context).size.width;
+    final smallScreen = ResponsiveWidget.isSmallScreen(context);
+    final moviesContentLength = MediaQuery.of(context).size.width;
     _mainController.currentPage.value = Pages.home;
     final pageButtons = Map.fromIterable(subpages,
         key: (entry) => entry as Pages,
@@ -66,7 +66,15 @@ class HomePage extends GetView<HomeController> {
         });
 
     return MyScaffold(
-      scrollController: controller.scrollController,
+      scrollController: _scrollController ..addListener(() {
+        if (_scrollController.offset >= _scrollController.position.maxScrollExtent - moviesContentLength && smallScreen) {
+          _moviesController.showPanel();
+        }
+
+        if (_scrollController.offset < _scrollController.position.maxScrollExtent - moviesContentLength && smallScreen) {
+          _moviesController.hidePanel();
+        }
+      }),
       body: ResponsiveWidget(
         smallScreen: Column(
           mainAxisAlignment: MainAxisAlignment.center,

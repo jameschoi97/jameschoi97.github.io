@@ -49,8 +49,6 @@ class MoviesController extends GetxController {
   @override
   void onInit() async {
     final singleLineXml = moviesXml.replaceAll('\n', '').replaceAll('    ', '');
-    final xmlRead = await rootBundle.loadString('assets/movies.xml');
-    print(xmlRead);
     final movieNodes = XmlDocument.parse(singleLineXml).children[1];
     for (var node in movieNodes.children) {
       final movie = Movie(node);
