@@ -805,361 +805,395 @@ const moviesXml = '''<?xml version="1.0"?>
         <ImgName>jack_the_giant_slayer.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>James and the Giant Peach</Name>
-
+        <Year>1996</Year>
+        <ImgName>james_and_the_giant_peach.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Jerry McGuire</Name>
-
+        <Name>Jerry Maguire</Name>
+        <Year>1996</Year>
+        <ImgName>jerry_maguire.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Jigsaw</Name>
-
+        <Year>2017</Year>
+        <Series>Saw</Series>
+        <SeriesIndex>8</SeriesIndex>
+        <ImgName>jigsaw.jpeg</ImgName>
     </Movie>
     <Movie>
-
         <Name>John Carter</Name>
-
+        <Year>2012</Year>
+        <ImgName>john_carter.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Jumper</Name>
-
+        <Year>2008</Year>
+        <ImgName>jumper.jpeg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Kickass</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Kickass 2</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Kingsmen The Secret Service</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Knocked Up</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Kung Fu Panda</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Kung Fu Panda 2</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Kung Fu Panda 3</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>La La Land</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Leap</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Les Miserables</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Liar Liar</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Little Shop of Horrors</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Logan (2017)</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Lolita</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Lord of the Rings </Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Lord of the Rings 2</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Lord of the Rings 3</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Love Actually</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Madagascar</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Man Up</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Mannequin</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Mannequin Two: On the Move</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Marley and Me</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Mary Poppins</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Mary Poppins Returns</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Meet Dave</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Meet the Parents</Name>
-
-
-        <Year>2000</Year>
-
-
-        <Series>Meet the Parents</Series>
-
-    </Movie>
-    <Movie>
-
-        <Name>Meet the Fockers</Name>
-
-
-        <Year>2004</Year>
-
-
-        <Series>Meet the Parents</Series>
-
-    </Movie>
-    <Movie>
-
-        <Name>Little Fockers</Name>
-
-
+        <Name>Kick-Ass</Name>
         <Year>2010</Year>
-
-
+        <Series>Kick-Ass</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>kick_ass.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Kick-Ass 2</Name>
+        <Year>2013</Year>
+        <Series>Kick-Ass</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>kick_ass_2.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Kingsman: The Secret Service</Name>
+        <Year>2014</Year>
+        <Series>Kingsman</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>kingsman_the_secret_service.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Kingsman: The Golden Circle</Name>
+        <Year>2017</Year>
+        <Series>Kingsman</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>kingsman_the_golden_circle.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Knocked Up</Name>
+        <Year>2007</Year>
+        <ImgName>knocked_up.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Kung Fu Panda</Name>
+        <Year>2008</Year>
+        <Series>Kung Fu Panda</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>kung_fu_panda.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Kung Fu Panda 2</Name>
+        <Year>2011</Year>
+        <Series>Kung Fu Panda</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>kung_fu_panda_2.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Kung Fu Panda 3</Name>
+        <Year>2016</Year>
+        <Series>Kung Fu Panda</Series>
+        <SeriesIndex>3</SeriesIndex>
+        <ImgName>kung_fu_panda_3.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>La La Land</Name>
+        <Year>2016</Year>
+        <ImgName>la_la_land.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Leap</Name>
+        <Year>2016</Year>
+        <ImgName>leap.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Les Misérables</Name>
+        <Year>2012</Year>
+        <ImgName>les_miserables.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Liar Liar</Name>
+        <Year>1997</Year>
+        <ImgName>liar_liar.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Little Shop of Horrors</Name>
+        <Year>1986</Year>
+        <ImgName>little_shop_of_horrors.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Logan</Name>
+        <Year>2017</Year>
+        <Series>Wolverine</Series>
+        <SeriesIndex>3</SeriesIndex>
+        <ImgName>logan.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Lolita</Name>
+        <Year>1997</Year>
+        <ImgName>lolita.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>The Lord of the Rings: The Fellowship of the Ring</Name>
+        <Year>2001</Year>
+        <Series>The Lord of the Rings</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>the_lord_of_the_rings_the_fellowship_of_the_ring.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>The Lord of the Rings: The Two Towers</Name>
+        <Year>2002</Year>
+        <Series>The Lord of the Rings</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>the_lord_of_the_rings_the_two_towers.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>The Lord of the Rings: The Return of the King</Name>
+        <Year>2003</Year>
+        <Series>The Lord of the Rings</Series>
+        <SeriesIndex>3</SeriesIndex>
+        <ImgName>the_lord_of_the_rings_the_return_of_the_king.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Love Actually</Name>
+        <Year>2003</Year>
+        <ImgName>love_actually.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Madagascar</Name>
+        <Year>2005</Year>
+        <ImgName>madagascar.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Man Up</Name>
+        <Year>2015</Year>
+        <ImgName>man_up.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Mannequin</Name>
+        <Year>1987</Year>
+        <Series>Mannequin</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>mannequin.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Mannequin: On the Move</Name>
+        <Year>1991</Year>
+        <Series>Mannequin</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>mannequin_on_the_move.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Marley and Me</Name>
+        <Year>2008</Year>
+        <ImgName>marley_and_me.jpeg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Mary Poppins</Name>
+        <Year>1964</Year>
+        <Series>Mary Poppins</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>mary_poppins.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Mary Poppins Returns</Name>
+        <Year>2018</Year>
+        <Series>Mary Poppins</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>marry_poppins_returns.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Meet Dave</Name>
+        <Year>2008</Year>
+        <ImgName>meet_dave.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Meet the Parents</Name>
+        <Year>2000</Year>
         <Series>Meet the Parents</Series>
-
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>meet_the_parents.jpg</ImgName>
     </Movie>
     <Movie>
-
+        <Name>Meet the Fockers</Name>
+        <Year>2004</Year>
+        <Series>Meet the Parents</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>meet_the_fockers.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Little Fockers</Name>
+        <Year>2010</Year>
+        <Series>Meet the Parents</Series>
+        <SeriesIndex>3</SeriesIndex>
+        <ImgName>little_fockers.jpg</ImgName>
+    </Movie>
+    <Movie>
         <Name>Megamind</Name>
-
+        <Year>2010</Year>
+        <ImgName>megamind.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Men in Black</Name>
-
+        <Year>1997</Year>
+        <Series>Men in Black</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>men_in_black.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Men in Black 3</Name>
-
+        <Year>2012</Year>
+        <Series>Men in Black</Series>
+        <SeriesIndex>3</SeriesIndex>
+        <ImgName>men_in_black_3.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Men in Black: International</Name>
-    </Movie>
-    <Movie>
-
-        <Name>MILF </Name>
-
-
-        <Year>2018</Year>
-
-    </Movie>
-    <Movie>
-
-        <Name>Moana</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Monster House</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Monsters Inc</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Monsters University</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Mother's Day</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Mr and Mrs Smith</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Mulan</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>My Big Fat Greek Wedding</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Naked</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Neighbors </Name>
-
-
-        <Year>2014</Year>
-
-    </Movie>
-    <Movie>
-
-        <Name>Neighbors 2: Sorority Rising</Name>
-
-
-        <Year>2016</Year>
-
-    </Movie>
-    <Movie>
-
-        <Name>Night at the Museum</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>No Instructions Included</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Nothing Like the Holidays</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Now You See Me</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Office Christmas Party</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Orphan</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Pain &amp; Gain</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Pan's Labyrith</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Percy Jackson &amp; the Olympians</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Peter Pan</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Pineapple Express</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Pink Panther</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Pink Panther 2</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Pirates of Carribean</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Planes</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>Pokémon Detective Pikachu</Name>
-
-
         <Year>2019</Year>
+        <Series>Men in Black</Series>
+        <SeriesIndex>4</SeriesIndex>
+        <ImgName>men_in_black_international.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>MILF </Name>
+        <Year>2018</Year>
+        <ImgName>milf.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Moana</Name>
+        <Year>2016</Year>
+        <ImgName>moana.jpeg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Monster House</Name>
+        <Year>2006</Year>
+        <ImgName>monster_house.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Monsters, Inc.</Name>
+        <Year>2001</Year>
+        <Series>Monsters, Inc.</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>monsters_inc.jpeg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Monsters University</Name>
+        <Year>2013</Year>
+        <Series>Monsters, Inc.</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>monsters_university.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Mother's Day</Name>
+        <Year>2016</Year>
+        <ImgName>mothers_day.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Mr and Mrs Smith</Name>
+        <Year>2015</Year>
+        <ImgName>mr_and_mrs_smith.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Mulan</Name>
+        <Year>1998</Year>
+        <ImgName>mulan.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>My Big Fat Greek Wedding</Name>
+        <Year>2002</Year>
+        <ImgName>my_big_fat_greek_wedding.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Naked</Name>
+        <Year>2017</Year>
+        <ImgName>naked.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Neighbors </Name>
+        <Year>2014</Year>
+        <Series>Neighbors</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>neighbors.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Neighbors 2: Sorority Rising</Name>
+        <Year>2016</Year>
+        <Series>Neighbors</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>neighbors_2_sorority_rising.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Night at the Museum</Name>
+        <Year>2006</Year>
+        <ImgName>night_at_the_museum.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Instructions NotIncluded</Name>
+        <Year>2013</Year>
+        <ImgName>instructions_not_included.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Nothing Like the Holidays</Name>
+        <Year>2008</Year>
+        <ImgName>nothing_like_the_holidays.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Now You See Me</Name>
+        <Year>2013</Year>
+        <ImgName>now_you_see_me.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Office Christmas Party</Name>
+        <Year>2016</Year>
+        <ImgName>office_christmas_party.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Orphan</Name>
+        <Year>2009</Year>
+        <ImgName>orphan.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Pain and Gain</Name>
+        <Year>2013</Year>
+        <ImgName>pain_and_gain.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Pan's Labyrith</Name>
+        <Year>2006</Year>
+        <ImgName>pans_labyrinth.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Percy Jackson and the Olympians: The Lightening Thief</Name>
+        <Year>2010</Year>
+        <ImgName>percy_jackson_and_the_olympians_the_lightening_thief.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Peter Pan</Name>
+        <Year>2003</Year>
+        <ImgName>peter_pan.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Pineapple Express</Name>
+        <Year>2008</Year>
+        <ImgName>pineapple_express.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>The Pink Panther</Name>
+        <Year>2006</Year>
+        <Series>The Pink Panther</Series>
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>the_pink_panther.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>The Pink Panther 2</Name>
+        <Year>2009</Year>
+        <Series>The Pink Panther</Series>
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>the_pink_panther_2.jpeg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Pirates of Carribean: The Curse of the Black Pearl</Name>
+        <Year>2003</Year>
+        <ImgName>pirates_of_the_caribbean_the_curse_of_the_black_pearl.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Planes</Name>
+        <Year>2013</Year>
+        <ImgName>planes.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>Pokémon Detective Pikachu</Name>
+        <Year>2019</Year>
+        <ImgName>pokemon_detective_pikachu.jpg</ImgName>
 
     </Movie>
     <Movie>
@@ -1244,53 +1278,53 @@ const moviesXml = '''<?xml version="1.0"?>
 
     </Movie>
     <Movie>
-
         <Name>Saw </Name>
-
+        <Year>2004</Year>
         <Series>Saw</Series>
-
+        <SeriesIndex>1</SeriesIndex>
+        <ImgName>saw.jpeg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Saw 2</Name>
-
+        <Name>Saw II</Name>
+        <Year>2005</Year>
         <Series>Saw</Series>
-
+        <SeriesIndex>2</SeriesIndex>
+        <ImgName>saw_2.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Saw 3</Name>
-
+        <Name>Saw III</Name>
+        <Year>2006</Year>
         <Series>Saw</Series>
-
+        <SeriesIndex>3</SeriesIndex>
+        <ImgName>saw_3.jpeg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Saw 4</Name>
-
+        <Name>Saw IV</Name>
+        <Year>2007</Year>
         <Series>Saw</Series>
-
+        <SeriesIndex>4</SeriesIndex>
+        <ImgName>saw_4.jpeg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Saw 5</Name>
-
+        <Name>Saw V</Name>
+        <Year>2008</Year>
         <Series>Saw</Series>
-
+        <SeriesIndex>5</SeriesIndex>
+        <ImgName>saw_5.jpeg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Saw 6</Name>
-
+        <Name>Saw VI</Name>
+        <Year>2009</Year>
         <Series>Saw</Series>
-
+        <SeriesIndex>6</SeriesIndex>
+        <ImgName>saw_6.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Saw 7</Name>
-
+        <Name>Saw: The Final Chapter</Name>
+        <Year>2010</Year>
         <Series>Saw</Series>
-
+        <SeriesIndex>7</SeriesIndex>
+        <ImgName>saw_the_final_chapter.jpg</ImgName>
     </Movie>
     <Movie>
 
@@ -1903,20 +1937,14 @@ const moviesXml = '''<?xml version="1.0"?>
 
 
         <Year>2009</Year>
-
-
         <Series>Wolverine</Series>
-
+        <SeriesIndex>1</SeriesIndex>
     </Movie>
     <Movie>
-
         <Name>The Wolverine</Name>
-
-
         <Year>2013</Year>
-
-
         <Series>Wolverine</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
@@ -2206,6 +2234,21 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>Onward</Name>
         <Year>2020</Year>
         <ImgName>onward.jpg</ImgName>
+    </Movie>
+    <Movie>
+        <Name>3 Idiots</Name>
+    </Movie>
+    <Movie>
+        <Name>Us</Name>
+    </Movie>
+    <Movie>
+        <Name>Jumanji</Name>
+    </Movie>
+    <Movie>
+        <Name>San Andreas</Name>
+    </Movie>
+    <Movie>
+        <Name>Crystal Inferno</Name>
     </Movie>
 </Movies>
 ''';
