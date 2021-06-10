@@ -149,71 +149,77 @@ class HomePage extends GetView<HomeController> {
       return Center(
         child: CarouselSlider(
             items: [
-              Stack(
-                alignment: AlignmentDirectional.bottomCenter,
-                children: [
-                  Image.asset('assets/images/me_1.png', fit: BoxFit.fitHeight),
-                  Container(
-                    padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.02),
-                    width: MediaQuery.of(context).size.width,
-                    child:
+              Center(
+                child: Stack(
+                  alignment: AlignmentDirectional.bottomCenter,
+                  children: [
+                    Image.asset('assets/images/me_1.png', fit: BoxFit.fitHeight),
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.02, vertical: 20),
+                      width: MediaQuery.of(context).size.width,
+                      child:
+                        FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: Text('SMART',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white.withOpacity(0.8),
+                            letterSpacing: 3
+                          ),)
+                        )
+
+                      ,
+                    )
+                  ],
+                ),
+              ),
+              Center(
+                child: Stack(
+                  alignment: AlignmentDirectional.bottomCenter,
+                  children: [
+                    Image.asset('assets/images/me_2.jpg', fit: BoxFit.fitHeight),
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.01, vertical: 10),
+                      width: MediaQuery.of(context).size.width,
+                      child:
                       FittedBox(
-                        fit: BoxFit.fitWidth,
-                        child: Text('SMART',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          color: Colors.white.withOpacity(0.8),
-                          letterSpacing: 3
-                        ),)
+                          fit: BoxFit.fitWidth,
+                          child: Text('FRIENDLY',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white.withOpacity(0.8),
+                                letterSpacing: 3
+                            ),)
                       )
 
-                    ,
-                  )
-                ],
-              ),
-              Stack(
-                alignment: AlignmentDirectional.bottomCenter,
-                children: [
-                  Image.asset('assets/images/me_2.png', fit: BoxFit.fitHeight),
-                  Container(
-                    padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.05),
-                    width: MediaQuery.of(context).size.width,
-                    child:
-                    FittedBox(
-                        fit: BoxFit.fitWidth,
-                        child: Text('FOCUSED',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white.withOpacity(0.8),
-                              letterSpacing: 3
-                          ),)
+                      ,
                     )
-
-                    ,
-                  )
-                ],
+                  ],
+                ),
               ),
-              Stack(
-                alignment: AlignmentDirectional.bottomCenter,
-                children: [
-                  Image.asset('assets/images/me_3.png', fit: BoxFit.fitHeight),
-                  Container(
-                    padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.045),
-                    width: MediaQuery.of(context).size.width,
-                    child:
-                    FittedBox(
-                        fit: BoxFit.fitWidth,
-                        child: Text('CONFIDENT',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white.withOpacity(0.8),
-                              letterSpacing: 3
-                          ),)
-                    )
+              Center(
+                child: Stack(
+                  alignment: AlignmentDirectional.bottomCenter,
+                  children: [
+                    Image.asset('assets/images/me_3.png', fit: BoxFit.fitHeight),
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.045, vertical: 20),
+                      width: MediaQuery.of(context).size.width,
+                      child:
+                      FittedBox(
+                          fit: BoxFit.fitWidth,
+                          child: Text('CONFIDENT',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white.withOpacity(0.8),
+                                letterSpacing: 3
+                            ),)
+                      )
 
-                    ,
-                  )
-                ],
+                      ,
+                    )
+                  ],
+                ),
               ),
             ],
             options: CarouselOptions(
