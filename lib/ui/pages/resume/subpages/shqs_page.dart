@@ -106,7 +106,7 @@ class ShqsPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(bottom: 15),
+                  padding: EdgeInsets.only(bottom: 10, left: 10, right: 10),
                   child: Text(
                     title,
                     style: TextStyle(
@@ -119,16 +119,15 @@ class ShqsPage extends StatelessWidget {
                 Container(
                   width: 400,
                   margin: EdgeInsets.symmetric(horizontal: 15),
-                  child: Text(content, style: TextStyle(fontSize: 20)),
+                  child: Text(content, style: TextStyle(fontSize: 16)),
                 ),
                 Container(
-                  margin: EdgeInsets.only(bottom: 20),
                   child: TextButton(
                     style: _themeController.theme.buttonStyle.copyWith(
                         side: MaterialStateProperty.all(
                             BorderSide(color: Colors.black)),
                         padding: MaterialStateProperty.all(
-                          EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                          EdgeInsets.symmetric(horizontal: 30, vertical: 12),
                         )),
                     onPressed: () => Get.dialog(AlertDialog(
                         contentPadding: EdgeInsets.zero,
@@ -137,7 +136,7 @@ class ShqsPage extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10)),
                         content: Container(
                           padding:
-                              EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                              EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                           child: Column(
                             children: [
                               Center(
@@ -153,7 +152,7 @@ class ShqsPage extends StatelessWidget {
                               ),
                               Expanded(
                                   child: Container(
-                                      padding: EdgeInsets.all(20),
+                                      padding: EdgeInsets.all(10),
                                       child: Image.asset(gifPath))),
                               TextButton(
                                   onPressed: () {
@@ -164,7 +163,7 @@ class ShqsPage extends StatelessWidget {
                                       maxWidth: 150,
                                     ),
                                     padding: EdgeInsets.symmetric(
-                                        horizontal: 5, vertical: 10),
+                                        horizontal: 20, vertical: 10),
                                     decoration: BoxDecoration(
                                       borderRadius:
                                           BorderRadius.all(Radius.circular(10)),

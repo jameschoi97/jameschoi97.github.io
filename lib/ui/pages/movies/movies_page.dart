@@ -226,7 +226,7 @@ class MoviesPage extends GetView<MoviesController> {
                     constraints: BoxConstraints(
                       maxWidth: 150,
                     ),
-                    padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                       border: Border.all(
