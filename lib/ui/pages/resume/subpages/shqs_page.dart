@@ -1,35 +1,44 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:jameschoi97/config/constants/ui/theme_constants.dart';
 import 'package:jameschoi97/ui/widgets/my_appbar.dart';
 import 'package:jameschoi97/ui/widgets/my_grid.dart';
 import 'package:jameschoi97/ui/widgets/my_scaffold.dart';
 import 'package:get/get.dart';
 
 class ShqsPage extends StatelessWidget {
+  final _themeController = Get.find<MyThemeController>();
+
   @override
   Widget build(BuildContext context) {
     final List<Widget> shqsItems = [
-      shqsItem('List Widget',
-          'List widget used in SmartHQ Service which shows an animated icon when it has no items',
+      shqsItem(
+          'List Widget',
+          'List widget used in SmartHQ Service which shows an animated icon when it has no items.',
           'assets/gifs/shqs_list.gif'),
-      shqsItem('Grid Widget',
-      'Grid widget used in SmartHQ Service which can automatically adjust the number of columns'
-          ' depending on the screen size. The widget also provides options to have a set number of columns / rows, '
-          'make the grid borderless / unscrollable, and set the max size of each grid',
-      'assets/gifs/shqs_grid.gif'),
-      shqsItem('Settings Page',
-          '',
+      shqsItem(
+          'Grid Widget',
+          'Grid widget which can automatically adjust the number of columns'
+              ' depending on the screen size. Also provides options to have a set number of columns/rows, '
+              'make the grid borderless/unscrollable, and set the max size of each grid.',
+          'assets/gifs/shqs_grid.gif'),
+      shqsItem('Settings Page', 'Settings page of SmartHQ Service.',
           'assets/gifs/settings.gif'),
-      shqsItem('Diagnostic Documents Page',
-          '',
+      shqsItem(
+          'Diagnostic Documents Page',
+          'Diagnostic Documents page where users can access useful documents through Salesforce cloud.',
           'assets/gifs/diagnostic_documents.gif'),
-      shqsItem('Diagnostic History\n-\nSearch Page',
-          '',
+      shqsItem(
+          'Diagnostic History - Search Page',
+          'Diagnostic History page where users can search for past sessions. The search can be narrowed down '
+              'with several parameters.',
           'assets/gifs/diagnostic_history.gif'),
-      shqsItem('Diagnostic History\n-\nSession Info',
-          '',
+      shqsItem(
+          'Diagnostic History - Session Info',
+          'A session information page which shows information about a past session. The details can be sent'
+              ' through email or SMS. Session notes/photos/videos '
+              'are made available when they are loaded.',
           'assets/gifs/session_info.gif'),
-
     ];
 
     return MyScaffold(
@@ -91,9 +100,91 @@ class ShqsPage extends StatelessWidget {
 
   Widget shqsItem(String title, String content, String gifPath) {
     return AspectRatio(
-      aspectRatio: 1,
-      child: Center(
-        child: Row(children: [
+        aspectRatio: 1,
+        child: Center(
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(bottom: 15),
+                  child: Text(
+                    title,
+                    style: TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.w600,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                Container(
+                  width: 400,
+                  margin: EdgeInsets.symmetric(horizontal: 15),
+                  child: Text(content, style: TextStyle(fontSize: 20)),
+                ),
+                Container(
+                  margin: EdgeInsets.only(bottom: 20),
+                  child: TextButton(
+                    style: _themeController.theme.buttonStyle.copyWith(
+                        side: MaterialStateProperty.all(
+                            BorderSide(color: Colors.black)),
+                        padding: MaterialStateProperty.all(
+                          EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                        )),
+                    onPressed: () => Get.dialog(AlertDialog(
+                        contentPadding: EdgeInsets.zero,
+                        shape: RoundedRectangleBorder(
+                            side: BorderSide(color: Colors.black, width: 2.0),
+                            borderRadius: BorderRadius.circular(10)),
+                        content: Container(
+                          padding:
+                              EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                          child: Column(
+                            children: [
+                              Center(
+                                child: FittedBox(
+                                  fit: BoxFit.fitWidth,
+                                  child: Text(title,
+                                      style: TextStyle(
+                                        letterSpacing: 3,
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 40,
+                                      )),
+                                ),
+                              ),
+                              Expanded(
+                                  child: Container(
+                                      padding: EdgeInsets.all(20),
+                                      child: Image.asset(gifPath))),
+                              TextButton(
+                                  onPressed: () {
+                                    Get.back();
+                                  },
+                                  child: Container(
+                                    constraints: BoxConstraints(
+                                      maxWidth: 150,
+                                    ),
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: 5, vertical: 10),
+                                    decoration: BoxDecoration(
+                                      borderRadius:
+                                          BorderRadius.all(Radius.circular(10)),
+                                      border: Border.all(
+                                        color: Colors.red,
+                                        width: 1,
+                                      ),
+                                    ),
+                                    child: Center(child: Text('Close')),
+                                  ))
+                            ],
+                          ),
+                        ))),
+                    child: Text('Show', style: TextStyle(fontSize: 20)),
+                  ),
+                )
+              ]),
+        )
+
+        /*Row(children: [
           Expanded(
               flex: 1,
               child: Center(
@@ -125,9 +216,8 @@ class ShqsPage extends StatelessWidget {
                   child: Image.asset(gifPath),
                 ),
               )),
-        ]),
-      ),
-    );
-  }
+        ]),);*/
 
+        );
+  }
 }
