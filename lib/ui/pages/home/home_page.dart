@@ -163,8 +163,17 @@ class HomePage extends StatelessWidget {
                   children: [
                     Image.asset('assets/images/me_1.png', fit: BoxFit.fitHeight),
                     Container(
-                      padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.02, vertical: 20),
+                        margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.03, vertical: 30),
                       width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.4),
+                              spreadRadius: 5,
+                              blurRadius: 20,
+                            )
+                          ]
+                      ),
                       child:
                         FittedBox(
                           fit: BoxFit.fitWidth,
@@ -187,8 +196,17 @@ class HomePage extends StatelessWidget {
                   children: [
                     Image.asset('assets/images/me_2.jpg', fit: BoxFit.fitHeight),
                     Container(
-                      padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.01, vertical: 10),
+                      margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.01, vertical: 10),
                       width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.4),
+                            spreadRadius: 5,
+                            blurRadius: 20,
+                          )
+                        ]
+                      ),
                       child:
                       FittedBox(
                           fit: BoxFit.fitWidth,
@@ -211,8 +229,17 @@ class HomePage extends StatelessWidget {
                   children: [
                     Image.asset('assets/images/me_3.png', fit: BoxFit.fitHeight),
                     Container(
-                      padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.045, vertical: 20),
+                      margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.055, vertical: 30),
                       width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.4),
+                              spreadRadius: 5,
+                              blurRadius: 20,
+                            )
+                          ]
+                      ),
                       child:
                       FittedBox(
                           fit: BoxFit.fitWidth,
@@ -220,7 +247,7 @@ class HomePage extends StatelessWidget {
                             style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 color: Colors.white.withOpacity(0.8),
-                                letterSpacing: 3
+                                letterSpacing: 2.5
                             ),)
                       )
 
