@@ -9,7 +9,6 @@ import 'package:jameschoi97/ui/widgets/my_scaffold.dart';
 import 'package:jameschoi97/ui/widgets/responsive_widget.dart';
 
 import 'package:get/get.dart';
-import 'dart:html' as html;
 
 class HomePage extends StatelessWidget {
   static final name = '/home';
@@ -52,8 +51,7 @@ class HomePage extends StatelessWidget {
                     }
                   },
             onTap: () {
-              html.window.open('https://www.google.com', 'Google');
-              //Get.toNamed(page.pageName);
+              Get.toNamed(page.pageName);
             },
             child: Text(
               page.name.toUpperCase(),
