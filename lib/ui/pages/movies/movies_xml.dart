@@ -171,18 +171,21 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>Avengers: Age of Ultron</Name>
         <Year>2015</Year>
         <Series>The Avengers</Series>
+        <SeriesIndex>2</SeriesIndex>
         <ImgName>avengers_age_of_ultron.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Avengers: Endgame</Name>
         <Year>2019</Year>
         <Series>The Avengers</Series>
+        <SeriesIndex>4</SeriesIndex>
         <ImgName>avengers_endgame.jpeg</ImgName>
     </Movie>
     <Movie>
         <Name>Avengers: Infinity War</Name>
         <Year>2018</Year>
         <Series>The Avengers</Series>
+        <SeriesIndex>3</SeriesIndex>
         <ImgName>avengers_infinity_war.jpg</ImgName>
     </Movie>
     <Movie>
@@ -1518,269 +1521,412 @@ const moviesXml = '''<?xml version="1.0"?>
     <Movie>
 
         <Name>Spy</Name>
+        <Year>2015</Year>
+        <ImgName>spy.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>St. Vincent</Name>
+        <Year>2014</Year>
+        <ImgName>st_vincent.jpg</ImgName>
 
     </Movie>
     <Movie>
 
-        <Name>Star Wars</Name>
+        <Name>Star Wars: Episode IV - A New Hope</Name>
+        <Year>1977</Year>
+        <ImgName>star_wars_episode_iv_a_new_hope.jpg</ImgName>
+
 
     </Movie>
     <Movie>
         <Name>Adam</Name>
         <Year>2020</Year>
+        <ImgName>adam.jpg</ImgName>
     </Movie>
     <Movie>
 
         <Name>Stepbrothers</Name>
+        <Year>2008</Year>
+        <ImgName>stepbrothers.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Stranger than Fiction</Name>
+        <Year>2006</Year>
+        <ImgName>stranger_than_fiction.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Superbad</Name>
+        <Year>2007</Year>
+        <ImgName>superbad.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Taken</Name>
+        <Year>2008</Year>
+        <ImgName>taken.jpg</ImgName>
+        <Series>Taken</Series>
+        <SeriesIndex>1</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>Taken 2</Name>
+        <Year>2012</Year>
+        <ImgName>taken2.jpg</ImgName>
+        <Series>Taken</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>Taken 3</Name>
+        <Year>2014</Year>
+        <ImgName>taken3.jpg</ImgName>
+        <Series>Taken</Series>
+        <SeriesIndex>3</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>Tangled</Name>
+        <Year>2010</Year>
+        <ImgName>tangled.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Tarjan</Name>
+        <Year>1999</Year>
+        <ImgName>tarjan.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Ted</Name>
+        <Year>2012</Year>
+        <ImgName>ted.jpg</ImgName>
+        <Series>Ted</Series>
+        <SeriesIndex>1</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>Ted 2</Name>
+        <Year>2015</Year>
+        <ImgName>ted2.jpg</ImgName>
+        <Series>Ted</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>The Age of Adaline</Name>
+        <Year>2015</Year>
+        <ImgName>the_age_of_adaline.jpg</ImgName>
 
     </Movie>
     <Movie>
 
-        <Name>The Anchorman</Name>
+        <Name>Anchorman: The Legend of Ron Burgundy</Name>
+        <Year>2004</Year>
+        <ImgName>anchorman_the_legend_of_ron_burgundy.jpg</ImgName>
+        <Series>Anchorman</Series>
+        <SeriesIndex>1</SeriesIndex>
 
     </Movie>
     <Movie>
 
-        <Name>The Anchorman 2</Name>
+        <Name>Anchorman 2: The Legend Continues</Name>
+        <Year>2013</Year>
+        <ImgName>anchorman2_the_legend_continues.jpeg</ImgName>
+        <Series>Anchorman</Series>
+        <SeriesIndex>1</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>The Angriest Man in Brooklyn</Name>
+        <Year>2014</Year>
+        <ImgName>the_angriest_man_in_brooklyn.jpg</ImgName>
 
     </Movie>
     <Movie>
         <Name>The Avengers</Name>
         <Year>2012</Year>
         <Series>The Avengers</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>the_avengers.jpg</ImgName>
     </Movie>
     <Movie>
 
         <Name>The Boss Baby</Name>
+        <Year>2017</Year>
+        <ImgName>the_boss_baby.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Breakfast Club</Name>
+        <Year>1985</Year>
+        <ImgName>the_breakfast_club.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Bucket List</Name>
+        <Year>2007</Year>
+        <ImgName>the_bucket_list</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Butterfly Effect</Name>
+        <Year>2004</Year>
+        <ImgName>the_butterfly_effect.jpg</ImgName>
+
 
     </Movie>
     <Movie>
 
-        <Name>The Change Up</Name>
+        <Name>The Change-Up</Name>
+        <Year>2011</Year>
+        <ImgName>the_change_up.jpg</ImgName>
+
 
     </Movie>
     <Movie>
 
         <Name>The Climb</Name>
+        <Year>2017</Year>
+        <ImgName>the_climb.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Curious Case of Benjamin Button</Name>
+        <Year>2008</Year>
+        <ImgName>the_curious_case_of_bejamin_button.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Devil Wears Prada</Name>
+        <Year>2006</Year>
+        <ImgName>the_devil_wears_prada.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Dictator</Name>
+        <Year>2012</Year>
+        <ImgName>the_dictator.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Do-Over</Name>
+        <Year>2016</Year>
+        <ImgName>the_do_over.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The DUFF</Name>
+        <Year>2015</Year>
+        <ImgName>the_DUFF.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Expendables</Name>
+        <Year>2010</Year>
+        <ImgName>the_expendables.jpg</ImgName>
 
     </Movie>
     <Movie>
 
-        <Name>The Five Year Engagement</Name>
+        <Name>The Five-Year Engagement</Name>
+        <Year>2012</Year>
+        <ImgName>the_five_year_engagement.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Foreigner</Name>
+        <Year>2017</Year>
+        <ImgName>the_foreigner.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Founder</Name>
+        <Year>2016</Year>
+        <ImgName>the_founder.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Giver</Name>
+        <Year>2014</Year>
+        <ImgName>the_giver.jpg</ImgName>
+
 
     </Movie>
     <Movie>
 
         <Name>The Great Gatsby</Name>
+        <Year>2013</Year>
+        <ImgName>the_great_gatsby.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Guardians of the Galaxy</Name>
+        <Year>2014</Year>
+        <ImgName>the_guardians_of_the_galaxy.jpg</ImgName>
+        <Series>The Guardians of the Galaxy</Series>
+        <SeriesIndex>1</SeriesIndex>
 
     </Movie>
     <Movie>
 
-        <Name>The Guardians of the Galaxy 2</Name>
+        <Name>The Guardians of the Galaxy Vol. 2</Name>
+        <Year>2017</Year>
+        <ImgName>the_guardians_of_the_galaxy_vol2.jpg</ImgName>
+        <Series>The Guardians of the Galaxy</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
 
-        <Name>The Hangover </Name>
+        <Name>The Hangover</Name>
+        <Year>2009</Year>
+        <ImgName>the_hangover.jpg</ImgName>
+        <Series>The Hangover</Series>
+        <SeriesIndex>1</SeriesIndex>
+
+    </Movie>
+    <Movie>
+        <Name>The Hangover Part II</Name>
+        <Year>2011</Year>
+        <ImgName>the_hangover_part_2.jpg</ImgName>
+        <Series>The Hangover</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
 
-        <Name>The Hangover 2</Name>
-
-    </Movie>
-    <Movie>
-
-        <Name>The Hangover 3</Name>
+        <Name>The Hangover Part III</Name>
+        <Year>2013</Year>
+        <ImgName>the_hangover_part_3.jpg</ImgName>
+        <Series>The Hangover</Series>
+        <SeriesIndex>3</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>The Heat</Name>
+        <Year>2013</Year>
+        <ImgName>the_heat.jpg</ImgName>
 
     </Movie>
     <Movie>
 
-        <Name>The Hobbit</Name>
+        <Name>The Hobbit: An Unexpected Journey</Name>
+        <Year>2012</Year>
+        <ImgName>the_hobbit_an_unexpected_journey.jpg</ImgName>
 
     </Movie>
     <Movie>
 
-        <Name>The Hot Tub Timemachine</Name>
+        <Name>Hot Tub Time Machine</Name>
+        <Year>2010</Year>
+        <ImgName>the_hot_tub_time_machine.jpg</ImgName>
+        <Series>Hot Tub Time Machine</Series>
+        <SeriesIndex>1</SeriesIndex>
+
 
     </Movie>
     <Movie>
 
-        <Name>The Hot Tub Timemachine 2</Name>
+        <Name>Hot Tub Time Machine 2</Name>
+        <Year>2015</Year>
+        <ImgName>hot_tub_time_machine2.jpg</ImgName>
+        <Series>Hot Tub Time Machine</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>The Imitation Game</Name>
+        <Year>2014</Year>
+        <ImgName>the_imitation_game.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Incredibles</Name>
+        <Year>2004</Year>
+        <ImgName>the_incredibles.jpg</ImgName>
+        <Series>The Incredibles</Series>
+        <SeriesIndex>1</SeriesIndex>
 
+    </Movie>
+
+    <Movie>
+        <Name>Incredibles 2</Name>
+        <Year>2018</Year>
+        <ImgName>incredibles2.jpg</ImgName>
+        <Series>The Incredibles</Series>
+        <SeriesIndex>2</SeriesIndex>
     </Movie>
     <Movie>
 
         <Name>The Intern</Name>
+        <Year>2015</Year>
+        <ImgName>the_intern.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Interview</Name>
+        <Year>2014</Year>
+        <ImgName>the_interview.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Intouchables</Name>
-
-
         <Year>2011</Year>
+        <ImgName>the_intouchables.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Invention of Lying</Name>
+        <Year>2009</Year>
+        <ImgName>the_invention_of_lying.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Jungle Book</Name>
+        <Year>1967</Year>
+        <ImgName>the_jungle_book.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Karate Kid</Name>
+        <Year>2010</Year>
+        <ImgName>the_karate_kid.jpg</ImgName>
 
     </Movie>
     <Movie>
