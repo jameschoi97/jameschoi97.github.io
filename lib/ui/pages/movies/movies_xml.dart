@@ -1194,29 +1194,28 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>Pokémon Detective Pikachu</Name>
         <Year>2019</Year>
         <ImgName>pokemon_detective_pikachu.jpg</ImgName>
-
     </Movie>
     <Movie>
-
-        <Name>Popstar</Name>
-
+        <Name>Popstar: Never Stop Never Stopping</Name>
+        <Year>2016</Year>
+        <ImgName>popstar_never_stop_never_stopping.jpeg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Pretty Woman</Name>
-
-
         <Year>1990</Year>
-
+        <ImgName>pretty_woman.jpg</ImgName>
     </Movie>
     <Movie>
-
         <Name>Prisoners</Name>
-
+        <Year>2013</Year>
+        <ImgName>prisoners.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Purge</Name>
+        <Name>The Purge</Name>
+        <Year>2013</Year>
+        <ImgName>the_purge.jpg</ImgName>
+        <Series>The Purge</Series>
+        <SeriesIndex>1</SeriesIndex>
 
     </Movie>
     <Movie>
@@ -1225,56 +1224,73 @@ const moviesXml = '''<?xml version="1.0"?>
         <ImgName>push.jpg</ImgName>
     </Movie>
     <Movie>
-
-        <Name>Purge 2 </Name>
+        <Name>The Purge: Anarchy</Name>
+        <Year>2014</Year>
+        <ImgName>the_purge_anarchy.jpg</ImgName>
+        <Series>The Purge</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
-
         <Name>Ratatouille</Name>
+        <Year>2007</Year>
+        <ImgName>ratatouille.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Ready Player One</Name>
-
-
         <Year>2018</Year>
+        <ImgName>ready_player_one.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Red</Name>
+        <Year>2010</Year>
+        <ImgName>RED.jpg</ImgName>
+        <Series>RED</Series>
+        <SeriesIndex>1</SeriesIndex>
 
     </Movie>
     <Movie>
-
-        <Name>Red 2</Name>
+        <Name>RED 2</Name>
+        <Year>2013</Year>
+        <ImgName>RED2.jpg</ImgName>
+        <Series>RED</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
-
         <Name>Remember the Titans</Name>
+        <Year>2000</Year>
+        <ImgName>remember_the_titans.jpg</ImgName>
 
     </Movie>
     <Movie>
-
         <Name>Robots </Name>
+        <Year>2005</Year>
+        <ImgName>robots.jpg</ImgName>
 
     </Movie>
     <Movie>
-
         <Name>Role Models</Name>
+        <Year>2008</Year>
+        <ImgName>role_models.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Rudy</Name>
+        <Year>1993</Year>
+        <ImgName>rudy.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Sausage Party</Name>
+        <Year>2016</Year>
+        <ImgName>sausage_party.jpg</ImgName>
 
     </Movie>
     <Movie>
@@ -1329,6 +1345,8 @@ const moviesXml = '''<?xml version="1.0"?>
     <Movie>
 
         <Name>School of Rock</Name>
+        <Year>2003</Year>
+        <ImgName>school_of_rock.jpg</ImgName>
 
     </Movie>
     <Movie>
@@ -1337,79 +1355,111 @@ const moviesXml = '''<?xml version="1.0"?>
 
 
         <Year>2019</Year>
+        <ImgName>shazam.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>She's Out of My League</Name>
+        <Year>2010</Year>
+        <ImgName>shes_out_of_my_league.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Shrek</Name>
+        <Year>2001</Year>
+        <ImgName>shrek.jpg</ImgName>
 
         <Series>Shrek</Series>
+        <SeriesIndex>1</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>Shrek 2</Name>
-
+        <Year>2004</Year>
+        <ImgName>shrek2.jpg</ImgName>
         <Series>Shrek</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
 
-        <Name>Shrek 3</Name>
+        <Name>Shrek the Third</Name>
+        <Year>2007</Year>
+        <ImgName>shrek_the_third.jpg</ImgName>
 
         <Series>Shrek</Series>
+        <SeriesIndex>3</SeriesIndex>
 
     </Movie>
     <Movie>
 
-        <Name>Shrek 4</Name>
+        <Name>Shrek Forever After</Name>
+        <Year>2010</Year>
+        <ImgName>shrek_forever_after.jpg</ImgName>
 
         <Series>Shrek</Series>
+        <SeriesIndex>4</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>Silver Linings Playbook</Name>
+        <Year>2012</Year>
+        <ImgName>silver_linings_playbook.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Sing</Name>
+        <Year>2016</Year>
+        <ImgName>sing.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Sing Street</Name>
+        <Year>2016</Year>
+        <ImgName>sing_street.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Singin' in the Rain</Name>
+        <Year>1952</Year>
+        <ImgName>singin_in_the_rain.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Sisters</Name>
+        <Year>2015</Year>
+        <ImgName>sisters.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Sky High</Name>
+        <Year>2005</Year>
+        <ImgName>sky_high.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Sleeping with Other People</Name>
+        <Year>2015</Year>
+        <ImgName>sleeping_with_other_people.jpg</ImgName>
+
 
     </Movie>
     <Movie>
 
         <Name>Slumdog Millionaire</Name>
+        <Year>2008</Year>
+        <ImgName>slumdog_millionaire.jpg</ImgName>
+
 
     </Movie>
     <Movie>
@@ -1418,31 +1468,51 @@ const moviesXml = '''<?xml version="1.0"?>
 
 
         <Year>2020</Year>
+        <ImgName>soul.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Spare Parts</Name>
+        <Year>2015</Year>
+        <ImgName>spare_parts.jpg</ImgName>
+
 
     </Movie>
     <Movie>
 
         <Name>Spider-Man</Name>
+        <Year>2002</Year>
+        <ImgName>spiderman.jpeg</ImgName>
+        <Series>Spider-Man</Series>
+        <SeriesIndex>1</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>Spider-Man 2</Name>
+        <Year>2004</Year>
+        <ImgName>spiderman2.jpg</ImgName>
+        <Series>Spider-Man</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>Spider-Man: Far From Home</Name>
+        <Year>2019</Year>
+        <ImgName>spiderman_far_from_home.jpg</ImgName>
+        <Series>Spider-Man: Homecoming</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>Spider-Man: Homecoming</Name>
+        <Year>2017</Year>
+        <ImgName>spiderman_homecoming.jpg</ImgName>
+        <Series>Spider-Man: Homecoming</Series>
+        <SeriesIndex>1</SeriesIndex>
 
     </Movie>
     <Movie>
