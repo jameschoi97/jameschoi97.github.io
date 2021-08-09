@@ -1682,7 +1682,7 @@ const moviesXml = '''<?xml version="1.0"?>
 
         <Name>The Bucket List</Name>
         <Year>2007</Year>
-        <ImgName>the_bucket_list</ImgName>
+        <ImgName>the_bucket_list.jpeg</ImgName>
 
     </Movie>
     <Movie>
@@ -1932,176 +1932,274 @@ const moviesXml = '''<?xml version="1.0"?>
     <Movie>
 
         <Name>The Last Airbender</Name>
+        <Year>2010</Year>
+        <ImgName>the_last_airbender.jpeg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Lion King</Name>
+        <Year>1994</Year>
+        <ImgName>the_lion_king.jpg</ImgName>
+
 
     </Movie>
     <Movie>
 
         <Name>The Little Mermaid</Name>
+        <Year>1989</Year>
+        <ImgName>the_little_mermaid.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Other Guys</Name>
+        <Year>2010</Year>
+        <ImgName>the_other_guys.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Outsiders</Name>
+        <Year>1983</Year>
+        <ImgName>the_outsiders.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Phantom of the Opera</Name>
+        <Year>2004</Year>
+        <ImgName>the_phantom_of_the_opera.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Polar Express</Name>
+        <Year>2004</Year>
+        <ImgName>the_polar_express.jpg</ImgName>
+
 
     </Movie>
     <Movie>
 
         <Name>The Princess and the Frog</Name>
+        <Year>2009</Year>
+        <ImgName>the_princess_and_the_frog.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Princess Bride</Name>
+        <Year>1987</Year>
+        <ImgName>the_princess_bride.jpg</ImgName>
 
     </Movie>
     <Movie>
 
-        <Name>The Pursuit of Happiness</Name>
+        <Name>The Pursuit of Happyness</Name>
+        <Year>2006</Year>
+        <ImgName>the_pursuit_of_happyness.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Rocky Horror Picture Show</Name>
+        <Year>1975</Year>
+        <ImgName>the_rocky_horror_picture_show.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Secret Life of Walter Mitty</Name>
+        <Year>2013</Year>
+        <ImgName>the_secret_life_of_walter_mitty.jpg</ImgName>
+
 
     </Movie>
     <Movie>
 
         <Name>The Sixth Sense</Name>
+        <Year>1999</Year>
+        <ImgName>the_sixth_sense.jpg</ImgName>
+
 
     </Movie>
     <Movie>
 
         <Name>The Sorcerer's Apprentice</Name>
+        <Year>2010</Year>
+        <ImgName>the_sorcerers_apprentice.jpeg</ImgName>
+
 
     </Movie>
     <Movie>
 
         <Name>The Switch</Name>
+        <Year>2010</Year>
+        <ImgName>the_switch.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Terminal</Name>
+        <Year>2004</Year>
+        <ImgName>the_terminal.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Truman Show</Name>
+        <Year>1998</Year>
+        <ImgName>the_truman_show.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Wedding Ringer</Name>
+        <Year>2015</Year>
+        <ImgName>the_wedding_ringer.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>The Wolf of the Wall Street</Name>
+        <Year>2013</Year>
+        <ImgName>the_wolf_of_wall_street.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>There's Something about Mary</Name>
+        <Year>1998</Year>
+        <ImgName>theres_something_about_mary.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Thor</Name>
+        <Year>2011</Year>
+        <ImgName>thor.jpg</ImgName>
+        <Series>Thor</Series>
+        <SeriesIndex>1</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>Thor: Ragnarok</Name>
+        <Year>2017</Year>
+        <ImgName>thor_ragnarok.jpg</ImgName>
+        <Series>Thor</Series>
+        <SeriesIndex>3</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>Thor: The Dark World</Name>
+        <Year>2013</Year>
+        <ImgName>thor_the_dark_world.jpg</ImgName>
+        <Series>Thor</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>Titanic</Name>
+        <Year>1997</Year>
+        <ImgName>titanic.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Toy Story</Name>
+        <Year>1995</Year>
+        <ImgName>toy_story.jpg</ImgName>
+        <Series>Toy Story</Series>
+        <SeriesIndex>1</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>Toy Story 2</Name>
+        <Year>1999</Year>
+        <ImgName>toy_story2.jpg</ImgName>
+        <Series>Toy Story</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>Toy Story 3</Name>
+        <Year>2010</Year>
+        <ImgName>toy_story3.jpg</ImgName>
+        <Series>Toy Story</Series>
+        <SeriesIndex>3</SeriesIndex>
 
+    </Movie>
+    <Movie>
+        <Name>Toy Story 4</Name>
+        <Year>2019</Year>
+        <ImgName>toy_story4.jpg</ImgName>
+        <Series>Toy Story</Series>
+        <SeriesIndex>4</SeriesIndex>
     </Movie>
     <Movie>
 
         <Name>Trainwreck</Name>
+        <Year>2010</Year>
+        <ImgName>trainwreck.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Transformers</Name>
+        <Year>2007</Year>
+        <ImgName>transformers.jpg</ImgName>
+        <Series>Transformers</Series>
+        <SeriesIndex>1</SeriesIndex>
 
     </Movie>
     <Movie>
 
-        <Name>Transformers 2</Name>
+        <Name>Transformers: Revenge of the Fallen</Name>
+        <Year>2009</Year>
+        <ImgName>transformers_revenge_of_the_fallen.jpg</ImgName>
+        <Series>Transformers</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
 
-        <Name>Tucker &amp; Dale vs. Evil</Name>
+        <Name>Tucker and Dale vs Evil</Name>
+        <Year>2010</Year>
+        <ImgName>tucker_and_dale_vs_evil.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Two Night Stand</Name>
+        <Year>2014</Year>
+        <ImgName>two_night_stand.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Up</Name>
+        <Year>2009</Year>
+        <ImgName>up.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Venom</Name>
+        <Year>2018</Year>
+        <ImgName>venom.jpg</ImgName>
 
     </Movie>
     <Movie>
 
-        <Name>WALL-E</Name>
+        <Name>WALL·E</Name>
+        <Year>2008</Year>
+        <ImgName>walle.jpg</ImgName>
 
     </Movie>
     <Movie>
