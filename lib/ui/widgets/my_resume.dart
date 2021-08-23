@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:jameschoi97/ui/pages/resume/subpages/hackathon_page.dart';
 import 'package:jameschoi97/ui/pages/resume/subpages/shqs_page.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:get/get.dart';
 
 class MyResume extends StatelessWidget {
   final myName = 'James Choi';
-  final myAddress = '303 E 5th St, New York, NY 10003';
-  final myNumber = '(610) 392-3086';
+  final myAddress = '620 E 11th St, New York, NY 10009';
+  final myNumber = '(646) 799-3223';
   final myEmail = 'wc1414@nyu.edu';
 
   final nyc = 'New York, NY';
@@ -164,7 +165,11 @@ class MyResume extends StatelessWidget {
                   TextBox(
                     text: 'Won 3rd place in 5th GEA hackathon',
                     fontSize: normalFontSize,
-                  )
+                    onPressed: () => Get.to(() => HackathonPage())
+                  ),
+                  TextBox(
+                      text: 'Finished a couple of Swift based projects',
+                      fontSize: normalFontSize)
                 ],
               )
             ],
