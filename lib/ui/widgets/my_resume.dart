@@ -167,7 +167,7 @@ class MyResume extends StatelessWidget {
                     text: 'Won 3rd place in 5th GEA hackathon',
                     fontSize: normalFontSize,
                     onPressed: () {
-                      Get.find<ResumeVideoController>().initWithAssetPath('assets/vids/hackathon_ui.mov');
+                      Get.find<ResumeVideoController>().initWithAssetPath('assets/vids/hackathon_ui.mp4');
                       Get.to(() => HackathonPage());
                     }
                   ),

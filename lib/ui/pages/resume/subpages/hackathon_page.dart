@@ -13,12 +13,6 @@ class HackathonPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<Widget> shqsItems = [
-      shqsItem(
-          'List Widget',
-          'List widget used in SmartHQ Service which shows an animated icon when it has no items.',
-          'assets/vids/shqs_list.mov'),
-    ];
 
     return MyScaffold(
         appBar: PreferredSize(
@@ -72,18 +66,20 @@ class HackathonPage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 16,
                   ))),
-          Container(
+          Obx(() => Container(
+            margin: EdgeInsets.symmetric(horizontal: 60),
+            constraints: BoxConstraints(
+              maxWidth: 750,
+            ),
               child: _resumeVideoController.isInitialized.value
                   ? Center(
                       child: Column(
                         children: [
-                          Expanded(
-                            child: AspectRatio(
+                            AspectRatio(
                                 aspectRatio: _resumeVideoController
                                     .videoPlayerController!.value.aspectRatio,
                                 child: VideoPlayer(_resumeVideoController
                                     .videoPlayerController!)),
-                          ),
                           Obx(() => Row(children: [
                                 _resumeVideoController.playButton(),
                                 Expanded(
@@ -99,148 +95,7 @@ class HackathonPage extends StatelessWidget {
                         ],
                       ),
                     )
-                  : Center(child: CircularProgressIndicator())),
+                  : Center(child: CircularProgressIndicator()))),
         ]));
-  }
-
-  Widget shqsItem(String title, String content, String vidPath) {
-    return AspectRatio(
-        aspectRatio: 1,
-        child: Container(
-          margin: EdgeInsets.all(15),
-          decoration: BoxDecoration(
-              border: Border.all(
-                  width: 8,
-                  color: _themeController.theme.colorSet.appBarBorder),
-              borderRadius: BorderRadius.circular(15),
-              color: _themeController.theme.colorSet.appBar),
-          child: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 10, left: 10, right: 10),
-                    child: Text(
-                      title,
-                      style: TextStyle(
-                        fontSize: 40,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.white,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                  Container(
-                    width: 400,
-                    margin: EdgeInsets.symmetric(horizontal: 15),
-                    child: Text(content,
-                        style: TextStyle(fontSize: 16, color: Colors.white)),
-                  ),
-                  Container(
-                    child: TextButton(
-                      style: _themeController.theme.buttonStyle.copyWith(
-                          side: MaterialStateProperty.all(
-                              BorderSide(color: Colors.white)),
-                          padding: MaterialStateProperty.all(
-                            EdgeInsets.symmetric(horizontal: 30, vertical: 12),
-                          )),
-                      onPressed: () {
-                        _resumeVideoController.initWithAssetPath(vidPath);
-                        Get.dialog(AlertDialog(
-                            contentPadding: EdgeInsets.zero,
-                            shape: RoundedRectangleBorder(
-                                side:
-                                    BorderSide(color: Colors.black, width: 2.0),
-                                borderRadius: BorderRadius.circular(10)),
-                            content: Container(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 10, horizontal: 10),
-                              child: Column(
-                                children: [
-                                  Center(
-                                    child: FittedBox(
-                                      fit: BoxFit.fitWidth,
-                                      child: Text(title,
-                                          style: TextStyle(
-                                            letterSpacing: 3,
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 40,
-                                          )),
-                                    ),
-                                  ),
-                                  Expanded(
-                                      child: Obx(() => Container(
-                                          padding: EdgeInsets.all(10),
-                                          child: _resumeVideoController
-                                                  .isInitialized.value
-                                              ? Center(
-                                                  child: Column(
-                                                    children: [
-                                                      Expanded(
-                                                        child: AspectRatio(
-                                                            aspectRatio:
-                                                                _resumeVideoController
-                                                                    .videoPlayerController!
-                                                                    .value
-                                                                    .aspectRatio,
-                                                            child: VideoPlayer(
-                                                                _resumeVideoController
-                                                                    .videoPlayerController!)),
-                                                      ),
-                                                      Obx(() => Row(children: [
-                                                            _resumeVideoController
-                                                                .playButton(),
-                                                            Expanded(
-                                                              child: Slider(
-                                                                onChanged:
-                                                                    (double
-                                                                        value) {
-                                                                  _resumeVideoController
-                                                                      .goTo(
-                                                                          value);
-                                                                },
-                                                                value: _resumeVideoController
-                                                                    .percentage
-                                                                    .value,
-                                                              ),
-                                                            ),
-                                                          ]))
-                                                    ],
-                                                  ),
-                                                )
-                                              : Center(
-                                                  child:
-                                                      CircularProgressIndicator())))),
-                                  TextButton(
-                                      onPressed: () {
-                                        Get.back();
-                                      },
-                                      child: Container(
-                                        constraints: BoxConstraints(
-                                          maxWidth: 150,
-                                        ),
-                                        padding: EdgeInsets.symmetric(
-                                            horizontal: 20, vertical: 10),
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(10)),
-                                          border: Border.all(
-                                            color: Colors.red,
-                                            width: 1,
-                                          ),
-                                        ),
-                                        child: Center(child: Text('Close')),
-                                      ))
-                                ],
-                              ),
-                            )));
-                      },
-                      child: Text('Video',
-                          style: TextStyle(fontSize: 20, color: Colors.white)),
-                    ),
-                  )
-                ]),
-          ),
-        ));
   }
 }
