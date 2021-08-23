@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:jameschoi97/ui/pages/resume/resume_video_controller.dart';
 import 'package:jameschoi97/ui/pages/resume/subpages/hackathon_page.dart';
 import 'package:jameschoi97/ui/pages/resume/subpages/shqs_page.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -165,7 +166,10 @@ class MyResume extends StatelessWidget {
                   TextBox(
                     text: 'Won 3rd place in 5th GEA hackathon',
                     fontSize: normalFontSize,
-                    onPressed: () => Get.to(() => HackathonPage())
+                    onPressed: () {
+                      Get.find<ResumeVideoController>().initWithAssetPath('assets/vids/hackathon_ui.mov');
+                      Get.to(() => HackathonPage());
+                    }
                   ),
                   TextBox(
                       text: 'Finished a couple of Swift based projects',

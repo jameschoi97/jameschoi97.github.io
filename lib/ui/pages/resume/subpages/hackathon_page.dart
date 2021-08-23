@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:jameschoi97/config/constants/ui/theme_constants.dart';
 import 'package:jameschoi97/ui/pages/resume/resume_video_controller.dart';
 import 'package:jameschoi97/ui/widgets/my_appbar.dart';
-import 'package:jameschoi97/ui/widgets/my_grid.dart';
 import 'package:jameschoi97/ui/widgets/my_scaffold.dart';
 import 'package:get/get.dart';
 import 'package:video_player/video_player.dart';
@@ -51,7 +50,10 @@ class HackathonPage extends StatelessWidget {
                 )),
           ),
           Container(
-              padding: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+              constraints: BoxConstraints(
+                maxWidth: 750,
+              ),
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 60),
               child: Image.asset('assets/images/hackathon.jpg')),
           Container(
               margin: EdgeInsets.symmetric(horizontal: 70, vertical: 20),
@@ -59,20 +61,45 @@ class HackathonPage extends StatelessWidget {
                 maxWidth: 750,
               ),
               child: Text(
-                  'During my time at GE Appliances, I was working with the Smart HQ Service team. '
-                      'Smart HQ Service helps technicians provide better repair services by giving them resources such '
-                      'as diagnostics data for the appliances. My main job in the team was to work on the cross-platform app, '
-                      'so that the technicians could access the app not only on their phones, but also'
-                      ' through web on a bigger screen. These are some of the features I added to SmartHQ Service during my internship:',
+                  'In May 2021, GE Appliances held its 5th hackathon. The theme of the hackathon was Over-the-air .'
+                  '(OTA) programming, and we had to come up with better ways to reach our customers with our updates. '
+                  'My team introduced a mobile application where the update information for your electronics can be viewed '
+                  'on your phone as if they were magazine articles.\n\n'
+                  'In our team, my responsibility was to create a UI for the dummy oven we would use for the demonstration. '
+                  'The UI can connect to the mobile application through a local server using simple HTTP requests, and when '
+                  'certain events, such as an addition of a recipe or winning of a free coupon, happen, display them on its '
+                  'screen. In addition to creating the UI, I also presented at our demonstration. Our team came in third, tied with another team. The UI I made using Flutter SDK, is shown below.',
                   style: TextStyle(
                     fontSize: 16,
                   ))),
-          MyGrid(
-            isScrollable: false,
-            children: shqsItems,
-            hasBorder: false,
-            max_grid_size: 600,
-          )
+          Container(
+              child: _resumeVideoController.isInitialized.value
+                  ? Center(
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: AspectRatio(
+                                aspectRatio: _resumeVideoController
+                                    .videoPlayerController!.value.aspectRatio,
+                                child: VideoPlayer(_resumeVideoController
+                                    .videoPlayerController!)),
+                          ),
+                          Obx(() => Row(children: [
+                                _resumeVideoController.playButton(),
+                                Expanded(
+                                  child: Slider(
+                                    onChanged: (double value) {
+                                      _resumeVideoController.goTo(value);
+                                    },
+                                    value:
+                                        _resumeVideoController.percentage.value,
+                                  ),
+                                ),
+                              ]))
+                        ],
+                      ),
+                    )
+                  : Center(child: CircularProgressIndicator())),
         ]));
   }
 
@@ -123,7 +150,7 @@ class HackathonPage extends StatelessWidget {
                             contentPadding: EdgeInsets.zero,
                             shape: RoundedRectangleBorder(
                                 side:
-                                BorderSide(color: Colors.black, width: 2.0),
+                                    BorderSide(color: Colors.black, width: 2.0),
                                 borderRadius: BorderRadius.circular(10)),
                             content: Container(
                               padding: EdgeInsets.symmetric(
@@ -142,36 +169,48 @@ class HackathonPage extends StatelessWidget {
                                     ),
                                   ),
                                   Expanded(
-                                      child: Obx(()=>Container(
+                                      child: Obx(() => Container(
                                           padding: EdgeInsets.all(10),
-                                          child: _resumeVideoController.isInitialized.value ? Center(
-                                            child: Column(
-                                              children: [
-                                                Expanded(
-                                                  child: AspectRatio(
-                                                      aspectRatio: _resumeVideoController.videoPlayerController!.value.aspectRatio,
-                                                      child: VideoPlayer(
-                                                          _resumeVideoController.videoPlayerController!
-                                                      )
+                                          child: _resumeVideoController
+                                                  .isInitialized.value
+                                              ? Center(
+                                                  child: Column(
+                                                    children: [
+                                                      Expanded(
+                                                        child: AspectRatio(
+                                                            aspectRatio:
+                                                                _resumeVideoController
+                                                                    .videoPlayerController!
+                                                                    .value
+                                                                    .aspectRatio,
+                                                            child: VideoPlayer(
+                                                                _resumeVideoController
+                                                                    .videoPlayerController!)),
+                                                      ),
+                                                      Obx(() => Row(children: [
+                                                            _resumeVideoController
+                                                                .playButton(),
+                                                            Expanded(
+                                                              child: Slider(
+                                                                onChanged:
+                                                                    (double
+                                                                        value) {
+                                                                  _resumeVideoController
+                                                                      .goTo(
+                                                                          value);
+                                                                },
+                                                                value: _resumeVideoController
+                                                                    .percentage
+                                                                    .value,
+                                                              ),
+                                                            ),
+                                                          ]))
+                                                    ],
                                                   ),
-                                                ),
-                                                Obx(()=>Row(children:[
-                                                  _resumeVideoController.playButton(),
-                                                  Expanded(
-                                                    child: Slider(
-                                                      onChanged:
-                                                          (double value) {
-                                                        _resumeVideoController
-                                                            .goTo(value);
-                                                      },
-                                                      value: _resumeVideoController
-                                                          .percentage.value,
-                                                    ),
-                                                  ),
-                                                ]))
-                                              ],
-                                            ),
-                                          ) : Center(child: CircularProgressIndicator())))),
+                                                )
+                                              : Center(
+                                                  child:
+                                                      CircularProgressIndicator())))),
                                   TextButton(
                                       onPressed: () {
                                         Get.back();
@@ -202,7 +241,6 @@ class HackathonPage extends StatelessWidget {
                   )
                 ]),
           ),
-        )
-    );
+        ));
   }
 }
