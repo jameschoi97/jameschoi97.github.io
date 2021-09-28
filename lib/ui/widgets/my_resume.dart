@@ -142,6 +142,37 @@ class MyResume extends StatelessWidget {
         ),
         [
           bulletPointTitle(
+              TextBox(
+                text: 'Courant Institute of Mathematical Sciences',
+                fontSize: normalFontSize,
+                bold: true,
+              ),
+              nyc,
+              [
+                bulletPointItem(
+                    TextBox(
+                      text: 'Web Administrator',
+                      fontSize: normalFontSize,
+                      italics: true,
+                    ),
+                    'October 2017 - September 2019, September 2021 - Present',
+                    [
+                      TextBox(
+                          text: 'Receive requests from math / computer science department faculty members and edit / manage websites,'
+                              '\nmainly through using Django or editing HTML code on the Linux server',
+                          fontSize: normalFontSize
+                      ),
+                      TextBox(
+                        text: 'Occasionally participate in small projects such as using Google Apps Script to modify the CS department\'s'
+                            '\nInternship Approval Form. Currently working on migrating the website\'s CSS files to SCSS.',
+                        fontSize: normalFontSize,
+                      )
+
+                    ])
+              ]
+          ),
+          SizedBox(height: itemMarginValue),
+          bulletPointTitle(
             TextBox(
               text: 'GE Appliances',
               fontSize: normalFontSize,
@@ -164,6 +195,10 @@ class MyResume extends StatelessWidget {
                     onPressed: () => Get.to(() => ShqsPage()),
                   ),
                   TextBox(
+                      text: 'Submitted multiple patent applications, two of which are currently being filed by the company',
+                      fontSize: normalFontSize
+                  ),
+                  TextBox(
                     text: 'Won 3rd place in 5th GEA hackathon',
                     fontSize: normalFontSize,
                     onPressed: () {
@@ -171,9 +206,7 @@ class MyResume extends StatelessWidget {
                       Get.to(() => HackathonPage());
                     }
                   ),
-                  TextBox(
-                      text: 'Finished a couple of Swift based projects',
-                      fontSize: normalFontSize)
+
                 ],
               )
             ],
@@ -203,41 +236,12 @@ class MyResume extends StatelessWidget {
                               '\nmaintenance and training levels',
                           fontSize: normalFontSize),
                       TextBox(
-                        text: 'Operated communication equipments, setting up the tactical network during the field training exercises',
+                        text: 'Operated communication equipment, setting up the tactical network during the field training exercises',
                         fontSize: normalFontSize,
                       ),
                     ]),
               ]),
-          SizedBox(height: itemMarginValue),
-          bulletPointTitle(
-              TextBox(
-                text: 'Courant Institute of Mathematical Sciences',
-                fontSize: normalFontSize,
-                bold: true,
-              ),
-              nyc,
-              [
-                bulletPointItem(
-                    TextBox(
-                      text: 'Web Administrator',
-                      fontSize: normalFontSize,
-                      italics: true,
-                    ),
-                    'October 2017 - September 2019',
-                    [
-                      TextBox(
-                        text: 'Received requests from math / computer science department faculty members and edit / websites, mainly'
-                            '\nthrough using Django or editing HTML code on the Linux web server',
-                        fontSize: normalFontSize
-                      ),
-                      TextBox(
-                        text: 'Occasionally had small projects such as using Google Apps Script to modify the CS department\'s'
-                            ' Internship\nApproval Form',
-                        fontSize: normalFontSize,
-                      )
 
-                    ])
-              ]),
         ],
         defaultSectionMargin);
 
@@ -319,17 +323,19 @@ class MyResume extends StatelessWidget {
             'Basic Algorithms',
             'Operating Systems',
             '\nArtificial Intelligence',
-            'Theory of Computation',
+            'Computation Theory',
             'Numerical Optimization',
+            'Parallel Computing',
+            '\nComputer Networks',
           ]),
           SizedBox(height: itemMarginValue),
           listItem('Mathematics', [
             'Calculus',
             'Linear Algebra',
-            'Theory of Probability',
+            'Probability Theory',
             'Numerical Analysis',
             'Real Analysis',
-            'Abstract\nAlgebra'
+            '\nAbstract Algebra'
           ])
         ],
         defaultSectionMargin);
@@ -379,12 +385,12 @@ class MyResume extends StatelessWidget {
                   [
                     TextBox(
                       text: 'Selected by a 40-person cohort to regularly communicate with the members, organize events, and'
-                          '\ncontribute to the sense of community at NYU',
+                          '\ninstill a sense of community within the group',
                       fontSize: normalFontSize,
                     ),
                     TextBox(
                       text: 'Attended NYU\'s Sophomore Leadership Development Series; topics included logistics of organizing events,'
-                          '\nhelping transfer students transition into NYU, and team-building with other cohort presidents',
+                          '\nhelping transfer students transition into NYU, and team-building with the other cohort presidents',
                       fontSize: normalFontSize,
                     )
                   ])
@@ -499,14 +505,14 @@ class MyResume extends StatelessWidget {
             TextBox(
                 text: myName,
                 fontSize: convert(30),
-                margin: EdgeInsets.only(top: convert(30), bottom: convert(10)),
+                margin: EdgeInsets.only(top: convert(15), bottom: convert(10)),
                 bold: true),
             myInfo,
-            technicalSkills,
-            workExperience,
-            projects,
             education,
+            workExperience,
             coursework,
+            technicalSkills,
+            projects,
             extracurricular,
           ],
         ));
