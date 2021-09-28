@@ -68,7 +68,6 @@ class ResumeVideoController extends GetxController {
     final totalMilliseconds = videoPlayerController?.value.duration.inMilliseconds.toDouble() ?? 0;
     final targetMilliseconds = (totalMilliseconds * targetPercentage).floor();
     final targetDuration = Duration(milliseconds: targetMilliseconds);
-    print(targetDuration);
     videoPlayerController!.seekTo(targetDuration);
     current = targetDuration;
     percentage.value = targetPercentage;
