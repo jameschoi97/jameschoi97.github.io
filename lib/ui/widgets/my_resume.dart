@@ -199,7 +199,7 @@ class MyResume extends StatelessWidget {
                       fontSize: normalFontSize
                   ),
                   TextBox(
-                    text: 'Won 3rd place in 5th GEA hackathon',
+                    text: 'Won 3rd place in the 5th GEA Hackathon',
                     fontSize: normalFontSize,
                     onPressed: () {
                       Get.find<ResumeVideoController>().initWithAssetPath('assets/vids/hackathon_ui.mp4');
