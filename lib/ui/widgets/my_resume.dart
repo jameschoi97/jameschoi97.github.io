@@ -304,6 +304,28 @@ class MyResume extends StatelessWidget {
                         text:
                         'Honors: CAS Presidential Honors Scholars, Deans\'s List (2016 - 2019), DURF Grant Recipient',
                         fontSize: normalFontSize,
+                      ),
+                      Row(
+                        children: [
+                          TextBox(
+                            text: 'Research: ',
+                            fontSize: normalFontSize,
+                          ),
+                          TextBox(
+                            text: "Optimization of Feature Selection",
+                            fontSize: normalFontSize,
+                            onPressed: () => launch("https://math.nyu.edu/media/math/filer_public/fe/c2/fec2e739-a688-4805-b490-c2eb96439dd7/optimization_of_feature_selection.pdf"),
+                          ),
+                          TextBox(
+                            text: ' through NYU Math department\'s ',
+                            fontSize: normalFontSize,
+                          ),
+                          TextBox(
+                            text: "SURE Program",
+                            fontSize: normalFontSize,
+                            onPressed: () => launch("https://math.nyu.edu/dynamic/undergrad/ba-cas/activities-research/summer-undergraduate-research-experience/"),
+                          )
+                        ]
                       )
                     ])
               ])
