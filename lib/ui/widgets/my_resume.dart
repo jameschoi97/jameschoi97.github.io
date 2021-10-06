@@ -7,10 +7,11 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:get/get.dart';
 
 class MyResume extends StatelessWidget {
-  final myName = 'James Choi';
+  final myName = 'James (Wonshik) Choi';
   final myAddress = '620 E 11th St, New York, NY 10009';
   final myNumber = '(646) 799-3223';
   final myEmail = 'wc1414@nyu.edu';
+  final myWebsite = 'jameschoi97.github.io';
 
   final nyc = 'New York, NY';
 
@@ -131,7 +132,19 @@ class MyResume extends StatelessWidget {
       TextBox(
           text: myEmail,
           fontSize: normalFontSize,
-          onPressed: () => launch('mailto:$myEmail')),
+          onPressed: () => launch('mailto:$myEmail')
+      ),
+      TextBox(
+        text: '|',
+        fontSize: normalFontSize,
+        margin: EdgeInsets.symmetric(horizontal: convert(10)),
+      ),
+      TextBox(
+          text: myWebsite,
+          fontSize: normalFontSize,
+          onPressed: () => launch('https://jameschoi97.github.io'),
+      ),
+
     ]);
 
     final workExperience = section(
