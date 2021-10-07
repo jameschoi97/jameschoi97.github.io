@@ -460,7 +460,7 @@ class MyResume extends StatelessWidget {
                 text: 'James Choi\'s Website',
                 fontSize: normalFontSize,
                 bold: true,
-                onPressed: () => launch('https://github.com/jameschoi97/jameschoi97.github.io'),
+                onPressed: () => launch('https://jameschoi97.github.io'),
               ),
               '',
               [
@@ -475,7 +475,7 @@ class MyResume extends StatelessWidget {
               text: 'Dogs&Cats',
               fontSize: normalFontSize,
               bold: true,
-              onPressed: () => launch('https://github.com/jameschoi97/Dogs-Cats'),
+              onPressed: () => launch('https://devpost.com/software/dogs-cats'),
             ),
             '',
             [
