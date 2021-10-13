@@ -176,8 +176,8 @@ class MyResume extends StatelessWidget {
                           fontSize: normalFontSize
                       ),
                       TextBox(
-                        text: 'Occasionally participate in small projects such as using Google Apps Script to modify the CS department\'s'
-                            '\nInternship Approval Form. Currently working on migrating the website\'s CSS files to SCSS.',
+                        text: 'Participate in projects such as using Google Apps Script to modify the CS department\'s '
+                            'Internship Approval\n Form. Currently working on migrating the website\'s CSS files to SCSS.',
                         fontSize: normalFontSize,
                       )
 
@@ -203,16 +203,16 @@ class MyResume extends StatelessWidget {
                 [
                   TextBox(
                     text:
-                    'Worked in SmartHQ Service Team, mainly focusing on the cross-platform app built with Flutter SDK',
+                    'Worked in SmartHQ Service Team, primarily focusing on the cross-platform app built with Flutter SDK',
                     fontSize: normalFontSize,
                     onPressed: () => Get.to(() => ShqsPage()),
                   ),
                   TextBox(
-                      text: 'Submitted multiple patent applications, two of which are currently being filed by the company',
+                      text: 'Drafted, revised, and submitted patent applications, two of which are approved and pending company filing',
                       fontSize: normalFontSize
                   ),
                   TextBox(
-                    text: 'Won 3rd place in the 5th GEA Hackathon',
+                    text: 'Placed 3rd place in company-wide hackathon, which focused on over-the-air appliance update solutions',
                     fontSize: normalFontSize,
                     onPressed: () {
                       Get.find<ResumeVideoController>().initWithAssetPath('assets/vids/hackathon_ui.mp4');
@@ -245,11 +245,10 @@ class MyResume extends StatelessWidget {
                     [
                       TextBox(
                           text:
-                          'As a squad leader, managed and gave orders to a 10-man squad, periodically checking up on the members\''
-                              '\nmaintenance and training levels',
+                          'Supervised a 10-man squad, periodically managing and assessing the members\' training levels and task\nmaintenance',
                           fontSize: normalFontSize),
                       TextBox(
-                        text: 'Operated communication equipment, setting up the tactical network during the field training exercises',
+                        text: 'Operated communication equipment and set up the tactical networks throughout field training exercises',
                         fontSize: normalFontSize,
                       ),
                     ]),
@@ -328,6 +327,7 @@ class MyResume extends StatelessWidget {
                             text: "Optimization of Feature Selection",
                             fontSize: normalFontSize,
                             onPressed: () => launch("https://math.nyu.edu/media/math/filer_public/fe/c2/fec2e739-a688-4805-b490-c2eb96439dd7/optimization_of_feature_selection.pdf"),
+                            italics: true,
                           ),
                           TextBox(
                             text: ' through NYU Math department\'s ',
@@ -482,8 +482,17 @@ class MyResume extends StatelessWidget {
               Row(
                 children: [
                   TextBox(
-                   text: 'A project built during HackNY Spring\'18 Hackathon. The project won the ',
+                   text: 'A project built during ',
                     fontSize: normalFontSize
+                  ),
+                  TextBox(
+                    text: 'HackNY',
+                    fontSize: normalFontSize,
+                    onPressed: () => launch('https://hackny.org'),
+                  ),
+                  TextBox(
+                    text: '\'s 2018 Hackathon. The project was awarded ',
+                    fontSize: normalFontSize,
                   ),
                   TextBox(
                     text: 'Best Use of GIPHY API',
@@ -500,28 +509,27 @@ class MyResume extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextBox(
-                    text: 'The web app, built using Flask, would accept requests for and send a random dog / cat GIF over SMS',
-                    fontSize: normalFontSize,
-                  ),
-                  TextBox(
-                    text: 'using Twilio API. Each user\'s number gets stored in the program, and every 3 GIFs they request, the user',
+                    text: 'Built using Flask, the web app accepted requests for and sent animal GIFs over SMS using Twilio API. For',
                     fontSize: normalFontSize,
                   ),
                   Row(
-                    children:
-                      [
-                        TextBox(
-                          text: 'would receive a random fact about ',
-                          fontSize: normalFontSize,
-                        ),
-                        TextBox(
-                          text: 'Animal Care Centers of NYC',
+                    children: [
+                      TextBox(
+                        text: 'every 3 GIFs requested, users would automatically receive facts and resources about ',
+                        fontSize: normalFontSize,
+                      ),
+                      TextBox(
+                          text: 'Animal Care Centers',
                           fontSize: normalFontSize,
                           onPressed: () => launch('https://www.nycacc.org/')
-                        )
-                      ]
-
+                      )
+                    ],
+                  ),
+                  TextBox(
+                    text: 'of NYC, an organization dedicated to personal placement of stray / abandoned animals in New York',
+                    fontSize: normalFontSize,
                   )
+
                 ],
               )
             ]
@@ -540,12 +548,12 @@ class MyResume extends StatelessWidget {
             TextBox(
                 text: myName,
                 fontSize: convert(30),
-                margin: EdgeInsets.only(top: convert(15), bottom: convert(10)),
+                margin: EdgeInsets.only(top: convert(8), bottom: convert(8)),
                 bold: true),
             myInfo,
             education,
-            workExperience,
             coursework,
+            workExperience,
             technicalSkills,
             projects,
             extracurricular,
