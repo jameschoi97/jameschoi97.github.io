@@ -420,7 +420,7 @@ class MyResume extends StatelessWidget {
                   [
                     TextBox(
                       text: 'Selected by a 40-person cohort to regularly communicate with the members, organize events, and'
-                          '\ninstill a sense of community within the group',
+                          ' instill a\nsense of community within the group',
                       fontSize: normalFontSize,
                     ),
                     TextBox(
