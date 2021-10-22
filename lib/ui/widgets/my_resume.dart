@@ -15,7 +15,7 @@ class MyResume extends StatelessWidget {
 
   final nyc = 'New York, NY';
 
-  final double defaultFontSize = 15;
+  final double defaultFontSize = 12;
 
   @override
   Widget build(BuildContext context) {
@@ -32,15 +32,14 @@ class MyResume extends StatelessWidget {
         margin: margin == null ? EdgeInsets.zero : margin,
         child: Column(children: [
           Container(
-            width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(
-              color: Colors.black,
-              width: convert(2),
-            ))),
-            child: title
-          ),
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                  border: Border(
+                      bottom: BorderSide(
+                color: Colors.black,
+                width: convert(2),
+              ))),
+              child: title),
           Column(
             children: children,
           )
@@ -132,19 +131,17 @@ class MyResume extends StatelessWidget {
       TextBox(
           text: myEmail,
           fontSize: normalFontSize,
-          onPressed: () => launch('mailto:$myEmail')
-      ),
+          onPressed: () => launch('mailto:$myEmail')),
       TextBox(
         text: '|',
         fontSize: normalFontSize,
         margin: EdgeInsets.symmetric(horizontal: convert(10)),
       ),
       TextBox(
-          text: myWebsite,
-          fontSize: normalFontSize,
-          onPressed: () => launch('https://jameschoi97.github.io'),
+        text: myWebsite,
+        fontSize: normalFontSize,
+        onPressed: () => launch('https://jameschoi97.github.io'),
       ),
-
     ]);
 
     final workExperience = section(
@@ -171,19 +168,18 @@ class MyResume extends StatelessWidget {
                     'October 2017 - September 2019, September 2021 - Present',
                     [
                       TextBox(
-                          text: 'Receive requests from math / computer science department faculty members and edit / manage websites,'
-                              '\nmainly through using Django or editing HTML code on the Linux server',
-                          fontSize: normalFontSize
-                      ),
+                          text:
+                              'Receive requests from math / computer science department faculty members and edit / manage websites,'
+                              ' mainly through using Django\nor editing HTML code on the Linux server.',
+                          fontSize: normalFontSize),
                       TextBox(
-                        text: 'Participate in projects such as using Google Apps Script to modify the CS department\'s '
-                            'Internship Approval\n Form. Currently working on migrating the website\'s CSS files to SCSS.',
+                        text:
+                            'Participate in projects such as using Google Apps Script to modify the CS department\'s '
+                            'Internship Approval Form. Currently working\non migrating the website\'s CSS files to SCSS.',
                         fontSize: normalFontSize,
                       )
-
                     ])
-              ]
-          ),
+              ]),
           SizedBox(height: itemMarginValue),
           bulletPointTitle(
             TextBox(
@@ -203,23 +199,23 @@ class MyResume extends StatelessWidget {
                 [
                   TextBox(
                     text:
-                    'Worked in SmartHQ Service Team, primarily focusing on the cross-platform app built with Flutter SDK',
+                        'Worked in SmartHQ Service Team, primarily focusing on the cross-platform app built with Flutter SDK.',
                     fontSize: normalFontSize,
                     onPressed: () => Get.to(() => ShqsPage()),
                   ),
                   TextBox(
-                      text: 'Drafted, revised, and submitted patent applications, two of which are approved and pending company filing',
-                      fontSize: normalFontSize
-                  ),
+                      text:
+                          'Drafted, revised, and submitted patent applications, two of which are approved and pending company filing.',
+                      fontSize: normalFontSize),
                   TextBox(
-                    text: 'Placed 3rd place in company-wide hackathon, which focused on over-the-air appliance update solutions',
-                    fontSize: normalFontSize,
-                    onPressed: () {
-                      Get.find<ResumeVideoController>().initWithAssetPath('assets/vids/hackathon_ui.mp4');
-                      Get.to(() => HackathonPage());
-                    }
-                  ),
-
+                      text:
+                          'Placed 3rd place in company-wide hackathon, which focused on over-the-air appliance update solutions.',
+                      fontSize: normalFontSize,
+                      onPressed: () {
+                        Get.find<ResumeVideoController>()
+                            .initWithAssetPath('assets/vids/hackathon_ui.mp4');
+                        Get.to(() => HackathonPage());
+                      }),
                 ],
               )
             ],
@@ -228,7 +224,7 @@ class MyResume extends StatelessWidget {
           bulletPointTitle(
               TextBox(
                 text:
-                'Republic of Korea Army, VII Corps, 107th Signal Battalion',
+                    'Republic of Korea Army, VII Corps, 107th Signal Battalion',
                 fontSize: normalFontSize,
                 bold: true,
               ),
@@ -237,7 +233,7 @@ class MyResume extends StatelessWidget {
                 bulletPointItem(
                     TextBox(
                       text:
-                      'Soldier (Sergeant / Squad Leader from October 2020)',
+                          'Soldier (Sergeant / Squad Leader from October 2020)',
                       fontSize: normalFontSize,
                       italics: true,
                     ),
@@ -245,15 +241,15 @@ class MyResume extends StatelessWidget {
                     [
                       TextBox(
                           text:
-                          'Supervised a 10-man squad, periodically managing and assessing the members\' training levels and task\nmaintenance',
+                              'Supervised a 10-man squad, periodically managing and assessing the members\' training levels and task maintenance.',
                           fontSize: normalFontSize),
                       TextBox(
-                        text: 'Operated communication equipment and set up the tactical networks throughout field training exercises',
+                        text:
+                            'Operated communication equipment and set up the tactical networks throughout field training exercises.',
                         fontSize: normalFontSize,
                       ),
                     ]),
               ]),
-
         ],
         defaultSectionMargin);
 
@@ -266,8 +262,7 @@ class MyResume extends StatelessWidget {
         [
           bulletPointTitle(
               TextBox(
-                text:
-                'College of Arts and Sciences, New York University',
+                text: 'College of Arts and Sciences, New York University',
                 fontSize: normalFontSize,
                 bold: true,
                 onPressed: () => launch('https://cas.nyu.edu'),
@@ -277,19 +272,17 @@ class MyResume extends StatelessWidget {
                 bulletPointItem(
                     TextBox(
                       text:
-                      'Pursuing B.S. in Computer Science / Mathematics with Honors',
+                          'Pursuing B.S. in Computer Science / Mathematics with Honors',
                       fontSize: normalFontSize,
                       italics: true,
-                      onPressed: () =>
-                          launch('https://courant.nyu.edu'),
+                      onPressed: () => launch('https://courant.nyu.edu'),
                     ),
                     'September 2016 - Expected May 2022',
                     [
                       Row(
                         children: [
                           TextBox(
-                              text: 'Current GPA: ',
-                              fontSize: normalFontSize),
+                              text: 'Current GPA: ', fontSize: normalFontSize),
                           TextBox(
                             text: '3.96/4.0',
                             fontSize: normalFontSize,
@@ -314,32 +307,9 @@ class MyResume extends StatelessWidget {
                       ),
                       TextBox(
                         text:
-                        'Honors: CAS Presidential Honors Scholars, Deans\'s List (2016 - 2019), DURF Grant Recipient',
+                            'Honors: CAS Presidential Honors Scholars, Deans\'s List (2016 - 2019), DURF Grant Recipient',
                         fontSize: normalFontSize,
                       ),
-                      Row(
-                        children: [
-                          TextBox(
-                            text: 'Research: ',
-                            fontSize: normalFontSize,
-                          ),
-                          TextBox(
-                            text: "Optimization of Feature Selection",
-                            fontSize: normalFontSize,
-                            onPressed: () => launch("https://math.nyu.edu/media/math/filer_public/fe/c2/fec2e739-a688-4805-b490-c2eb96439dd7/optimization_of_feature_selection.pdf"),
-                            italics: true,
-                          ),
-                          TextBox(
-                            text: ' through NYU Math department\'s ',
-                            fontSize: normalFontSize,
-                          ),
-                          TextBox(
-                            text: "SURE Program",
-                            fontSize: normalFontSize,
-                            onPressed: () => launch("https://math.nyu.edu/dynamic/undergrad/ba-cas/activities-research/summer-undergraduate-research-experience/"),
-                          )
-                        ]
-                      )
                     ])
               ])
         ],
@@ -347,7 +317,7 @@ class MyResume extends StatelessWidget {
 
     final coursework = section(
         TextBox(
-          text: 'Coursework',
+          text: 'Relevant Coursework',
           fontSize: normalFontSize,
           bold: true,
         ),
@@ -357,11 +327,11 @@ class MyResume extends StatelessWidget {
             'Computer Systems Organization',
             'Basic Algorithms',
             'Operating Systems',
-            '\nArtificial Intelligence',
-            'Computation Theory',
+            'Artificial Intelligence',
+            '\nComputation Theory',
             'Numerical Optimization',
             'Parallel Computing',
-            '\nComputer Networks',
+            'Computer Networks',
           ]),
           SizedBox(height: itemMarginValue),
           listItem('Mathematics', [
@@ -370,7 +340,7 @@ class MyResume extends StatelessWidget {
             'Probability Theory',
             'Numerical Analysis',
             'Real Analysis',
-            '\nAbstract Algebra'
+            'Abstract Algebra'
           ])
         ],
         defaultSectionMargin);
@@ -403,74 +373,62 @@ class MyResume extends StatelessWidget {
         ),
         [
           bulletPointTitle(
-            TextBox(
-              text: 'NYU College Cohort Program',
-              fontSize: normalFontSize,
-              bold: true,
-            ),
-            nyc,
-            [
-              bulletPointItem(
-                  TextBox(
-                    text: 'Cohort President',
-                    fontSize: normalFontSize,
-                    italics: true,
-                  ),
-                  'August 2017 - September 2019',
-                  [
+              TextBox(
+                text: 'NYU College Cohort Program',
+                fontSize: normalFontSize,
+                bold: true,
+              ),
+              nyc,
+              [
+                bulletPointItem(
                     TextBox(
-                      text: 'Selected by a 40-person cohort to regularly communicate with the members, organize events, and'
-                          ' instill a\nsense of community within the group',
+                      text: 'Cohort President',
                       fontSize: normalFontSize,
+                      italics: true,
                     ),
-                    TextBox(
-                      text: 'Attended NYU\'s Sophomore Leadership Development Series; topics included logistics of organizing events,'
-                          '\nhelping transfer students transition into NYU, and team-building with the other cohort presidents',
-                      fontSize: normalFontSize,
-                    )
-                  ])
-            ]),
+                    'August 2017 - September 2019',
+                    [
+                      TextBox(
+                        text:
+                            'Selected by a 40-person cohort to regularly communicate with the members, organize events, and'
+                            ' instill a sense of community\nwithin the group.',
+                        fontSize: normalFontSize,
+                      ),
+                      TextBox(
+                        text:
+                            'Attended NYU\'s Sophomore Leadership Development Series; topics included logistics of organizing events,'
+                            ' helping transfer students\ntransition into NYU, and team-building with the other cohort presidents.',
+                        fontSize: normalFontSize,
+                      )
+                    ])
+              ]),
         ],
         defaultSectionMargin);
 
     final projects = section(
-        Row(
-          children: [
+      TextBox(
+        text: 'Personal Achievements',
+        fontSize: normalFontSize,
+        bold: true,
+      ),
+      [
+        bulletPointItem(
             TextBox(
-              text: 'Personal Projects (code available on ',
+              text: 'Optimization of Feature Selection',
               fontSize: normalFontSize,
               bold: true,
+              onPressed: () => launch(
+                  "https://math.nyu.edu/media/math/filer_public/fe/c2/fec2e739-a688-4805-b490-c2eb96439dd7/optimization_of_feature_selection.pdf"),
             ),
-            TextBox(
-              text: 'github.com/jameschoi97',
-              fontSize: normalFontSize,
-              bold: true,
-              onPressed: () => launch('https://github.com/jameschoi97?tab=repositories'),
-            ),
-            TextBox(
-              text: ')',
-              fontSize: normalFontSize,
-              bold: true,
-            ),
-          ],
-        ),
-        [
-          bulletPointItem(
+            '',
+            [
               TextBox(
-                text: 'James Choi\'s Website',
+                text:
+                    'My research paper written during NYU math department’s SURE (Summer Undergraduate Research Experience) program in 2019.',
                 fontSize: normalFontSize,
-                bold: true,
-                onPressed: () => launch('https://jameschoi97.github.io'),
-              ),
-              '',
-              [
-                TextBox(
-                  text: 'My personal website, built with Flutter SDK, which includes my interactive resume',
-                  fontSize: normalFontSize,
-                )
-              ]
-          ),
-          bulletPointItem(
+              )
+            ]),
+        bulletPointItem(
             TextBox(
               text: 'Dogs&Cats',
               fontSize: normalFontSize,
@@ -482,9 +440,8 @@ class MyResume extends StatelessWidget {
               Row(
                 children: [
                   TextBox(
-                   text: 'A project built during ',
-                    fontSize: normalFontSize
-                  ),
+                      text: 'A project built during ',
+                      fontSize: normalFontSize),
                   TextBox(
                     text: 'HackNY',
                     fontSize: normalFontSize,
@@ -509,33 +466,39 @@ class MyResume extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextBox(
-                    text: 'Built using Flask, the web app accepted requests for and sent animal GIFs over SMS using Twilio API. For',
+                    text:
+                        'Built using Flask, the web app accepted requests for and sent animal GIFs over SMS using Twilio API. For every 3 Gifs requested,',
                     fontSize: normalFontSize,
                   ),
                   Row(
                     children: [
                       TextBox(
-                        text: 'every 3 GIFs requested, users would automatically receive facts and resources about ',
+                        text:
+                            'users would automatically receive facts and resources about ',
                         fontSize: normalFontSize,
                       ),
                       TextBox(
-                          text: 'Animal Care Centers',
+                          text: 'Animal Care Centers of NYC',
                           fontSize: normalFontSize,
                           onPressed: () => launch('https://www.nycacc.org/')
-                      )
+                      ),
+                      TextBox(
+                        text:
+                        ', an organization dedicated to personal',
+                        fontSize: normalFontSize,
+                      ),
                     ],
                   ),
                   TextBox(
-                    text: 'of NYC, an organization dedicated to personal placement of stray / abandoned animals in New York',
+                    text:
+                        'placement of stray / abandoned animals in New York.',
                     fontSize: normalFontSize,
                   )
-
                 ],
               )
-            ]
-          )
-        ],
-        defaultSectionMargin,
+            ])
+      ],
+      defaultSectionMargin,
     );
 
     return Container(
@@ -598,7 +561,8 @@ class TextBox extends StatelessWidget {
           : TextButton(
               onPressed: onPressed,
               style: ButtonStyle(
-                  foregroundColor: MaterialStateProperty.all(Colors.black),),
+                foregroundColor: MaterialStateProperty.all(Colors.black),
+              ),
               child: Text(text,
                   style: TextStyle(
                     fontFamily: 'TimesNewRoman',

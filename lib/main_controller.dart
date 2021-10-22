@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:get/get.dart';
 import 'package:jameschoi97/ui/pages/about_me/about_me_page.dart';
 import 'package:jameschoi97/ui/pages/home/home_page.dart';
@@ -52,6 +54,34 @@ const pages = [
 
 class MainController extends GetxController {
   final currentPage = Pages.home.obs;
+  final hovering = false.obs;
   final hoverPage = Pages.home.obs;
   final movieController = Get.put(MoviesController());
+  final idlePage = Pages.aboutMe.obs;
+
+  @override
+  void onInit() {
+    Timer.periodic(
+    Duration(seconds: 4), (Timer t) {
+      if (idlePage.value == Pages.aboutMe) {
+        idlePage.value = Pages.resume;
+      } else if (idlePage.value == Pages.resume) {
+        idlePage.value = Pages.movies;
+        movieController.showPanel();
+      } else {
+        idlePage.value = Pages.aboutMe;
+        movieController.hidePanel();
+      }
+    });
+
+    super.onInit();
+  }
+
+  Pages getShowPage() {
+    if (hovering.value) {
+      return hoverPage.value;
+    } else {
+      return idlePage.value;
+    }
+  }
 }

@@ -42,10 +42,12 @@ class HomePage extends StatelessWidget {
                       if (page == Pages.movies) {
                         _mainController.movieController.showPanel();
                       }
+                      _mainController.hovering.value = true;
                       _mainController.hoverPage.value = page;
                     } else {
+                      _mainController.hovering.value = false;
                       _mainController.hoverPage.value = Pages.home;
-                      if (page == Pages.movies) {
+                      if (page == Pages.movies && _mainController.idlePage.value != Pages.movies) {
                         _mainController.movieController.hidePanel();
                       }
                     }
@@ -53,15 +55,15 @@ class HomePage extends StatelessWidget {
             onTap: () {
               Get.toNamed(page.pageName);
             },
-            child: Text(
+            child: Obx(() => Text(
               page.name.toUpperCase(),
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 40,
+                fontSize: _mainController.getShowPage() == page ? 50 : 40,
                 fontWeight: FontWeight.w600,
                 letterSpacing: 4,
               ),
-            ),
+            )),
           );
         });
 
@@ -79,10 +81,10 @@ class HomePage extends StatelessWidget {
         smallScreen: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          children: [/*
             Container(
                 padding: EdgeInsets.symmetric(vertical: 50, horizontal: 100),
-                child: getItem(context, Pages.home)),
+                child: getItem(context, Pages.home)),*/
             Column(
               children: subpages
                   .map((page) => Column(
@@ -123,9 +125,9 @@ class HomePage extends StatelessWidget {
                         maxHeight: MediaQuery.of(context).size.height,
                       ),
                       child: Stack(
-                        children: pages
+                        children: subpages
                             .map((page) => AnimatedOpacity(
-                                  opacity: _mainController.hoverPage.value == page
+                                  opacity: _mainController.getShowPage() == page
                                       ? 1
                                       : 0,
                                   duration: Duration(milliseconds: 200),
@@ -141,19 +143,7 @@ class HomePage extends StatelessWidget {
   }
 
   Widget getItem(BuildContext context, Pages page) {
-    if (page == Pages.home) {
-      return Text(
-        'Welcome to my website!\n'
-        '\nThis is a work in progress, but I will aim to perfect it over the next '
-        'few months / years or maybe even for the rest of my life.',
-        style: TextStyle(
-          fontSize: ResponsiveWidget.isSmallScreen(context) ? 20 : 30,
-          fontWeight: FontWeight.w600,
-          letterSpacing: 4,
-        ),
-        textAlign: TextAlign.center,
-      );
-    } else if (page == Pages.aboutMe) {
+    if (page == Pages.aboutMe) {
       return Center(
         child: CarouselSlider(
             items: [
