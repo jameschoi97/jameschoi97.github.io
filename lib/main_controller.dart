@@ -66,13 +66,14 @@ class MainController extends GetxController {
       if (idlePage.value == Pages.aboutMe) {
         idlePage.value = Pages.resume;
       } else if (idlePage.value == Pages.resume) {
-        idlePage.value = Pages.movies;
         movieController.showPanel();
+        idlePage.value = Pages.movies;
       } else {
+        idlePage.value = Pages.aboutMe;
         if (!hovering.value || hoverPage.value != Pages.movies) {
           movieController.hidePanel();
         }
-        idlePage.value = Pages.aboutMe;
+
       }
     });
 

@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
               page.name.toUpperCase(),
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: _mainController.getShowPage() == page ? 50 : 40,
+                fontSize: _mainController.getShowPage() == page && ResponsiveWidget.isLargeScreen(context) ? 50 : 40,
                 fontWeight: FontWeight.w600,
                 letterSpacing: 4,
               ),

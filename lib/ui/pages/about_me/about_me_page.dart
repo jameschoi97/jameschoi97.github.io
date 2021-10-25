@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jameschoi97/main_controller.dart';
@@ -13,12 +15,14 @@ class AboutMePage extends GetView<MainController> {
 
   final instaButton = IconButton(
       onPressed: () => launch('https://www.instagram.com/choiisyourboi'),
-      icon: Image.asset('assets/images/instagram.png', width: 150, height: 150)
+      icon: Image.asset('assets/images/instagram.png'),
+    iconSize: 150,
   );
 
   final linkedinButton = IconButton(
       onPressed: () => launch('https://www.linkedin.com/in/james-choi-303335115/'),
-      icon: Image.asset('assets/images/linkedin.png', width: 150, height: 150)
+      icon: Image.asset('assets/images/linkedin.png'),
+    iconSize: 150,
   );
 
   @override
@@ -31,36 +35,53 @@ class AboutMePage extends GetView<MainController> {
       ),
       body: Container(
         child: ResponsiveWidget(
-          smallScreen: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                instaButton,
-                linkedinButton
-              ],
+          smallScreen: Container(
+            height: 800,
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                Text(
+                'I believe a person\'s social media tells a lot about them.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 4,
+                ),),
+                  instaButton,
+                  linkedinButton
+                ],
+              ),
             ),
           ),
-          largeScreen: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text(
-                  'I think a person\'s social media can tell a lot about them.',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 40,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 4,
+          largeScreen: Container(
+            height: max(MediaQuery.of(context).size.height - 56, 500),
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 30),
+                    child: Text(
+                      'I believe a person\'s social media tells a lot about them.',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 4,
+                      ),
+                    ),
                   ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    instaButton,
-                    linkedinButton
-                  ],
-                )
-              ]
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      instaButton,
+                      linkedinButton
+                    ],
+                  )
+                ]
+              ),
             ),
           ),
 
