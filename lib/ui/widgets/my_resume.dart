@@ -352,12 +352,12 @@ class MyResume extends StatelessWidget {
           bold: true,
         ),
         [
-          listItem('Languages', [
+          listItem('Programming Languages', [
             'Python',
             'Java',
             'C',
             'HTML',
-            'Javascript',
+            'JavaScript',
             'MATLAB',
             'Swift',
             'Dart',
@@ -501,6 +501,26 @@ class MyResume extends StatelessWidget {
       defaultSectionMargin,
     );
 
+    final interests = section(
+      TextBox(
+        text: 'Personal Interests',
+        fontSize: normalFontSize,
+        bold: true,
+      ),
+        [
+            Row(
+              children: [
+                TextBox(
+                  text: 'Cooking, Weightlifting, Marvel Comics, Hearthstone (Top 1%), Watching Movies (Currently at 400+ movies), App Development',
+                  fontSize: normalFontSize,
+                ),
+              ],
+            ),
+
+        ],
+        defaultSectionMargin,
+    );
+
     return Container(
         width: 210,
         height: 297,
@@ -520,6 +540,7 @@ class MyResume extends StatelessWidget {
             technicalSkills,
             projects,
             extracurricular,
+            interests,
           ],
         ));
   }
