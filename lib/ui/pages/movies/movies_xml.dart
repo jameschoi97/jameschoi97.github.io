@@ -24,12 +24,14 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>21 Jump Street</Name>
         <Year>2012</Year>
         <Series>21 Jump Street</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>21_jump_street.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>22 Jump Street</Name>
         <Year>2014</Year>
         <Series>21 Jump Street</Series>
+        <SeriesIndex>2</SeriesIndex>
         <ImgName>22_jump_street.jpg</ImgName>
     </Movie>
     <Movie>
@@ -86,48 +88,56 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>American Pie</Name>
         <Year>1999</Year>
         <Series>American Pie</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>american_pie.jpeg</ImgName>
     </Movie>
     <Movie>
         <Name>American Pie 2</Name>
         <Year>2001</Year>
         <Series>American Pie</Series>
+        <SeriesIndex>2</SeriesIndex>
         <ImgName>american_pie_2.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>American Wedding</Name>
         <Year>2003</Year>
         <Series>American Pie</Series>
+        <SeriesIndex>3</SeriesIndex>
         <ImgName>american_wedding.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>American Reunion</Name>
         <Year>2012</Year>
         <Series>American Pie</Series>
+        <SeriesIndex>4</SeriesIndex>
         <ImgName>american_reunion.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>American Pie Presents: Band Camp</Name>
         <Year>2005</Year>
         <Series>American Pie Presents</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>american_pie_presents_band_camp.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>American Pie Presnets: The Naked Mile</Name>
         <Year>2006</Year>
         <Series>American Pie Presents</Series>
+        <SeriesIndex>2</SeriesIndex>
         <ImgName>american_pie_presents_the_naked_mile.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>American Pie Presents: Beta House</Name>
         <Year>2007</Year>
         <Series>American Pie Presents</Series>
+        <SeriesIndex>3</SeriesIndex>
         <ImgName>american_pie_presents_beta_house.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>American Pie Presents: The Book of Love</Name>
         <Year>2009</Year>
         <Series>American Pie Presents</Series>
+        <SeriesIndex>4</SeriesIndex>
         <ImgName>american_pie_presents_the_book_of_love.jpg</ImgName>
     </Movie>
     <Movie>
@@ -154,12 +164,14 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>Ant-Man</Name>
         <Year>2015</Year>
         <Series>Ant-Man</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>ant_man.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Ant-Man and the Wasp</Name>
         <Year>2018</Year>
         <Series>Ant-Man</Series>
+        <SeriesIndex>2</SeriesIndex>
         <ImgName>ant_man_and_the_wasp.jpg</ImgName>
     </Movie>
     <Movie>
@@ -197,18 +209,21 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>Back to the Future </Name>
         <Year>1985</Year>
         <Series>Back to the Future</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>back_to_the_future.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Back to the Future Part II</Name>
         <Year>1989</Year>
         <Series>Back to the Future</Series>
+        <SeriesIndex>2</SeriesIndex>
         <ImgName>back_to_the_future_part_2.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Back to the Future Part III</Name>
         <Year>1990</Year>
         <Series>Back to the Future</Series>
+        <SeriesIndex>3</SeriesIndex>
         <ImgName>back_to_the_future_part_3.jpg</ImgName>
     </Movie>
     <Movie>
@@ -225,24 +240,28 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>Basic Instinct</Name>
         <Year>1992</Year>
         <Series>Basic Instinct</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>basic_instinct.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Basic Instinct 2</Name>
         <Year>2006</Year>
         <Series>Basic Instinct</Series>
+        <SeriesIndex>2</SeriesIndex>
         <ImgName>basic_instinct_2.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Batman Begins</Name>
         <Year>2005</Year>
         <Series>The Dark Knight</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>batman_begins.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>The Dark Knight Rises</Name>
         <Year>2012</Year>
         <Series>The Dark Knight</Series>
+        <SeriesIndex>3</SeriesIndex>
         <ImgName>the_dark_knight_rises.jpg</ImgName>
     </Movie>
     <Movie>
@@ -304,12 +323,14 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>Bruce Almighty</Name>
         <Year>2003</Year>
         <Series>Bruce Almighty</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>bruce_almighty.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Evan Almighty</Name>
         <Year>2007</Year>
         <Series>Bruce Almighty</Series>
+        <SeriesIndex>2</SeriesIndex>
         <ImgName>evan_almighty.jpg</ImgName>
     </Movie>
     <Movie>
@@ -321,18 +342,21 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>Captain America: The First Avenger</Name>
         <Year>2011</Year>
         <Series>Captain America</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>captain_america_the_first_avenger.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Captain America: The Winter Soldier</Name>
         <Year>2014</Year>
         <Series>Captain America</Series>
+        <SeriesIndex>2</SeriesIndex>
         <ImgName>captain_america_the_winter_soldier.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Captain America: Civil War</Name>
         <Year>2016</Year>
         <Series>Captain America</Series>
+        <SeriesIndex>3</SeriesIndex>
         <ImgName>captain_america_civil_war.jpg</ImgName>
     </Movie>
     <Movie>
@@ -344,12 +368,14 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>Cars</Name>
         <Year>2006</Year>
         <Series>Cars</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>cars.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Cars 2</Name>
         <Year>2011</Year>
         <Series>Cars</Series>
+        <SeriesIndex>2</SeriesIndex>
         <ImgName>cars_2.jpg</ImgName>
     </Movie>
     <Movie>
@@ -426,12 +452,14 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>Deadpool</Name>
         <Year>2016</Year>
         <Series>Deadpool</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>deadpool.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Deadpool 2</Name>
         <Year>2018</Year>
         <Series>Deadpool</Series>
+        <SeriesIndex>2</SeriesIndex>
         <ImgName>deadpool_2.jpg</ImgName>
     </Movie>
     <Movie>
@@ -504,6 +532,7 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>Fantastic Four</Name>
         <Year>2005</Year>
         <Series>Fantastic Four</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>fantastic_four_2005.jpg</ImgName>
     </Movie>
     <Movie>
@@ -515,6 +544,7 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>Fantastic 4: Rise of the Silver Surfer</Name>
         <Year>2007</Year>
         <Series>Fantastic Four</Series>
+        <SeriesIndex>2</SeriesIndex>
         <ImgName>fantastic_4_rise_of_the_silver_surfer.jpg</ImgName>
     </Movie>
     <Movie>
@@ -556,12 +586,14 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>G.I. Joe: The Rise of Cobra</Name>
         <Year>2009</Year>
         <Series>G.I. Joe</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>gi_joe_the_rise_of_cobra.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>G.I. Joe: Retaliation</Name>
         <Year>2013</Year>
         <Series>G.I. Joe</Series>
+        <SeriesIndex>2</SeriesIndex>
         <ImgName>gi_joe_retaliation.jpg</ImgName>
     </Movie>
     <Movie>
@@ -593,12 +625,14 @@ const moviesXml = '''<?xml version="1.0"?>
         <Name>Harold and Kumar Go to White Castle</Name>
         <Year>2004</Year>
         <Series>Harold and Kumar</Series>
+        <SeriesIndex>1</SeriesIndex>
         <ImgName>harold_and_kumar_go_to_white_castle.jpg</ImgName>
     </Movie>
     <Movie>
         <Name>Harold and Kumar Escape from Guantanamo Bay</Name>
         <Year>2008</Year>
         <Series>Harold and Kumar</Series>
+        <SeriesIndex>2</SeriesIndex>
         <ImgName>harold_and_kumar_escape_from_guantanamo_bay.jpg</ImgName>
     </Movie>
     <Movie>
@@ -2564,5 +2598,86 @@ const moviesXml = '''<?xml version="1.0"?>
     <Movie>
         <Name>Crystal Inferno</Name>
     </Movie>
+    <Movie>
+        <Name>The Package</Name>
+    </Movie>
+    <Movie>
+        <Name>Vampire Academy</Name>
+        <Year>2014</Year>
+    </Movie>
+    <Movie>
+        <Name>Paddington</Name>
+        <Year>2014</Year>
+    </Movie>
+    <Movie>
+        <Name>Fatherhood</Name>
+        <Year>2021</Year>
+    </Movie>
+    <Movie>
+        <Name>Five Feet Apart</Name>
+        <Year>2019</Year>
+    </Movie>
+    <Movie>
+        <Name>The Guide to the Perfect Family</Name>
+        <Year>2021</Year>
+    </Movie>
+    <Movie>
+        <Name>Me Before You</Name>
+        <Year>2016</Year>
+    </Movie>
+    <Movie>
+        <Name>Palm Springs</Name>
+        <year>2020</year>
+    </Movie>
+    <Movie>
+        <Name>Superman Returns</Name>
+        <Year>2006</Year>
+    </Movie>
+    <Movie>
+        <Name>Joker</Name>
+        <Year>2019</Year>
+    </Movie>
+    <Movie>
+        <Name>Man of Steel</Name>
+        <Year>2013</Year>
+    </Movie>
+    <Movie>
+        <Name>Batman vs. Superman</Name>
+        <Year>2016</Year>
+    </Movie>
+    <Movie>
+        <Name>Suicide Squad</Name>
+        <Year>2016</Year>
+    </Movie>
+    <Movie>
+        <Name>Jumanji: The Next Level</Name>
+        <Year>2019</Year>
+    </Movie>
+    <Movie>
+        <Name>Smallfoot</Name>
+        <Year>2018</Year>
+    </Movie>
+    <Movie>
+        <Name>Set It Up</Name>
+        <Year>2018</Year>
+    </Movie>
+    <Movie>
+        <Name>Tusk</Name>
+        <Year>2014</Year>
+    </Movie>
+    <Movie>
+        <Name>Venom: Let There Be Carnage</Name>
+        <Year>2021</Year>
+    </Movie>
+    <Movie>
+        <Name>Black Widow</Name>
+        <Year>2021</Year>
+    </Movie>
+    <Movie>
+        <Name>Shang-Chi and the Legend of the Ten Rings</Name>
+        <year>2021</year>
+    </Movie>
+
+
 </Movies>
 ''';

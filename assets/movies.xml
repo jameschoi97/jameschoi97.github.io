@@ -2598,4 +2598,85 @@
     <Movie>
         <Name>Crystal Inferno</Name>
     </Movie>
+    <Movie>
+        <Name>The Package</Name>
+    </Movie>
+    <Movie>
+        <Name>Vampire Academy</Name>
+        <Year>2014</Year>
+    </Movie>
+    <Movie>
+        <Name>Paddington</Name>
+        <Year>2014</Year>
+    </Movie>
+    <Movie>
+        <Name>Fatherhood</Name>
+        <Year>2021</Year>
+    </Movie>
+    <Movie>
+        <Name>Five Feet Apart</Name>
+        <Year>2019</Year>
+    </Movie>
+    <Movie>
+        <Name>The Guide to the Perfect Family</Name>
+        <Year>2021</Year>
+    </Movie>
+    <Movie>
+        <Name>Me Before You</Name>
+        <Year>2016</Year>
+    </Movie>
+    <Movie>
+        <Name>Palm Springs</Name>
+        <year>2020</year>
+    </Movie>
+    <Movie>
+        <Name>Superman Returns</Name>
+        <Year>2006</Year>
+    </Movie>
+    <Movie>
+        <Name>Joker</Name>
+        <Year>2019</Year>
+    </Movie>
+    <Movie>
+        <Name>Man of Steel</Name>
+        <Year>2013</Year>
+    </Movie>
+    <Movie>
+        <Name>Batman vs. Superman</Name>
+        <Year>2016</Year>
+    </Movie>
+    <Movie>
+        <Name>Suicide Squad</Name>
+        <Year>2016</Year>
+    </Movie>
+    <Movie>
+        <Name>Jumanji: The Next Level</Name>
+        <Year>2019</Year>
+    </Movie>
+    <Movie>
+        <Name>Smallfoot</Name>
+        <Year>2018</Year>
+    </Movie>
+    <Movie>
+        <Name>Set It Up</Name>
+        <Year>2018</Year>
+    </Movie>
+    <Movie>
+        <Name>Tusk</Name>
+        <Year>2014</Year>
+    </Movie>
+    <Movie>
+        <Name>Venom: Let There Be Carnage</Name>
+        <Year>2021</Year>
+    </Movie>
+    <Movie>
+        <Name>Black Widow</Name>
+        <Year>2021</Year>
+    </Movie>
+    <Movie>
+        <Name>Shang-Chi and the Legend of the Ten Rings</Name>
+        <year>2021</year>
+    </Movie>
+
+
 </Movies>

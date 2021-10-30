@@ -110,7 +110,7 @@ class MyResume extends StatelessWidget {
       top: convert(15),
     );
 
-    final itemMarginValue = convert(10);
+    final itemMarginValue = convert(12);
 
     final myInfo = Row(mainAxisAlignment: MainAxisAlignment.center, children: [
       TextBox(text: myAddress, fontSize: normalFontSize),
@@ -333,7 +333,6 @@ class MyResume extends StatelessWidget {
             'Parallel Computing',
             'Computer Networks',
           ]),
-          SizedBox(height: itemMarginValue),
           listItem('Mathematics', [
             'Calculus',
             'Linear Algebra',
@@ -361,6 +360,12 @@ class MyResume extends StatelessWidget {
             'MATLAB',
             'Swift',
             'Dart',
+          ]),
+          listItem('Additional Skills', [
+            'LaTeX',
+            'Korean',
+            'Spanish',
+            'Microsoft Excel',
           ])
         ],
         defaultSectionMargin);
@@ -424,7 +429,19 @@ class MyResume extends StatelessWidget {
             [
               TextBox(
                 text:
-                    'My research paper written during NYU math department’s SURE (Summer Undergraduate Research Experience) program in 2019.',
+                    'My research paper written for NYU math department’s SURE (Summer Undergraduate Research Experience) program in 2019.',
+                fontSize: normalFontSize,
+              ),
+              TextBox(
+                text:
+                'Advised by Professor Esteban G. Tabak, the research addresses the problem of choosing a smaller number of important attributes,'
+                    '\ngiven data points that each consists of a larger number of attributes.',
+                fontSize: normalFontSize,
+              ),
+              TextBox(
+                text:
+                'The research paper, posted on the NYU website, describes the process of building a prediction model and optimizing over the features'
+                    '\nof data points to minimize the error between the prediction and the real data.',
                 fontSize: normalFontSize,
               )
             ]),
@@ -530,8 +547,8 @@ class MyResume extends StatelessWidget {
           children: [
             TextBox(
                 text: myName,
-                fontSize: convert(30),
-                margin: EdgeInsets.only(top: convert(8), bottom: convert(8)),
+                fontSize: convert(40),
+                margin: EdgeInsets.only(top: convert(40), bottom: convert(15)),
                 bold: true),
             myInfo,
             education,

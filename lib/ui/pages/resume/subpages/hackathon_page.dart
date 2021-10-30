@@ -58,11 +58,28 @@ class HackathonPage extends StatelessWidget {
                   'In May 2021, GE Appliances held its 5th hackathon. The theme of the hackathon was Over-the-air .'
                   '(OTA) programming, and we had to come up with better ways to reach our customers with our updates. '
                   'My team introduced a mobile application where the update information for your electronics can be viewed '
-                  'on your phone as if they were magazine articles.\n\n'
+                  'on your phone as if they were magazine articles.',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ))),
+          Container(
+            constraints: BoxConstraints(
+              maxWidth: 750,
+            ),
+            padding: EdgeInsets.symmetric(vertical: 20, horizontal: 60),
+            child: Image.asset('assets/images/hackathon2.jpeg')
+          ),
+          Container(
+              margin: EdgeInsets.symmetric(horizontal: 70, vertical: 20),
+              constraints: BoxConstraints(
+                maxWidth: 750,
+              ),
+              child: Text(
                   'In our team, my responsibility was to create a UI for the dummy oven we would use for the demonstration. '
-                  'The UI can connect to the mobile application through a local server using simple HTTP requests, and when '
-                  'certain events, such as an addition of a recipe or winning of a free coupon, happen, display them on its '
-                  'screen. In addition to creating the UI, I also presented at our demonstration. Our team came in third, tied with another team. The UI I made using Flutter SDK, is shown below.',
+                      'The UI can connect to the mobile application through a local server using simple HTTP requests, and when '
+                      'certain events, such as an addition of a recipe or winning of a free coupon, happen, display them on its '
+                      'screen. In addition to creating the UI, I also presented at our demonstration. Our team came in third, '
+                      'tied with another team. The UI I made using Flutter SDK, is shown below.',
                   style: TextStyle(
                     fontSize: 16,
                   ))),

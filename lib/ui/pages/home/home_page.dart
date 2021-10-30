@@ -217,9 +217,9 @@ class HomePage extends StatelessWidget {
                 child: Stack(
                   alignment: AlignmentDirectional.bottomCenter,
                   children: [
-                    Image.asset('assets/images/me_3.png', fit: BoxFit.fitHeight),
+                    Image.asset('assets/images/me_3.JPG', fit: BoxFit.fitHeight),
                     Container(
-                      margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.055, vertical: 30),
+                      margin: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.065, vertical: 30),
                       width: MediaQuery.of(context).size.width,
                       decoration: BoxDecoration(
                           boxShadow: [
@@ -237,7 +237,7 @@ class HomePage extends StatelessWidget {
                             style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 color: Colors.white.withOpacity(0.8),
-                                letterSpacing: 2.5
+                                letterSpacing: 2
                             ),)
                       )
 
