@@ -38,6 +38,7 @@ extension ColumnExtension on MovieInfo {
 class MoviesController extends GetxController {
   final imageNames = <String>[];
   final movies = <Movie>[].obs;
+  final searchText = ''.obs;
 
   final currentSort = MovieInfo.name.obs;
   final sortAscending = true.obs;

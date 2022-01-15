@@ -68,6 +68,17 @@ class MoviesPage extends GetView<MoviesController> {
                 )
               )
             ),
+            Container(
+              margin: EdgeInsets.only(top: 15),
+              width: MediaQuery.of(context).size.width * 0.5,
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Search Movies',
+                ),
+                onChanged: (value) => controller.searchText.value = value.toLowerCase(),
+              )
+            ),
             _showMovies(context)],
         ));
   }
@@ -91,8 +102,8 @@ class MoviesPage extends GetView<MoviesController> {
                     width: max(getTotalWidth(), MediaQuery.of(context).size.width-2*sidePadding),
                     child: ListView.builder(
                       padding: EdgeInsets.zero,
-                      itemCount: controller.movies.length,
-                        itemBuilder: (context, index) => _getMovieRow(context, controller.movies[index], index % 2 != 0)
+                      itemCount: controller.movies.where((item) => item.name.toLowerCase().contains(controller.searchText.value)).length,
+                        itemBuilder: (context, index) => _getMovieRow(context, controller.movies.where((item) => item.name.toLowerCase().contains(controller.searchText.value)).elementAt(index), index % 2 != 0)
 
 
                     )
