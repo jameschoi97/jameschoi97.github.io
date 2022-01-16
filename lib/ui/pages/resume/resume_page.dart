@@ -7,6 +7,7 @@ import 'package:jameschoi97/ui/widgets/my_appbar.dart';
 import 'package:jameschoi97/ui/widgets/my_resume.dart';
 import 'package:jameschoi97/ui/widgets/my_scaffold.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ResumePage extends GetView<MainController> {
   static final name = '/resume';
@@ -34,7 +35,7 @@ class ResumePage extends GetView<MainController> {
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                   ),
-                  recognizer: TapGestureRecognizer()..onTap = () => Get.to(() => StaticResumePage()),
+                  recognizer: TapGestureRecognizer()..onTap = () => launch('assets/resume.pdf'),//Get.to(() => StaticResumePage()),
                 ),
                 TextSpan(
                   text: '.'
