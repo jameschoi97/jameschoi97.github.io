@@ -2677,6 +2677,18 @@
         <Name>Shang-Chi and the Legend of the Ten Rings</Name>
         <year>2021</year>
     </Movie>
+    <Movie>
+        <Name>Eternals</Name>
+    </Movie>
+    <Movie>
+        <Name>Spider-Man: No Way Home</Name>
+    </Movie>
+    <Movie>
+        <Name>The Hateful Eight</Name>
+    </Movie>
+    <Movie>
+        <Name>The Unforgivable</Name>
+    </Movie>
 
 
 </Movies>
