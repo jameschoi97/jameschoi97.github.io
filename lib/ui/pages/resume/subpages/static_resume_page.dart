@@ -12,7 +12,7 @@ class StaticResumePage extends StatelessWidget {
           preferredSize: Size(MediaQuery.of(context).size.width, 56),
           child: MyAppBar(),
         ),
-        body: Image.asset('assets/images/resume.png', width: MediaQuery.of(context).size.width,
+        body: Image.asset('assets/images/resume.jpg', width: MediaQuery.of(context).size.width,
         fit: BoxFit.fitHeight));
   }
 }

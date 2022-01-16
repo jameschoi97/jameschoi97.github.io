@@ -260,7 +260,7 @@ class HomePage extends StatelessWidget {
             )),
       );
     } else if (page == Pages.resume) {
-      return Image.asset('assets/images/resume.png', fit: BoxFit.fitHeight);
+      return Image.asset('assets/images/resume.jpg', fit: BoxFit.fitHeight);
     } else if (page == Pages.movies) {
       return Container(
         padding: EdgeInsets.symmetric(horizontal: 30),
