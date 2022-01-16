@@ -35,7 +35,7 @@ class ResumePage extends GetView<MainController> {
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                   ),
-                  recognizer: TapGestureRecognizer()..onTap = () => launch('assets/resume.pdf'),//Get.to(() => StaticResumePage()),
+                  recognizer: TapGestureRecognizer()..onTap = () => launch('https://github.com/jameschoi97/jameschoi97.github.io/blob/main/assets/resume.pdf?raw=true'),//Get.to(() => StaticResumePage()),
                 ),
                 TextSpan(
                   text: '.'
