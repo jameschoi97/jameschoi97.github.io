@@ -284,7 +284,7 @@ class MyResume extends StatelessWidget {
                           TextBox(
                               text: 'Current GPA: ', fontSize: normalFontSize),
                           TextBox(
-                            text: '3.96/4.0',
+                            text: '3.95/4.0',
                             fontSize: normalFontSize,
                             bold: true,
                             underline: true,
