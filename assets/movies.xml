@@ -2239,21 +2239,29 @@
     <Movie>
 
         <Name>War of the Worlds</Name>
+        <Year>2005</Year>
+        <ImgName>war_of_the_worlds.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Warm Bodies</Name>
+        <Year>2013</Year>
+        <ImgName>warm_bodies.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>We're the Millers</Name>
+        <Year>2013</Year>
+        <ImgName>were_the_millers.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Wedding Crashers</Name>
+        <Year>2005</Year>
+        <ImgName>wedding_crashers.jpg</ImgName>
 
     </Movie>
     <Movie>
@@ -2262,21 +2270,29 @@
 
 
         <Year>2017</Year>
+        <ImgName>what_happened_to_monday.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Whiplash</Name>
+        <Year>2014</Year>
+        <ImgName>whiplash.jpg</ImgName>
+
 
     </Movie>
     <Movie>
 
         <Name>Why Him?</Name>
+        <Year>2016</Year>
+        <ImgName>why_him.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Win Win</Name>
+        <Year>2011</Year>
+        <ImgName>win_win.jpg</ImgName>
 
     </Movie>
     <Movie>
@@ -2285,12 +2301,14 @@
 
 
         <Year>2009</Year>
+        <ImgName>xmen_origins_wolverine.jpg</ImgName>
         <Series>Wolverine</Series>
         <SeriesIndex>1</SeriesIndex>
     </Movie>
     <Movie>
         <Name>The Wolverine</Name>
         <Year>2013</Year>
+        <ImgName>the_wolverine.jpg</ImgName>
         <Series>Wolverine</Series>
         <SeriesIndex>2</SeriesIndex>
 
@@ -2298,12 +2316,17 @@
     <Movie>
 
         <Name>World's Greatest Dad</Name>
+        <Year>2009</Year>
+        <ImgName>worlds_greatest_dad.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Wreck-It Ralph</Name>
+        <Year>2012</Year>
+        <ImgName>wreck_it_ralph.jpg</ImgName>
         <Series>Wreck-It Ralph</Series>
+        <SeriesIndex>1</SeriesIndex>
 
     </Movie>
     <Movie>
@@ -2312,20 +2335,24 @@
 
 
         <Year>2000</Year>
+        <ImgName>xmen.jpg</ImgName>
 
 
         <Series>X-Men</Series>
+        <SeriesIndex>1</SeriesIndex>
 
     </Movie>
     <Movie>
 
-        <Name>X2</Name>
+        <Name>X2: X-Men United</Name>
 
 
         <Year>2003</Year>
+        <ImgName>x2_xmen_united.jpg</ImgName>
 
 
         <Series>X-Men</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
@@ -2334,9 +2361,11 @@
 
 
         <Year>2006</Year>
+        <ImgName>xmen_the_last_stand.jpg</ImgName>
 
 
         <Series>X-Men</Series>
+        <SeriesIndex>3</SeriesIndex>
 
     </Movie>
     <Movie>
@@ -2345,20 +2374,24 @@
 
 
         <Year>2011</Year>
+        <ImgName>xmen_first_class.jpg</ImgName>
 
 
         <Series>X-Men</Series>
+        <SeriesIndex>4</SeriesIndex>
 
     </Movie>
     <Movie>
 
-        <Name>X-Men: Days of the Future Past</Name>
+        <Name>X-Men: Days of Future Past</Name>
 
 
         <Year>2014</Year>
+        <ImgName>xmen_days_of_future_past.jpg</ImgName>
 
 
         <Series>X-Men</Series>
+        <SeriesIndex>5</SeriesIndex>
 
     </Movie>
     <Movie>
@@ -2367,9 +2400,11 @@
 
 
         <Year>2016</Year>
+        <ImgName>xmen_apocalypse.jpeg</ImgName>
 
 
         <Series>X-Men</Series>
+        <SeriesIndex>6</SeriesIndex>
 
     </Movie>
     <Movie>
@@ -2378,29 +2413,40 @@
 
 
         <Year>2019</Year>
+        <ImgName>xmen_dark_phoenix.jpg</ImgName>
 
 
         <Series>X-Men</Series>
+        <SeriesIndex>7</SeriesIndex>
 
     </Movie>
     <Movie>
 
         <Name>Yes Man</Name>
+        <Year>2008</Year>
+        <ImgName>yes_man.jpg</ImgName>
+
 
     </Movie>
     <Movie>
 
         <Name>Yogi Bear</Name>
+        <Year>2010</Year>
+        <ImgName>yogi_bear.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Zack and Miri Make a Porno</Name>
+        <Year>2008</Year>
+        <ImgName>zack_and_miri_make_a_porno.jpg</ImgName>
 
     </Movie>
     <Movie>
 
         <Name>Zootopia</Name>
+        <Year>2016</Year>
+        <ImgName>zootopia.jpg</ImgName>
 
     </Movie>
     <Movie>
@@ -2412,6 +2458,7 @@
 
 
         <Series>Wreck-It Ralph</Series>
+        <SeriesIndex>2</SeriesIndex>
 
     </Movie>
     <Movie>
@@ -2675,19 +2722,23 @@
     </Movie>
     <Movie>
         <Name>Shang-Chi and the Legend of the Ten Rings</Name>
-        <year>2021</year>
+        <Year>2021</Year>
     </Movie>
     <Movie>
         <Name>Eternals</Name>
+        <Year>2021</Year>
     </Movie>
     <Movie>
         <Name>Spider-Man: No Way Home</Name>
+        <Year>2021</Year>
     </Movie>
     <Movie>
         <Name>The Hateful Eight</Name>
+        <Year>2015</Year>
     </Movie>
     <Movie>
         <Name>The Unforgivable</Name>
+        <Year>2021</Year>
     </Movie>
 
 
