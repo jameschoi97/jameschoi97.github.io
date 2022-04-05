@@ -96,7 +96,7 @@ class ShqsPage extends StatelessWidget {
             isScrollable: false,
             children: shqsItems,
             hasBorder: false,
-            max_grid_size: 600,
+            maxGridSize: 600,
           )
         ]));
   }

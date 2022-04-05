@@ -6,7 +6,7 @@ class MyGrid extends StatelessWidget {
   final bool hasBorder;
   final bool isScrollable;
   final List<Widget> children;
-  final int max_grid_size;
+  final int maxGridSize;
 
   MyGrid(
       {Key? key,
@@ -15,7 +15,7 @@ class MyGrid extends StatelessWidget {
         this.hasBorder = true,
         this.isScrollable = true,
         required this.children,
-        this.max_grid_size = 250})
+        this.maxGridSize = 250})
       : super(key: key);
 
   @override
@@ -25,7 +25,7 @@ class MyGrid extends StatelessWidget {
 
   Widget _buildGrid(BuildContext context) {
     final _column =
-        column ?? (MediaQuery.of(context).size.width / max_grid_size).ceil();
+        column ?? (MediaQuery.of(context).size.width / maxGridSize).ceil();
     final _row = row ?? (children.length / _column).ceil();
     final elements = <Widget>[];
     for (var r = 0; r < _row; r++) {
@@ -64,7 +64,7 @@ class MyGrid extends StatelessWidget {
           itemCount: elements.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: column ??
-                (MediaQuery.of(context).size.width / max_grid_size).ceil(),
+                (MediaQuery.of(context).size.width / maxGridSize).ceil(),
           ),
           itemBuilder: (_, index) {
             return elements[index];
