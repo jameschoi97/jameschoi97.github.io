@@ -21,7 +21,7 @@ class AboutMePage extends GetView<MainController> {
 
   final linkedinButton = IconButton(
     onPressed: () =>
-        launch('https://www.linkedin.com/in/james-choi-303335115/'),
+        launch('https://www.linkedin.com/in/jameschoiswe'),
     icon: Image.asset('assets/images/linkedin.png'),
     iconSize: 150,
   );
